@@ -29,7 +29,7 @@
             <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
                 <a class="nav-aviator-badge" href="#">Aviator</a>
                 <div class="nav-dropdown-wrap">
-                    <a class="nav-crash-active" href="#">Crash</a>
+                    <a class="nav-crash-link nav-crash-active" href="crash.html">Crash</a>
                     <div class="nav-dropdown">
                         <a href="#" class="nav-dropdown-item">
                             <div class="nav-dropdown-card">
@@ -49,9 +49,24 @@
                                 <span>Aviatrix</span>
                             </div>
                         </a>
+                        <a href="#" class="nav-dropdown-item">
+                            <div class="nav-dropdown-card">
+                                <img src="assets/figma-export/neking/provider-golden-race.png" alt="GoldenRace">
+                                <span>GoldenRace</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <a href="#">Casino</a><a href="#">Virtual</a><a href="#">E-Sports</a><a href="#">Bet Game</a>
+                <div class="nav-dropdown-wrap">
+                    <a class="nav-casino-link" href="casino.html">Casino</a>
+                    <div class="nav-dropdown nav-casino-dropdown">
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+                <a href="#">Virtual</a><a href="#">E-Sports</a><a href="#">Bet Game</a>
             </nav>
             <div class="desktop-actions desktop-before-login flex items-center">
                 <a class="login-btn" href="login.html">Login</a>
@@ -196,7 +211,7 @@
             </section>
         </aside>
         <nav class="mobile-top-nav flex items-center overflow-x-auto" aria-label="Mobile game navigation">
-            <a class="active" href="#">Aviator</a><a href="#">Crash</a><a href="#">Casino</a><a href="#">Virtual</a><a href="#">E-Sports</a>
+            <a class="active" href="#">Aviator</a><a href="crash.html">Crash</a><a href="casino.html">Casino</a><a href="#">Virtual</a><a href="#">E-Sports</a>
         </nav>
         <section class="mobile-hero relative overflow-hidden">
             <div class="hero-slider" data-slider>

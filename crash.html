@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crash - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+    <main class="crash-page auth-logged-out">
+        <input class="nav-drawer-toggle" type="checkbox" id="desktopNavDrawer" aria-hidden="true">
+        <input class="nav-drawer-toggle" type="checkbox" id="mobileNavDrawer" aria-hidden="true">
+
+        <header class="desktop-header flex items-center">
+            <label class="desktop-menu inline-grid shrink-0 place-items-center" for="desktopNavDrawer" aria-label="Menu"><img src="assets/figma-export/neking/menu-icon.svg" alt=""></label>
+            <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
+            <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
+                <a class="nav-aviator-badge" href="index.html">Aviator</a>
+                <div class="nav-dropdown-wrap">
+                    <a class="nav-crash-link active" href="crash.html">Crash</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games"><span>Turbo Games</span></div></a>
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><span>Spribe</span></div></a>
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+                <div class="nav-dropdown-wrap">
+                    <a class="nav-casino-link" href="casino.html">Casino</a>
+                    <div class="nav-dropdown nav-casino-dropdown">
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+                <a href="#">Virtual</a><a href="#">E-Sports</a><a href="#">Bet Game</a>
+            </nav>
+            <div class="desktop-actions desktop-before-login flex items-center">
+                <a class="login-btn" href="login.html">Login</a>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+            <div class="desktop-actions desktop-after-login flex items-center">
+                <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+                <a class="messages" href="#" aria-label="Messages"><img src="assets/figma-export/neking/chat-bubble.svg" alt=""></a>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+        </header>
+
+        <label class="drawer-backdrop" for="desktopNavDrawer" aria-hidden="true"></label>
+        <aside class="side-drawer grid content-start" aria-label="Main menu">
+            <div class="drawer-logo inline-flex items-center"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+            <label class="drawer-close" for="desktopNavDrawer" aria-label="Close menu">&times;</label>
+            <nav class="drawer-nav grid">
+                <a class="drawer-home" href="index.html"><span></span>Home</a>
+                <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+                <a href="#"><span>*</span>Inbox</a>
+                <a href="promotion.html"><span>~</span>Promotions</a>
+                <a href="#"><span>#</span>Personal Center</a>
+                <a href="#"><span>+</span>Affiliate</a>
+                <a href="#"><span>V</span>VIP Club</a>
+                <a href="#"><span>B</span>Blog</a>
+                <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+            </nav>
+        </aside>
+
+        <header class="mobile-header flex items-center">
+            <label class="mobile-menu inline-grid shrink-0 place-items-center" for="mobileNavDrawer" aria-label="Menu"><img src="assets/figma-export/neking/menu-icon.svg" alt=""></label>
+            <img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+            <div class="mobile-before-login flex items-center">
+                <a class="login-btn" href="login.html">Login</a>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+            <div class="mobile-after-login flex items-center">
+                <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong></div>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+        </header>
+
+        <label class="drawer-backdrop" for="mobileNavDrawer" aria-hidden="true"></label>
+        <aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
+            <div class="drawer-logo inline-flex items-center"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+            <label class="drawer-close" for="mobileNavDrawer" aria-label="Close menu">&times;</label>
+            <nav class="drawer-nav grid">
+                <a class="drawer-home" href="index.html"><span></span>Home</a>
+                <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+                <a href="#"><span>*</span>Inbox</a>
+                <a href="promotion.html"><span>~</span>Promotions</a>
+                <a href="#"><span>#</span>Personal Center</a>
+                <a href="#"><span>+</span>Affiliate</a>
+                <a href="#"><span>V</span>VIP Club</a>
+                <a href="#"><span>B</span>Blog</a>
+                <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+            </nav>
+        </aside>
+
+        <section class="crash-content">
+            <label class="crash-search">
+                <img src="assets/icons/svg/search.svg" alt="">
+                <input type="search" placeholder="Search">
+            </label>
+
+            <section class="crash-dashboard" aria-label="Account promotion summary">
+                <div class="crash-metric-grid">
+                    <article class="crash-metric-card">
+                        <div>
+                            <span>Wallet</span>
+                            <strong>0.00</strong>
+                        </div>
+                        <i class="crash-metric-icon refresh-icon" aria-hidden="true"></i>
+                    </article>
+                    <article class="crash-metric-card">
+                        <div>
+                            <span>Membership Rebate</span>
+                            <strong>5.00%</strong>
+                        </div>
+                        <i class="crash-metric-icon lock-icon" aria-hidden="true"></i>
+                    </article>
+                </div>
+
+                <article class="crash-current-promo">
+                    <header>
+                        <h2>CURRENT PROMO <span>-</span> <b>All Time Deposit Promotion</b></h2>
+                        <button type="button">End Promo</button>
+                    </header>
+                    <div class="crash-progress-row">
+                        <p><span>Promo Rollover</span><strong>3.00/6.00</strong><b>0%</b></p>
+                        <div class="crash-progress-track"><i style="width: 0%"></i></div>
+                    </div>
+                    <div class="crash-progress-row">
+                        <p><span>Target</span><strong>166.11/241.11</strong><b>69%</b></p>
+                        <div class="crash-progress-track"><i style="width: 69%"></i></div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="crash-provider-panel" aria-label="Provider List">
+                <h1>Provider List</h1>
+                <div class="crash-provider-list">
+                    <article class="active">
+                        <img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe">
+                        <strong>Spribe</strong>
+                    </article>
+                    <article>
+                        <img src="assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games">
+                        <strong>Turbo Games</strong>
+                    </article>
+                    <article>
+                        <img src="assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix">
+                        <strong>Aviatrix</strong>
+                    </article>
+                </div>
+            </section>
+
+            <section class="crash-game-grid" aria-label="Crash games">
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=aviator"><div><img class="game-cover" src="assets/figma-export/neking/game-aviator.webp" alt="Aviator"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Aviator</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=dice"><div><img class="game-cover" src="assets/figma-export/neking/game-dice.webp" alt="Dice"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Dice</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=goal"><div><img class="game-cover" src="assets/figma-export/neking/game-goal.webp" alt="Goal"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Goal</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=hilo"><div><img class="game-cover" src="assets/figma-export/neking/game-hilo.webp" alt="Hi Lo"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Hi Lo</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=hotline"><div><img class="game-cover" src="assets/figma-export/neking/game-hotline.webp" alt="Hotline"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Hotline</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=keno"><div><img class="game-cover" src="assets/figma-export/neking/game-keno.webp" alt="Keno"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Keno</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=mines"><div><img class="game-cover" src="assets/figma-export/neking/game-mines.webp" alt="Mines"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Mines</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=mini-roulette"><div><img class="game-cover" src="assets/figma-export/neking/game-mini-roulette.webp" alt="Mini Roulette"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Mini Roulette</h2></a></article>
+                <article class="crash-game-card"><a class="crash-game-link" href="game-detail.html?game=plinko"><div><img class="game-cover" src="assets/figma-export/neking/game-plinko.webp" alt="Plinko"><i class="crash-play-overlay"><img src="assets/figma-export/neking/play-now.png" alt=""><b>Play Now</b></i><span><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><img src="assets/figma-export/neking/game-heart.png" alt="Favorite"></span></div><h2>Plinko</h2></a></article>
+            </section>
+        </section>
+
+        <button class="floating-chat" aria-label="Chat"><span></span></button>
+        <nav class="bottom-nav flex items-center" aria-label="Bottom navigation">
+            <a class="promotion-link" href="promotion.html"><img src="assets/figma-export/neking/bottom-receipt.png" alt="">Promotion</a>
+            <a class="affiliate-link" href="#"><img src="assets/figma-export/neking/bottom-crown.png" alt="">Affiliate</a>
+            <a class="active home-link" href="index.html"><img src="assets/figma-export/neking/bottom-x-icon.png" alt="">Home</a>
+            <a href="#"><img src="assets/figma-export/neking/bottom-deposit.webp" alt="">Deposit</a>
+            <a href="#"><img src="assets/figma-export/neking/bottom-chat.webp" alt="">Chat</a>
+        </nav>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

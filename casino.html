@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+    <main class="casino-page auth-logged-out">
+        <input class="nav-drawer-toggle" type="checkbox" id="desktopNavDrawer" aria-hidden="true">
+        <input class="nav-drawer-toggle" type="checkbox" id="mobileNavDrawer" aria-hidden="true">
+
+        <header class="desktop-header flex items-center">
+            <label class="desktop-menu inline-grid shrink-0 place-items-center" for="desktopNavDrawer" aria-label="Menu"><img src="assets/figma-export/neking/menu-icon.svg" alt=""></label>
+            <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
+            <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
+                <a class="nav-aviator-badge" href="index.html">Aviator</a>
+                <div class="nav-dropdown-wrap">
+                    <a class="nav-crash-link" href="crash.html">Crash</a>
+                    <div class="nav-dropdown">
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games"><span>Turbo Games</span></div></a>
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe"><span>Spribe</span></div></a>
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="#" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="assets/figma-export/neking/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+                <div class="nav-dropdown-wrap">
+                    <a class="nav-casino-link active" href="casino.html">Casino</a>
+                    <div class="nav-dropdown nav-casino-dropdown">
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-evolution.png" alt="Evolution"><span>Evolution</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-netent.png" alt="NetEnt"><span>NetEnt</span></div></a>
+                    </div>
+                </div>
+                <a href="#">Virtual</a><a href="#">E-Sports</a><a href="#">Bet Game</a>
+            </nav>
+            <div class="desktop-actions desktop-before-login flex items-center">
+                <a class="login-btn" href="login.html">Login</a>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+            <div class="desktop-actions desktop-after-login flex items-center">
+                <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+                <a class="messages" href="#" aria-label="Messages"><img src="assets/figma-export/neking/chat-bubble.svg" alt=""></a>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+        </header>
+
+        <label class="drawer-backdrop" for="desktopNavDrawer" aria-hidden="true"></label>
+        <aside class="side-drawer grid content-start" aria-label="Main menu">
+            <div class="drawer-logo inline-flex items-center"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+            <label class="drawer-close" for="desktopNavDrawer" aria-label="Close menu">&times;</label>
+            <nav class="drawer-nav grid">
+                <a class="drawer-home" href="index.html"><span></span>Home</a>
+                <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+                <a href="#"><span>*</span>Inbox</a>
+                <a href="promotion.html"><span>~</span>Promotions</a>
+                <a href="#"><span>#</span>Personal Center</a>
+                <a href="#"><span>+</span>Affiliate</a>
+                <a href="#"><span>V</span>VIP Club</a>
+                <a href="#"><span>B</span>Blog</a>
+                <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+            </nav>
+        </aside>
+
+        <header class="mobile-header flex items-center">
+            <label class="mobile-menu inline-grid shrink-0 place-items-center" for="mobileNavDrawer" aria-label="Menu"><img src="assets/figma-export/neking/menu-icon.svg" alt=""></label>
+            <img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+            <div class="mobile-before-login flex items-center">
+                <a class="login-btn" href="login.html">Login</a>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+            <div class="mobile-after-login flex items-center">
+                <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong></div>
+                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+            </div>
+        </header>
+
+        <label class="drawer-backdrop" for="mobileNavDrawer" aria-hidden="true"></label>
+        <aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
+            <div class="drawer-logo inline-flex items-center"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+            <label class="drawer-close" for="mobileNavDrawer" aria-label="Close menu">&times;</label>
+            <nav class="drawer-nav grid">
+                <a class="drawer-home" href="index.html"><span></span>Home</a>
+                <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+                <a href="#"><span>*</span>Inbox</a>
+                <a href="promotion.html"><span>~</span>Promotions</a>
+                <a href="#"><span>#</span>Personal Center</a>
+                <a href="#"><span>+</span>Affiliate</a>
+                <a href="#"><span>V</span>VIP Club</a>
+                <a href="#"><span>B</span>Blog</a>
+                <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+            </nav>
+        </aside>
+
+        <section class="casino-content">
+            <section class="casino-top-series" aria-label="Top 10 Series in NEKINGX Today">
+                <div class="casino-section-title casino-top-heading"><h1>Top 10 Series in NEKINGX Today</h1><a href="#">ALL <img src="assets/figma-export/neking/arrow-right.svg" alt=""></a></div>
+                <div class="casino-top-track">
+                    <article><b>1</b><img src="assets/figma-export/neking/casino/casino-top-1.png" alt="Top casino game 1"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                    <article><b>2</b><img src="assets/figma-export/neking/casino/casino-top-2.png" alt="Top casino game 2"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                    <article><b>3</b><img src="assets/figma-export/neking/casino/casino-top-3.png" alt="Top casino game 3"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                    <article><b>4</b><img src="assets/figma-export/neking/casino/casino-top-4.png" alt="Top casino game 4"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                    <article><b>5</b><img src="assets/figma-export/neking/casino/casino-top-5.png" alt="Top casino game 5"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                    <article><b>6</b><img src="assets/figma-export/neking/casino/casino-top-6.png" alt="Top casino game 6"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                    <article><b>7</b><img src="assets/figma-export/neking/casino/casino-top-7.png" alt="Top casino game 7"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                </div>
+            </section>
+
+            <section class="casino-filter-panel" aria-label="Casino filters">
+                <div class="casino-category-row">
+                    <button class="active" type="button"><i>▦</i><span>All</span></button>
+                    <button type="button"><i>★</i><span>Favourite</span></button>
+                    <button type="button"><i>▣</i><span>Slot</span></button>
+                    <button type="button"><i>●</i><span>Marble</span></button>
+                    <button type="button"><i>⚔</i><span>Arcade</span></button>
+                </div>
+                <label class="casino-search"><img src="assets/figma-export/neking/category/search.svg" alt=""><input type="search" placeholder="Search"></label>
+            </section>
+
+            <section class="casino-provider-panel" aria-label="Provider List">
+                <div class="casino-section-title"><h1>Provider List</h1></div>
+                <button class="casino-arrow" type="button" aria-label="Previous providers">&lsaquo;</button>
+                <div class="casino-provider-track">
+                    <article><img src="assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><strong>Aviatrix</strong></article>
+                    <article><img src="assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><strong>BetGames</strong></article>
+                    <article><img src="assets/figma-export/neking/casino/provider-evolution.png" alt="Evolution"><strong>Evolution</strong></article>
+                    <article><img src="assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><strong>Ezugi</strong></article>
+                    <article><img src="assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><strong>GoldenRace</strong></article>
+                    <article><img src="assets/figma-export/neking/casino/provider-netent.png" alt="NetEnt"><strong>NetEnt</strong></article>
+                </div>
+                <button class="casino-arrow next" type="button" aria-label="Next providers">&rsaquo;</button>
+            </section>
+
+            <section class="casino-game-panel" aria-label="Game List">
+                <div class="casino-section-title"><h1>Game List</h1><a href="#">ALL &rsaquo;</a></div>
+                <div class="casino-game-grid">
+                    <article><a href="game-detail.html?game=chicken-route"><img src="assets/figma-export/neking/casino/game-chicken-route.png" alt="Chicken Route"></a></article>
+                    <article><a href="game-detail.html?game=vortex-powerplay"><img src="assets/figma-export/neking/casino/game-vortex-powerplay.png" alt="Vortex Powerplay"></a></article>
+                    <article><a href="game-detail.html?game=vortex-2"><img src="assets/figma-export/neking/casino/game-vortex-2.png" alt="Vortex 2"></a></article>
+                    <article><a href="game-detail.html?game=vortex-safari"><img src="assets/figma-export/neking/casino/game-vortex-safari.png" alt="Vortex Safari"></a></article>
+                    <article><a href="game-detail.html?game=doggo-balloon"><img src="assets/figma-export/neking/casino/game-doggo-balloon.png" alt="Doggo Balloon"></a></article>
+                    <article><a href="game-detail.html?game=vortex-halloween"><img src="assets/figma-export/neking/casino/game-vortex-halloween.png" alt="Vortex Halloween"></a></article>
+                    <article><a href="game-detail.html?game=chicken-route-2"><img src="assets/figma-export/neking/casino/game-chicken-route-2.png" alt="Chicken Route"></a></article>
+                    <article><a href="game-detail.html?game=tap-pinata"><img src="assets/figma-export/neking/casino/game-tap-pinata.png" alt="Tap Pinata"></a></article>
+                    <article><a href="game-detail.html?game=mysteco"><img src="assets/figma-export/neking/casino/game-mysteco.png" alt="Mysteco"></a></article>
+                    <article><a href="game-detail.html?game=rings-of-olympus"><img src="assets/figma-export/neking/casino/game-rings-of-olympus.png" alt="Rings of Olympus"></a></article>
+                    <article><a href="game-detail.html?game=cricket-boom"><img src="assets/figma-export/neking/casino/game-cricket-boom.png" alt="Cricket Boom"></a></article>
+                    <article><a href="game-detail.html?game=catanza"><img src="assets/figma-export/neking/casino/game-catanza.png" alt="Catanza"></a></article>
+                    <article><a href="game-detail.html?game=jewel-clicker"><img src="assets/figma-export/neking/casino/game-jewel-clicker.png" alt="Jewel Clicker"></a></article>
+                    <article><a href="game-detail.html?game=pumpedx"><img src="assets/figma-export/neking/casino/game-pumpedx.png" alt="Pumped X"></a></article>
+                    <article><a href="game-detail.html?game=donny-king"><img src="assets/figma-export/neking/casino/game-donny-king.png" alt="Donny King"></a></article>
+                    <article><a href="game-detail.html?game=crystal-poker"><img src="assets/figma-export/neking/casino/game-crystal-poker.png" alt="Crystal Poker"></a></article>
+                    <article><a href="game-detail.html?game=book-of"><img src="assets/figma-export/neking/casino/game-book-of.png" alt="Book Of"></a></article>
+                    <article><a href="game-detail.html?game=itap-mines"><img src="assets/figma-export/neking/casino/game-itap-mines.png" alt="iTap Mines"></a></article>
+                    <article><a href="game-detail.html?game=vortex"><img src="assets/figma-export/neking/casino/game-vortex.png" alt="Vortex"></a></article>
+                    <article><a href="game-detail.html?game=aero"><img src="assets/figma-export/neking/casino/game-aero.png" alt="Aero"></a></article>
+                    <article><a href="game-detail.html?game=bubbles"><img src="assets/figma-export/neking/casino/game-bubbles.png" alt="Bubbles"></a></article>
+                    <article><a href="game-detail.html?game=jewel-clicker-2"><img src="assets/figma-export/neking/casino/game-jewel-clicker-2.png" alt="Jewel Clicker"></a></article>
+                    <article><a href="game-detail.html?game=fst-fielder"><img src="assets/figma-export/neking/casino/game-fst-fielder.png" alt="FST Fielder"></a></article>
+                    <article><a href="game-detail.html?game=wicket-blast"><img src="assets/figma-export/neking/casino/game-wicket-blast.png" alt="Wicket Blast"></a></article>
+                    <article><a href="game-detail.html?game=spin-strike"><img src="assets/figma-export/neking/casino/game-spin-strike.png" alt="Spin Strike"></a></article>
+                    <article><a href="game-detail.html?game=hi-lo"><img src="assets/figma-export/neking/casino/game-hi-lo.png" alt="Hi Lo"></a></article>
+                    <article><a href="game-detail.html?game=fruit-towers"><img src="assets/figma-export/neking/casino/game-fruit-towers.png" alt="Fruit Towers"></a></article>
+                </div>
+                <nav class="casino-pages" aria-label="Casino game pages"><a href="#">&lsaquo;</a><a href="#">1</a><a class="active" href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">&rsaquo;</a></nav>
+            </section>
+        </section>
+
+        <button class="floating-chat" aria-label="Chat"><span></span></button>
+        <nav class="bottom-nav flex items-center" aria-label="Bottom navigation">
+            <a class="promotion-link" href="promotion.html"><img src="assets/figma-export/neking/bottom-receipt.png" alt="">Promotion</a>
+            <a class="affiliate-link" href="#"><img src="assets/figma-export/neking/bottom-crown.png" alt="">Affiliate</a>
+            <a class="home-link" href="index.html"><img src="assets/figma-export/neking/bottom-x-icon.png" alt="">Home</a>
+            <a href="#"><img src="assets/figma-export/neking/bottom-deposit.webp" alt="">Deposit</a>
+            <a href="#"><img src="assets/figma-export/neking/bottom-chat.webp" alt="">Chat</a>
+        </nav>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

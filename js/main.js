@@ -1,6 +1,5 @@
 (() => {
     const authKey = "nekingx-auth-state";
-    const isLoggedIn = window.localStorage.getItem(authKey) === "logged-in";
     const authRoots = document.querySelectorAll(".auth-logged-in, .auth-logged-out");
 
     const setAuthState = (loggedIn) => {
@@ -10,6 +9,7 @@
         });
     };
 
+    const isLoggedIn = window.localStorage.getItem(authKey) === "logged-in";
     setAuthState(isLoggedIn);
 
     document.querySelectorAll(".login-form, .register-form").forEach((form) => {
@@ -25,8 +25,73 @@
             event.preventDefault();
             window.localStorage.removeItem(authKey);
             setAuthState(false);
+            document.querySelectorAll(".nav-drawer-toggle").forEach((toggle) => {
+                toggle.checked = false;
+            });
         });
     });
+
+    const gameTitle = document.querySelector("[data-game-title]");
+    if (gameTitle) {
+        const gameNames = {
+            aviator: "Aviator",
+            dice: "Dice",
+            goal: "Goal",
+            hilo: "Hi Lo",
+            hotline: "Hotline",
+            keno: "Keno",
+            mines: "Mines",
+            "mini-roulette": "Mini Roulette",
+            plinko: "Plinko",
+            "chicken-route": "Chicken Route",
+            "vortex-powerplay": "Vortex Powerplay",
+            "vortex-2": "Vortex 2",
+            "vortex-safari": "Vortex Safari",
+            "doggo-balloon": "Doggo Balloon",
+            "vortex-halloween": "Vortex Halloween",
+            "chicken-route-2": "Chicken Route",
+            "tap-pinata": "Tap Pinata",
+            mysteco: "Mysteco",
+            "rings-of-olympus": "Rings of Olympus",
+            "cricket-boom": "Cricket Boom",
+            catanza: "Catanza",
+            "jewel-clicker": "Jewel Clicker",
+            pumpedx: "Pumped X",
+            "donny-king": "Donny King",
+            "crystal-poker": "Crystal Poker",
+            "book-of": "Book Of",
+            "itap-mines": "iTap Mines",
+            vortex: "Vortex",
+            aero: "Aero",
+            bubbles: "Bubbles",
+            "jewel-clicker-2": "Jewel Clicker",
+            "fst-fielder": "FST Fielder",
+            "wicket-blast": "Wicket Blast",
+            "spin-strike": "Spin Strike",
+            "hi-lo": "Hi Lo",
+            "fruit-towers": "Fruit Towers"
+        };
+        const params = new URLSearchParams(window.location.search);
+        const game = params.get("game") || "aviator";
+        gameTitle.textContent = gameNames[game] || "Aviator";
+        document.title = `${gameTitle.textContent} - NEKINGX`;
+
+        const casinoGames = new Set([
+            "chicken-route", "vortex-powerplay", "vortex-2", "vortex-safari",
+            "doggo-balloon", "vortex-halloween", "chicken-route-2", "tap-pinata",
+            "mysteco", "rings-of-olympus", "cricket-boom", "catanza",
+            "jewel-clicker", "pumpedx", "donny-king", "crystal-poker",
+            "book-of", "itap-mines", "vortex", "aero", "bubbles",
+            "jewel-clicker-2", "fst-fielder", "wicket-blast", "spin-strike",
+            "hi-lo", "fruit-towers"
+        ]);
+        const crashNav = document.querySelector(".detail-crash-nav");
+        const casinoNav = document.querySelector(".detail-casino-nav");
+        if (casinoGames.has(game) && crashNav && casinoNav) {
+            crashNav.classList.remove("active");
+            casinoNav.classList.add("active");
+        }
+    }
 
     const sliders = document.querySelectorAll("[data-slider]");
 
