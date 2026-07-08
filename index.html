@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            const distPage = page === "index.html" ? "index-new.html" : page;
+            window.location.replace(`dist/${distPage}${window.location.search}${window.location.hash}`);
+        }
+    </script>
     <title>NEKINGX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,91 +24,12 @@
         };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="min-h-screen overflow-x-hidden">
     <main class="desktop-home auth-logged-out mx-auto overflow-hidden" aria-label="NEKINGX desktop home">
-        <input class="nav-drawer-toggle" type="checkbox" id="desktopNavDrawer" aria-hidden="true">
-        <header class="desktop-header flex items-center">
-            <label class="desktop-menu inline-grid shrink-0 place-items-center" for="desktopNavDrawer" aria-label="Menu"><img src="assets/figma-export/neking/menu-icon.svg" alt=""></label>
-            <a class="desktop-logo inline-flex shrink-0 items-center" href="#"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
-            <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
-                <a class="nav-aviator-badge" href="#">Aviator</a>
-                <div class="nav-dropdown-wrap">
-                    <a class="nav-crash-link nav-crash-active" href="crash.html">Crash</a>
-                    <div class="nav-dropdown">
-                        <a href="#" class="nav-dropdown-item">
-                            <div class="nav-dropdown-card">
-                                <img src="assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games">
-                                <span>Turbo Games</span>
-                            </div>
-                        </a>
-                        <a href="#" class="nav-dropdown-item">
-                            <div class="nav-dropdown-card">
-                                <img src="assets/figma-export/neking/provider-spribe.webp" alt="Spribe">
-                                <span>Spribe</span>
-                            </div>
-                        </a>
-                        <a href="#" class="nav-dropdown-item">
-                            <div class="nav-dropdown-card">
-                                <img src="assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix">
-                                <span>Aviatrix</span>
-                            </div>
-                        </a>
-                        <a href="#" class="nav-dropdown-item">
-                            <div class="nav-dropdown-card">
-                                <img src="assets/figma-export/neking/provider-golden-race.png" alt="GoldenRace">
-                                <span>GoldenRace</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="nav-dropdown-wrap">
-                    <a class="nav-casino-link" href="casino.html">Casino</a>
-                    <div class="nav-dropdown nav-casino-dropdown">
-                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
-                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
-                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
-                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card nav-casino-card"><img src="assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
-                    </div>
-                </div>
-                <a href="#">Virtual</a><a href="#">E-Sports</a><a href="#">Bet Game</a>
-            </nav>
-            <div class="desktop-actions desktop-before-login flex items-center">
-                <a class="login-btn" href="login.html">Login</a>
-                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
-            </div>
-            <div class="desktop-actions desktop-after-login flex items-center">
-                <div class="wallet flex items-center"><span>N</span><strong>50,145.00</strong><img src="assets/figma-export/neking/refresh.png" width="25" alt=""></div>
-                <a class="messages" href="#" aria-label="Messages"><img src="assets/figma-export/neking/chat-bubble.svg" alt=""></a>
-                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
-            </div>
-        </header>
-        <label class="drawer-backdrop" for="desktopNavDrawer" aria-hidden="true"></label>
-        <aside class="side-drawer grid content-start" aria-label="Main menu">
-            <div class="drawer-logo inline-flex items-center"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
-            <label class="drawer-close" for="desktopNavDrawer" aria-label="Close menu">&times;</label>
-            <nav class="drawer-nav grid">
-                <a class="active drawer-home" href="#"><span></span>Home</a>
-                <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
-                <a href="#"><span>●</span>Inbox</a>
-                <a href="promotion.html"><span>⌁</span>Promotions</a>
-                <a href="#"><span>▣</span>Personal Center</a>
-                <a href="#"><span>◆</span>Affiliate</a>
-                <a href="#"><span>♛</span>VIP Club</a>
-                <a href="#"><span>♕</span>Blog</a>
-                <a class="drawer-logout logged-in-only" href="#"><span>↪</span>LOG OUT</a>
-            </nav>
-            <section class="drawer-invite logged-in-only grid">
-                <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
-                <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
-                <div class="drawer-qr"><img src="assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-                <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>⧉</span></div>
-                <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>⧉</span></div>
-            </section>
-        </aside>
-
+        <div data-include="/components/header.html"></div>
         <section class="desktop-hero relative overflow-hidden">
             <div class="hero-slider" data-slider>
                 <div class="hero-slides">
@@ -140,78 +68,14 @@
                 <article><b>10</b><img src="assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
             </div>
         </section>
-
-        <footer class="desktop-footer grid">
-            <section class="footer-about grid">
-                <div class="footer-logo"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
-                <h3>About NekingX</h3>
-                <p>About NekingX<br>Aiming to create the best gaming experience platform, NekingX integrates Esports, Crash Games, and PVP virtual modes for the new era of gaming culture.</p>
-                <p>Responsible Gambling<br>NekingX supports responsible gambling and encourages players to play responsibly at all times.</p>
-            </section>
-            <section class="footer-legal grid">
-                <p>Copyright &copy; 2026.<br><strong>Nekingx.com</strong> is licensed and issued by EEking Innovation Ltd and is regulated under the laws of Nigeria.</p>
-                <p>License No: LSLGA/OP/OG/EEI200426<br>Issued By: Lagos State Lotteries and Gaming Authority</p>
-                <p><em>🔞</em> This platform is strictly for persons aged 18 years and above only.<br>Please play responsibly.</p>
-            </section>
-            <aside class="invite-card grid">
-                <h3>Join for Wealth <span>We Made Way!</span></h3>
-                <p>Share your QR code and invite friends to build your team and earn more together.</p>
-                <div class="invite-grid grid">
-                    <div class="qr"><img src="assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-                    <div class="invite-fields grid">
-                        <div><img src="assets/figma-export/neking/user-octagon.svg" alt=""><p><span>REFERRAL CODE</span><strong>UVM2JD</strong></p><button>COPY</button></div>
-                        <div><img src="assets/figma-export/neking/link-icon.svg" alt=""><p><span>INVITE LINK</span><strong>https://www.nekingx.com/account/login?ref...</strong></p><button>COPY</button></div>
-                    </div>
-                </div>
-                <h4>Share &amp; Invite</h4>
-                <div class="share-icons flex items-center justify-center">
-                    <a href="#"><img src="assets/figma-export/neking/telegram.svg" alt=""></a><a href="#"><img src="assets/figma-export/neking/twitter.svg" alt=""></a><a href="#"><img src="assets/figma-export/neking/instagram.svg" alt=""></a><a href="#"><img src="assets/figma-export/neking/facebook.svg" alt=""></a><a href="#"><img src="assets/figma-export/neking/qr-icon.svg" alt=""></a>
-                </div>
-            </aside>
-        </footer>
+        <div data-include="/components/footer.html" data-variant="desktop"></div>
 
     </main>
 
     <main class="mobile-home auth-logged-out flex flex-col overflow-hidden" aria-label="NEKINGX mobile home">
-        <input class="nav-drawer-toggle" type="checkbox" id="mobileNavDrawer" aria-hidden="true">
-        <header class="mobile-header flex items-center">
-            <label class="mobile-menu inline-grid shrink-0 place-items-center" for="mobileNavDrawer" aria-label="Menu"><img src="assets/figma-export/neking/menu-icon.svg" alt=""></label>
-            <img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
-            <div class="mobile-before-login flex items-center">
-                <a class="login-btn" href="login.html">Login</a>
-                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
-            </div>
-            <div class="mobile-after-login flex items-center">
-                <div class="wallet flex items-center"><span>N</span><strong>50,145.00</strong></div>
-                <a class="messages" href="#" aria-label="Messages"><img src="assets/figma-export/neking/chat-bubble.svg" alt=""></a>
-                <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
-            </div>
-        </header>
-        <label class="drawer-backdrop" for="mobileNavDrawer" aria-hidden="true"></label>
-        <aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
-            <div class="drawer-logo inline-flex items-center"><img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
-            <label class="drawer-close" for="mobileNavDrawer" aria-label="Close menu">&times;</label>
-            <nav class="drawer-nav grid">
-                <a class="active drawer-home" href="#"><span></span>Home</a>
-                <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
-                <a href="#"><span>●</span>Inbox</a>
-                <a href="promotion.html"><span>⌁</span>Promotions</a>
-                <a href="#"><span>▣</span>Personal Center</a>
-                <a href="#"><span>◆</span>Affiliate</a>
-                <a href="#"><span>♛</span>VIP Club</a>
-                <a href="#"><span>♕</span>Blog</a>
-                <a class="drawer-logout logged-in-only" href="#"><span>↪</span>LOG OUT</a>
-            </nav>
-            <section class="drawer-invite logged-in-only grid">
-                <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
-                <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
-                <div class="drawer-qr"><img src="assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-                <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>⧉</span></div>
-                <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>⧉</span></div>
-            </section>
-        </aside>
+        <div data-include="/components/header.html"></div>
         <nav class="mobile-top-nav flex items-center overflow-x-auto" aria-label="Mobile game navigation">
-            <a class="active" href="#">Aviator</a><a href="crash.html">Crash</a><a href="casino.html">Casino</a><a href="#">Virtual</a><a href="#">E-Sports</a>
+            <a class="active" href="#">Aviator</a><a href="crash.html">Crash</a><a href="casino.html">Casino</a><a href="virtual.html">Virtual</a><a href="e-sports.html">E-Sports</a><a href="bet-game.html">Bet Game</a>
         </nav>
         <section class="mobile-hero relative overflow-hidden">
             <div class="hero-slider" data-slider>
@@ -231,7 +95,7 @@
             <div class="announcement-icon">!</div>
             <h2>Announcement</h2>
             <span></span>
-            <p>Welcome to NEKINGX. Claim your exclusive welcome package, daily rewards, and latest game events now.</p>
+            <p>Claim rewards and latest events now.</p>
             <div class="live"><img src="assets/figma-export/neking/live-dot.svg" alt="">LIVE</div>
         </section>
         <section class="mobile-games overflow-hidden">
@@ -249,28 +113,9 @@
                 <article><b>10</b><img src="assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
             </div>
         </section>
-        <footer class="mobile-footer grid">
-            <img src="assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
-            <h3>Join for Wealth <span>We Made Way!</span></h3>
-            <p>Share your QR code and invite friends to build your team and earn more together.</p>
-            <div class="mobile-qr"><img src="assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-            <div class="mobile-links grid"><div><b>Company</b><a>About Us</a><a>Responsible Gambling</a><a>Careers</a></div><div><b>Legal</b><a>Terms &amp; Conditions</a><a>Privacy Policy</a><a>License</a></div></div>
-            <div class="mobile-referral"><b>Referral Code</b><strong>UVM2JD</strong><span>Share with friends and earn rewards</span></div>
-            <div class="mobile-referral"><b>Invite Link</b><strong>https://www.nekingx.com/account/login?referralcode...</strong><span>Copy your invitation link</span></div>
-            <h2>About NekingX</h2>
-            <p>About NekingX<br>Aiming to create the best gaming experience platform, NekingX integrates Esports, Crash Games, and PVP virtual modes for the new era of gaming culture.</p>
-            <p>Responsible Gambling<br>NekingX supports responsible gambling and encourages players to play responsibly at all times.</p>
-            <img class="mobile-social" src="assets/figma-export/neking/mobile-social-icons.svg" alt="">
-            <small>&copy; 2026 NEKINGX. All rights reserved. Licensed &amp; regulated.</small>
-        </footer>
+        <div data-include="/components/footer.html" data-variant="mobile"></div>
         <button class="floating-chat" aria-label="Chat"><span></span></button>
-        <nav class="bottom-nav flex items-center" aria-label="Bottom navigation">
-            <a class="promotion-link" href="promotion.html"><img src="assets/figma-export/neking/bottom-receipt.png" alt="">Promotion</a>
-            <a class="active affiliate-link" href="#"><img src="assets/figma-export/neking/bottom-crown.png" alt="">Affiliate</a>
-            <a class="home-link" href="#"><img src="assets/figma-export/neking/bottom-x-icon.png" alt="">Home</a>
-            <a href="#"><img src="assets/figma-export/neking/bottom-deposit.webp" alt="">Deposit</a>
-            <a href="#"><img src="assets/figma-export/neking/bottom-chat.webp" alt="">Chat</a>
-        </nav>
+        <div data-include="/components/mobile-bottom-nav.html"></div>
     </main>
 
     <!-- Welcome Promotion Popup Modal -->
@@ -326,7 +171,8 @@
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="/js/include.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

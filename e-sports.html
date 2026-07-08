@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>E-Sports - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+    <main class="crash-page e-sports-page auth-logged-out">
+        <div data-include="/components/header.html"></div>
+        <section class="crash-content e-sports-content">
+            <section class="e-sports-hero" aria-label="E-Sports promotion banners">
+                <div class="hero-slider" data-slider>
+                    <div class="hero-slides">
+                        <img class="active" src="assets/figma-export/neking/banner01.webp" alt="NEKINGX promotion banner 1">
+                        <img src="assets/figma-export/neking/banner02.webp" alt="NEKINGX promotion banner 2">
+                        <img src="assets/figma-export/neking/banner03.webp" alt="NEKINGX promotion banner 3">
+                    </div>
+                    <div class="hero-slider-dots" aria-label="Hero banner controls">
+                        <button class="active" type="button" aria-label="Show banner 1"></button>
+                        <button type="button" aria-label="Show banner 2"></button>
+                        <button type="button" aria-label="Show banner 3"></button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="crash-provider-panel" aria-label="Provider List">
+                <h1>Provider List</h1>
+                <div class="crash-provider-list">
+                    <article class="active">
+                        <img src="assets/figma-export/neking/e-sports/turbo.webp" alt="Turbo Sports">
+                        <strong>Turbo Sports</strong>
+                    </article>
+                    <article>
+                        <img src="assets/figma-export/neking/e-sports/oddin.webp" alt="Oddin">
+                        <strong>Oddin</strong>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <button class="floating-chat" aria-label="Chat"><span></span></button>
+        <div data-include="/components/mobile-bottom-nav.html"></div>
+    </main>
+    <script src="/js/include.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

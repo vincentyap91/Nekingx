@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            const distPage = page === "index.html" ? "index-new.html" : page;
+            window.location.replace(`dist/${distPage}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            corePlugins: {
+                preflight: false
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+    <main class="desktop-home auth-logged-out mx-auto overflow-hidden" aria-label="NEKINGX desktop home">
+        <input class="nav-drawer-toggle" type="checkbox" id="static1DesktopNavDrawer" aria-hidden="true">
+<input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
+
+<header class="desktop-header flex items-center">
+    <label class="desktop-menu inline-grid shrink-0 place-items-center" for="static1DesktopNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
+    <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
+        <a class="nav-aviator-badge" data-nav="home" href="index.html">Aviator</a>
+        <div class="nav-dropdown-wrap nav-crash-wrap">
+            <a class="nav-crash-link detail-crash-nav" data-nav="crash" data-text="Crash" href="crash.html">Crash</a>
+            <div class="nav-dropdown nav-crash-dropdown">
+                <div class="nav-provider-panel">
+    <div class="nav-featured-providers" aria-label="Crash providers">
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games">
+                <span>Turbo Games</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-spribe.webp" alt="Spribe">
+                <span>Spribe</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix">
+                <span>Aviatrix</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="nav-dropdown-wrap nav-casino-wrap">
+            <a class="nav-casino-link detail-casino-nav" data-nav="casino" data-text="Casino" href="casino.html">Casino</a>
+            <div class="nav-dropdown nav-casino-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="Casino providers">
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-virtual-link" data-nav="virtual" data-text="Virtual" href="virtual.html">Virtual</a>
+        <div class="nav-dropdown-wrap nav-esports-wrap">
+            <a class="nav-esports-link" data-nav="esports" data-text="E-Sports" href="e-sports.html">E-Sports</a>
+            <div class="nav-dropdown nav-esports-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="E-Sports providers">
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/turbo2.webp" alt="Turbo Sports"><span>Turbo Sports</span></div></a>
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/oddin2.webp" alt="Oddin"><span>Oddin</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-bet-game-link" data-nav="betgame" data-text="Bet Game" href="bet-game.html">Bet Game</a>
+    </nav>
+    <div class="desktop-actions desktop-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+    <div class="desktop-actions desktop-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>50,145.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+</header>
+
+<label class="drawer-backdrop" for="static1DesktopNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer grid content-start" aria-label="Main menu">
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <label class="drawer-close" for="static1DesktopNavDrawer" aria-label="Close menu">&times;</label>
+    <nav class="drawer-nav grid">
+        <a class="drawer-home" href="index.html"><span></span>Home</a>
+        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+        <a href="#"><span>*</span>Inbox</a>
+        <a href="promotion.html"><span>~</span>Promotions</a>
+        <a href="profile.html"><span>#</span>Personal Center</a>
+        <a href="#"><span>+</span>Affiliate</a>
+        <a href="#"><span>V</span>VIP Club</a>
+        <a href="#"><span>B</span>Blog</a>
+        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+    </nav>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+    </section>
+</aside>
+
+<header class="mobile-header flex items-center">
+    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+    <div class="mobile-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+    <div class="mobile-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>46,305.49</strong></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+</header>
+
+<label class="drawer-backdrop" for="static1MobileNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <label class="drawer-close" for="static1MobileNavDrawer" aria-label="Close menu">&times;</label>
+    <nav class="drawer-nav grid">
+        <a class="drawer-home" href="index.html"><span></span>Home</a>
+        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+        <a href="#"><span>*</span>Inbox</a>
+        <a href="promotion.html"><span>~</span>Promotions</a>
+        <a href="profile.html"><span>#</span>Personal Center</a>
+        <a href="#"><span>+</span>Affiliate</a>
+        <a href="#"><span>V</span>VIP Club</a>
+        <a href="#"><span>B</span>Blog</a>
+        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+    </nav>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+    </section>
+</aside>
+
+        <section class="desktop-hero relative overflow-hidden">
+            <div class="hero-slider" data-slider>
+                <div class="hero-slides">
+                    <img class="active" src="../assets/figma-export/neking/banner01.webp" alt="NEKINGX promotion banner 1">
+                    <img src="../assets/figma-export/neking/banner02.webp" alt="NEKINGX promotion banner 2">
+                    <img src="../assets/figma-export/neking/banner03.webp" alt="NEKINGX promotion banner 3">
+                </div>
+                <div class="hero-slider-dots" aria-label="Hero banner controls">
+                    <button class="active" type="button" aria-label="Show banner 1"></button>
+                    <button type="button" aria-label="Show banner 2"></button>
+                    <button type="button" aria-label="Show banner 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="announcement-bar flex items-center" aria-label="Announcement">
+            <div class="announcement-icon">!</div>
+            <h2>Announcement</h2>
+            <span></span>
+            <p>Welcome to NEKINGX. Claim your exclusive welcome package, daily rewards, and latest game events now.</p>
+            <div class="live"><img src="../assets/figma-export/neking/live-dot.svg" alt="">LIVE</div>
+        </section>
+
+        <section class="top-series desktop-series overflow-hidden">
+            <div class="series-heading flex items-center justify-between"><h2>Top 10 Series in NEKINGX Today</h2><a href="#">ALL <img src="../assets/figma-export/neking/arrow-right.svg" alt=""></a></div>
+            <div class="series-track flex overflow-x-auto">
+                <article><b>1</b><img src="../assets/figma-export/neking/live-game-aviator.webp" alt="Aviator"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>2</b><img src="../assets/figma-export/neking/live-game-aviatrix.webp" alt="Aviatrix"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>3</b><img src="../assets/figma-export/neking/live-game-crash.webp" alt="Crash"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>4</b><img src="../assets/figma-export/neking/live-game-chicken-route.webp" alt="Chicken Route"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>5</b><img src="../assets/figma-export/neking/live-game-aero.webp" alt="Aero"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>6</b><img src="../assets/figma-export/neking/live-game-olympus.webp" alt="Gates of Olympus"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>7</b><img src="../assets/figma-export/neking/live-game-zeus.webp" alt="Zeus vs Hades"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>8</b><img src="../assets/figma-export/neking/live-game-oddin.webp" alt="Oddin"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>9</b><img src="../assets/figma-export/neking/live-game-ezugi.webp" alt="Ezugi"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>10</b><img src="../assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+            </div>
+        </section>
+        <footer class="desktop-footer">
+        <section class="footer-about">
+            <div class="footer-logo"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+            <h3>About NekingX</h3>
+            <p>About NekingX<br>Aiming to create the best gaming experience platform, NekingX integrates Esports, Crash Games, and PVP virtual modes for the new era of gaming culture.</p>
+            <p>Responsible Gambling<br>NekingX supports responsible gambling and encourages players to play responsibly at all times.</p>
+        </section>
+        <section class="footer-legal">
+            <p>Copyright &copy; 2026.<br><strong>Nekingx.com</strong> is licensed and issued by EEking Innovation Ltd and is regulated under the laws of Nigeria.</p>
+            <p>License No: LSLGA/OP/OG/EEI200426<br>Issued By: Lagos State Lotteries and Gaming Authority</p>
+            <p><em>18+</em> This platform is strictly for persons aged 18 years and above only.<br>Please play responsibly.</p>
+        </section>
+        <aside class="invite-card">
+            <h3>Join for Wealth <span>We Made Way!</span></h3>
+            <p>Share your QR code and invite friends to build your team and earn more together.</p>
+            <div class="invite-grid">
+                <div class="qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+                <div class="invite-fields">
+                    <div><img src="../assets/figma-export/neking/user-octagon.svg" alt=""><p><span>REFERRAL CODE</span><strong>UVM2JD</strong></p><button>COPY</button></div>
+                    <div><img src="../assets/figma-export/neking/link-icon.svg" alt=""><p><span>INVITE LINK</span><strong>https://www.nekingx.com/account/login?ref...</strong></p><button>COPY</button></div>
+                </div>
+            </div>
+            <h4>Share &amp; Invite</h4>
+            <div class="share-icons flex items-center justify-center">
+                <a href="#"><img src="../assets/figma-export/neking/telegram.svg" alt=""></a><a href="#"><img src="../assets/figma-export/neking/twitter.svg" alt=""></a><a href="#"><img src="../assets/figma-export/neking/instagram.svg" alt=""></a><a href="#"><img src="../assets/figma-export/neking/facebook.svg" alt=""></a><a href="#"><img src="../assets/figma-export/neking/qr-icon.svg" alt=""></a>
+            </div>
+        </aside>
+    </footer>
+
+    </main>
+
+    <main class="mobile-home auth-logged-out flex flex-col overflow-hidden" aria-label="NEKINGX mobile home">
+        <input class="nav-drawer-toggle" type="checkbox" id="static3DesktopNavDrawer" aria-hidden="true">
+<input class="nav-drawer-toggle" type="checkbox" id="static3MobileNavDrawer" aria-hidden="true">
+
+<header class="desktop-header flex items-center">
+    <label class="desktop-menu inline-grid shrink-0 place-items-center" for="static3DesktopNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
+    <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
+        <a class="nav-aviator-badge" data-nav="home" href="index.html">Aviator</a>
+        <div class="nav-dropdown-wrap nav-crash-wrap">
+            <a class="nav-crash-link detail-crash-nav" data-nav="crash" data-text="Crash" href="crash.html">Crash</a>
+            <div class="nav-dropdown nav-crash-dropdown">
+                <div class="nav-provider-panel">
+    <div class="nav-featured-providers" aria-label="Crash providers">
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games">
+                <span>Turbo Games</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-spribe.webp" alt="Spribe">
+                <span>Spribe</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix">
+                <span>Aviatrix</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="nav-dropdown-wrap nav-casino-wrap">
+            <a class="nav-casino-link detail-casino-nav" data-nav="casino" data-text="Casino" href="casino.html">Casino</a>
+            <div class="nav-dropdown nav-casino-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="Casino providers">
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-virtual-link" data-nav="virtual" data-text="Virtual" href="virtual.html">Virtual</a>
+        <div class="nav-dropdown-wrap nav-esports-wrap">
+            <a class="nav-esports-link" data-nav="esports" data-text="E-Sports" href="e-sports.html">E-Sports</a>
+            <div class="nav-dropdown nav-esports-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="E-Sports providers">
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/turbo2.webp" alt="Turbo Sports"><span>Turbo Sports</span></div></a>
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/oddin2.webp" alt="Oddin"><span>Oddin</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-bet-game-link" data-nav="betgame" data-text="Bet Game" href="bet-game.html">Bet Game</a>
+    </nav>
+    <div class="desktop-actions desktop-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+    <div class="desktop-actions desktop-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>50,145.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+</header>
+
+<label class="drawer-backdrop" for="static3DesktopNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer grid content-start" aria-label="Main menu">
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <label class="drawer-close" for="static3DesktopNavDrawer" aria-label="Close menu">&times;</label>
+    <nav class="drawer-nav grid">
+        <a class="drawer-home" href="index.html"><span></span>Home</a>
+        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+        <a href="#"><span>*</span>Inbox</a>
+        <a href="promotion.html"><span>~</span>Promotions</a>
+        <a href="profile.html"><span>#</span>Personal Center</a>
+        <a href="#"><span>+</span>Affiliate</a>
+        <a href="#"><span>V</span>VIP Club</a>
+        <a href="#"><span>B</span>Blog</a>
+        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+    </nav>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+    </section>
+</aside>
+
+<header class="mobile-header flex items-center">
+    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static3MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+    <div class="mobile-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+    <div class="mobile-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>46,305.49</strong></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+</header>
+
+<label class="drawer-backdrop" for="static3MobileNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <label class="drawer-close" for="static3MobileNavDrawer" aria-label="Close menu">&times;</label>
+    <nav class="drawer-nav grid">
+        <a class="drawer-home" href="index.html"><span></span>Home</a>
+        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
+        <a href="#"><span>*</span>Inbox</a>
+        <a href="promotion.html"><span>~</span>Promotions</a>
+        <a href="profile.html"><span>#</span>Personal Center</a>
+        <a href="#"><span>+</span>Affiliate</a>
+        <a href="#"><span>V</span>VIP Club</a>
+        <a href="#"><span>B</span>Blog</a>
+        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+    </nav>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+    </section>
+</aside>
+
+        <nav class="mobile-top-nav flex items-center overflow-x-auto" aria-label="Mobile game navigation">
+            <a class="active" href="#">Aviator</a><a href="crash.html">Crash</a><a href="casino.html">Casino</a><a href="virtual.html">Virtual</a><a href="e-sports.html">E-Sports</a><a href="bet-game.html">Bet Game</a>
+        </nav>
+        <section class="mobile-hero relative overflow-hidden">
+            <div class="hero-slider" data-slider>
+                <div class="hero-slides">
+                    <img class="active" src="../assets/figma-export/neking/banner01.webp" alt="NEKINGX promotion banner 1">
+                    <img src="../assets/figma-export/neking/banner02.webp" alt="NEKINGX promotion banner 2">
+                    <img src="../assets/figma-export/neking/banner03.webp" alt="NEKINGX promotion banner 3">
+                </div>
+                <div class="hero-slider-dots" aria-label="Hero banner controls">
+                    <button class="active" type="button" aria-label="Show banner 1"></button>
+                    <button type="button" aria-label="Show banner 2"></button>
+                    <button type="button" aria-label="Show banner 3"></button>
+                </div>
+            </div>
+        </section>
+        <section class="mobile-announcement flex items-center" aria-label="Announcement">
+            <div class="announcement-icon">!</div>
+            <h2>Announcement</h2>
+            <span></span>
+            <p>Claim rewards and latest events now.</p>
+            <div class="live"><img src="../assets/figma-export/neking/live-dot.svg" alt="">LIVE</div>
+        </section>
+        <section class="mobile-games overflow-hidden">
+            <div class="mobile-section-title flex items-center justify-between"><h2>Top 10 Series in NEKINGX Today</h2><a href="#">ALL <img src="../assets/figma-export/neking/arrow-right.svg" alt=""></a></div>
+            <div class="mobile-game-row flex overflow-x-auto">
+                <article><b>1</b><img src="../assets/figma-export/neking/live-game-aviator.webp" alt="Aviator"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>2</b><img src="../assets/figma-export/neking/live-game-aviatrix.webp" alt="Aviatrix"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>3</b><img src="../assets/figma-export/neking/live-game-crash.webp" alt="Crash"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>4</b><img src="../assets/figma-export/neking/live-game-chicken-route.webp" alt="Chicken Route"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>5</b><img src="../assets/figma-export/neking/live-game-aero.webp" alt="Aero"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>6</b><img src="../assets/figma-export/neking/live-game-olympus.webp" alt="Gates of Olympus"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>7</b><img src="../assets/figma-export/neking/live-game-zeus.webp" alt="Zeus vs Hades"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>8</b><img src="../assets/figma-export/neking/live-game-oddin.webp" alt="Oddin"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>9</b><img src="../assets/figma-export/neking/live-game-ezugi.webp" alt="Ezugi"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><b>10</b><img src="../assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="../assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+            </div>
+        </section>
+        <footer class="mobile-footer">
+        <img class="mobile-footer-logo" src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+
+        <section class="mobile-footer-about">
+            <h2>About NEKINGX</h2>
+            <p>About NekingX<br>Aiming to create the best gaming experience platform, NekingX integrates Esports, Crash Games, and PVP virtual modes for the new era of gaming culture.</p>
+            <p>Responsible Gambling<br>NekingX supports responsible gambling and encourages players to play responsibly at all times.</p>
+        </section>
+
+        <section class="mobile-footer-legal">
+            <p>Copyright &copy; 2026.<br><strong>Nekingx.com</strong> is licensed and issued by EEking Innovation Ltd and is regulated under the laws of Nigeria.</p>
+            <p>License No: LSLGA/OP/OG/EEI200426<br>Issued By: Lagos State Lotteries and Gaming Authority</p>
+            <p><em>18+</em> This platform is strictly for persons aged 18 years and above only.<br>Please play responsibly.</p>
+        </section>
+
+        <section class="mobile-footer-invite">
+            <h3>Join for Wealth <span>We Made Way !</span></h3>
+            <p>Share your QR code and invite friends to build your team and earn more together.</p>
+            <div class="mobile-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+            <div class="mobile-code-row">
+                <div class="mobile-code-card">
+                    <div class="mobile-code-head">
+                        <span>INVITATION CODE</span>
+                        <button type="button" aria-label="Copy invitation code"><img src="../assets/figma-export/neking/link-icon.svg" alt=""></button>
+                    </div>
+                    <strong>191175</strong>
+                </div>
+                <div class="mobile-code-card">
+                    <div class="mobile-code-head">
+                        <span>MEMBER ID</span>
+                        <button type="button" aria-label="Copy member ID"><img src="../assets/figma-export/neking/link-icon.svg" alt=""></button>
+                    </div>
+                    <strong>01****8677</strong>
+                </div>
+            </div>
+        </section>
+    </footer>
+        <button class="floating-chat" aria-label="Chat"><span></span></button>
+        <nav class="bottom-nav flex items-center" aria-label="Bottom navigation">
+    <a class="promotion-link" href="promotion.html"><img src="../assets/figma-export/neking/bottom-receipt.png" alt="">Promotion</a>
+    <a class="affiliate-link" href="#"><img src="../assets/figma-export/neking/bottom-crown.png" alt="">Affiliate</a>
+    <a class="home-link" href="index.html"><img src="../assets/figma-export/neking/bottom-x-icon.png" alt="">Home</a>
+    <a href="#"><img src="../assets/figma-export/neking/bottom-deposit.webp" alt="">Deposit</a>
+    <a href="#"><img src="../assets/figma-export/neking/bottom-chat.webp" alt="">Chat</a>
+</nav>
+
+    </main>
+
+    <!-- Welcome Promotion Popup Modal -->
+    <div id="welcomePopup" class="fixed inset-0 z-[200] hidden items-center justify-center bg-black/60 p-4 transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <!-- Main solid black popup card container -->
+        <div id="welcomePopupCard" class="relative w-full max-w-[500px] bg-black rounded-[24px] p-6 flex flex-col gap-4 transform scale-95 opacity-0 transition-all duration-300 shadow-2xl">
+            <!-- Header Row with Close Button -->
+            <div class="flex justify-end w-full">
+                <!-- Close Button (Square, bright green, top right) -->
+                <button id="closeWelcomePopup" class="w-[34px] h-[34px] rounded-[6px] bg-[#05ef43] hover:bg-[#00f243] flex items-center justify-center text-black font-extrabold shadow-md hover:scale-105 active:scale-95 transition-transform border-0 cursor-pointer" aria-label="Close popup">
+                    <span class="text-xl leading-none font-bold">&times;</span>
+                </button>
+            </div>
+
+            <!-- Inner Green-Bordered Container -->
+            <div class="w-full bg-[#030904] border border-[#1e3c23] rounded-[16px] p-[18px] flex flex-col gap-4">
+                <!-- Banner Image with rounded corners -->
+                <div class="relative w-full aspect-[438/218] rounded-[10px] overflow-hidden">
+                    <img src="../assets/figma-export/neking/promotion-welcome-package.webp" alt="Welcome Package Banner" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Details Card -->
+                <div class="bg-[#040c06] border border-[#1f3c22] rounded-[12px] p-[15px] flex flex-col gap-3">
+                    <div class="text-xs font-semibold text-white/70 uppercase tracking-wider" id="popupTitle">Welcome Package Summary</div>
+                    <div class="text-3xl font-black text-[#00f243] tracking-tight">₦10,000 NGN</div>
+                    <div>
+                        <span class="inline-block border border-[#008f26] rounded-full px-3.5 py-1 text-xs font-bold text-[#00f243]">
+                            Free Sign-up Credit
+                        </span>
+                    </div>
+                    <div class="text-xs text-[#a8c8a8] font-semibold leading-relaxed">
+                        Applicable Games: All except Golden Race & Jackpot Games.
+                    </div>
+                    <div class="bg-[#131405] border border-[#5e6618] rounded-lg p-3 text-xs font-semibold text-[#e5ff0d] leading-normal flex items-start gap-2">
+                        <span class="text-sm shrink-0">🏆</span>
+                        <span>Reach VIP 3 and 6 friend — Claim 3,000 NGN without deposit!!!</span>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <a id="popupBetNowBtn" href="promotion.html" class="flex h-[50px] items-center justify-center rounded-full text-[#0a1a00] font-bold text-sm uppercase tracking-wider shadow-lg hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-150 cursor-pointer" style="background: linear-gradient(104deg, #00f243 1.1%, #e5ff0d 98.9%)">
+                    Bet Now
+                </a>
+            </div>
+
+            <!-- Bottom Checkbox Row (Centered on solid black card) -->
+            <div class="flex items-center justify-center gap-2.5 mt-1">
+                <input type="checkbox" id="dontShowPopupToday" class="w-4 h-4 rounded border-2 border-white bg-transparent text-black focus:ring-0 focus:ring-offset-0 cursor-pointer accent-[#00f243]">
+                <label for="dontShowPopupToday" class="text-sm font-semibold text-white select-none cursor-pointer hover:text-white/80 transition-colors">
+                    Please do not show this message today again.
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

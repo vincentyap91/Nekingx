@@ -10,7 +10,7 @@
             window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
         }
     </script>
-    <title>Game Detail - NEKINGX</title>
+    <title>Bet Game - NEKINGX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,20 +23,13 @@
 </head>
 
 <body class="min-h-screen overflow-x-hidden">
-    <main class="game-detail-page auth-logged-out">
+    <main class="crash-page iframe-preview-page bet-game-page auth-logged-out">
         <div data-include="/components/header.html"></div>
-        <section class="game-detail-content">
-            <div class="game-detail-bar">
-                <div class="game-detail-title">
-                    <a href="crash.html" aria-label="Back to crash games">&lsaquo;</a>
-                    <h1 data-game-title>Aviator</h1>
-                </div>
-                <a class="game-detail-launch" href="https://www.nekingx.com/" target="_blank" rel="noopener">Launch Platform</a>
-            </div>
-            <figure class="game-platform-preview">
-                <img src="assets/figma-export/neking/game-detail-preview.png" alt="Platform game detail preview">
-            </figure>
+        <section class="iframe-preview-content" aria-label="Bet Game preview">
+            <img src="assets/figma-export/neking/bet-game.jpg" alt="Bet Game preview">
         </section>
+        <button class="floating-chat" aria-label="Chat"><span></span></button>
+        <div data-include="/components/mobile-bottom-nav.html"></div>
     </main>
     <script src="/js/include.js"></script>
     <script src="/js/main.js"></script>

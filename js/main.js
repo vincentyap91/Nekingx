@@ -10,7 +10,7 @@
     };
 
     const isLoggedIn = window.localStorage.getItem(authKey) === "logged-in";
-    setAuthState(isLoggedIn);
+    setAuthState(document.querySelector(".profile-page") ? true : isLoggedIn);
 
     document.querySelectorAll(".login-form, .register-form").forEach((form) => {
         form.addEventListener("submit", (event) => {
@@ -189,6 +189,92 @@
         welcomePopup.addEventListener("click", (event) => {
             if (event.target === welcomePopup) {
                 hidePopup();
+            }
+        });
+    }
+
+    // ---- Profile / Personal Center: modals, sheets, avatar picker ----
+    const profilePage = document.querySelector(".profile-page");
+    if (profilePage) {
+        const openDialog = (name) => {
+            ["modal-" + name, "sheet-" + name].forEach((id) => {
+                const dialog = document.getElementById(id);
+                if (dialog) dialog.classList.add("is-open");
+            });
+            document.body.style.overflow = "hidden";
+        };
+
+        const closeDialog = (dialog) => {
+            if (dialog) dialog.classList.remove("is-open");
+            if (!document.querySelector(".profile-modal.is-open, .profile-sheet.is-open")) {
+                document.body.style.overflow = "";
+            }
+        };
+
+        document.querySelectorAll("[data-profile-open]").forEach((trigger) => {
+            trigger.addEventListener("click", (event) => {
+                event.preventDefault();
+                openDialog(trigger.getAttribute("data-profile-open"));
+            });
+        });
+
+        document.querySelectorAll("[data-profile-close]").forEach((btn) => {
+            btn.addEventListener("click", (event) => {
+                event.preventDefault();
+                closeDialog(btn.closest("[data-profile-dialog]"));
+            });
+        });
+
+        document.querySelectorAll(".profile-modal").forEach((modal) => {
+            modal.addEventListener("click", (event) => {
+                if (event.target === modal) closeDialog(modal);
+            });
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                document.querySelectorAll(".profile-modal.is-open, .profile-sheet.is-open").forEach(closeDialog);
+            }
+        });
+
+        // Avatar picker (inline swap within each profile root)
+        document.querySelectorAll("[data-profile-root]").forEach((root) => {
+            const target = root.querySelector("[data-avatar-target]");
+            const preview = root.querySelector("[data-avatar-preview]");
+            const grid = root.querySelector("[data-avatar-grid]");
+            let pendingSrc = target ? target.getAttribute("src") : null;
+
+            root.querySelectorAll("[data-avatar-edit]").forEach((btn) => {
+                btn.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    root.classList.add("avatar-editing");
+                });
+            });
+
+            if (grid) {
+                grid.querySelectorAll(".avatar-option").forEach((option) => {
+                    option.addEventListener("click", () => {
+                        grid.querySelectorAll(".avatar-option").forEach((o) => o.classList.remove("is-selected"));
+                        option.classList.add("is-selected");
+                        pendingSrc = option.getAttribute("data-avatar-src");
+                        if (preview) preview.setAttribute("src", pendingSrc);
+                    });
+                });
+            }
+
+            const cancelBtn = root.querySelector("[data-avatar-cancel]");
+            if (cancelBtn) {
+                cancelBtn.addEventListener("click", () => {
+                    root.classList.remove("avatar-editing");
+                });
+            }
+
+            const saveBtn = root.querySelector("[data-avatar-save]");
+            if (saveBtn) {
+                saveBtn.addEventListener("click", () => {
+                    if (target && pendingSrc) target.setAttribute("src", pendingSrc);
+                    root.classList.remove("avatar-editing");
+                });
             }
         });
     }
