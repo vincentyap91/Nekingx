@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>Deposit - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+
+    <!-- ============ DESKTOP ============ -->
+    <main class="dw-page dw-desktop auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX deposit" data-dw-mode="deposit">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+        <div data-include="/components/header.html"></div>
+
+        <section class="dw-shell">
+            <div class="balance-card">
+                <div class="balance-user">
+                    <div class="balance-avatar"><img src="/assets/figma-export/neking/profile-user-avatar.png" alt="User avatar"></div>
+                    <div class="balance-vip"><img class="vip-badge" src="/assets/figma-export/neking/profile-vip-badge.svg" alt="" width="32" height="32"><span>VIP 3</span></div>
+                    <p class="balance-name"><span>Name</span> TestAx88</p>
+                </div>
+                <div class="balance-main">
+                    <p class="balance-wallet-tag">Main Wallet</p>
+                    <div class="balance-figures">
+                        <div>
+                            <h2>Balance</h2>
+                            <p><em>USDT</em> 100.00 <button class="icon-btn" aria-label="Refresh balance"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8M20 4v4h-4M20 12a8 8 0 0 1-13.7 5.7L4 16M4 20v-4h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p>
+                        </div>
+                        <div>
+                            <h3>Bonus</h3>
+                            <p><em>USDT</em> 100.00 <button class="icon-btn" aria-label="Refresh bonus"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0 1 13.7-5.7L20 8M20 4v4h-4M20 12a8 8 0 0 1-13.7 5.7L4 16M4 20v-4h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button></p>
+                        </div>
+                    </div>
+                    <div class="balance-actions">
+                        <a class="btn-deposit" href="/deposit.html">DEPOSIT</a>
+                        <a class="btn-withdraw" href="/withdrawal.html">WITHDRAW</a>
+                    </div>
+                </div>
+                <img class="balance-coins" src="/assets/figma-export/neking/profile-coins.png" alt="" width="160" height="160">
+            </div>
+
+            <div class="dw-layout">
+                <aside class="dw-rail">
+                    <div class="dw-rail-head">
+                        <a class="dw-back" href="/profile.html" aria-label="Back"><img src="/assets/figma-export/neking/icon-back-arrow.svg" alt=""></a>
+                        <h1>Deposit</h1>
+                    </div>
+                    <div class="dw-rail-tabs" role="tablist" aria-label="Deposit method">
+                        <button class="dw-rail-tab" type="button" data-dw-tab="crypto" aria-selected="false">Crypto</button>
+                        <button class="dw-rail-tab is-active" type="button" data-dw-tab="legal" aria-selected="true">Legal</button>
+                    </div>
+                </aside>
+
+                <div class="dw-panel">
+                    <div class="dw-step is-active" data-dw-step="1">
+                        <p class="dw-prompt">Select a reload option from the available options.</p>
+
+                        <div class="dw-accordion is-open" data-dw-accordion>
+                            <button class="dw-accordion-head" type="button" data-dw-accordion-toggle>
+                                <img class="dw-acc-ico" src="/assets/figma-export/neking/dw-icon-bank.svg" alt="">
+                                <span class="dw-acc-copy"><strong>Bank</strong><em>Normal Bank Transfer</em></span>
+                                <img class="dw-acc-chevron" src="/assets/figma-export/neking/icon-chevron-up.svg" alt="">
+                            </button>
+                            <div class="dw-accordion-body">
+                                <div class="dw-bank-grid">
+                                    <button class="dw-bank-card is-selected" type="button" data-dw-bank="ABA BANK">
+                                        <img src="/assets/figma-export/neking/dw-bank-aba.png" alt="">
+                                        <strong>ABA BANK</strong>
+                                        <span>3 – 100000</span>
+                                    </button>
+                                    <button class="dw-bank-card" type="button" data-dw-bank="WING BANK">
+                                        <img src="/assets/figma-export/neking/dw-bank-wing.png" alt="">
+                                        <strong>WING BANK</strong>
+                                        <span>3 – 100000</span>
+                                    </button>
+                                    <button class="dw-bank-card" type="button" data-dw-bank="ACLEDA BANK">
+                                        <img src="/assets/figma-export/neking/dw-bank-acleda.png" alt="">
+                                        <strong>ACLEDA BANK</strong>
+                                        <span>3 – 100000</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dw-accordion" data-dw-accordion>
+                            <button class="dw-accordion-head" type="button" data-dw-accordion-toggle>
+                                <img class="dw-acc-ico" src="/assets/figma-export/neking/dw-icon-ewallet.svg" alt="">
+                                <span class="dw-acc-copy"><strong>E-Wallet</strong><em>E-Wallet (Manual)</em></span>
+                                <img class="dw-acc-chevron" src="/assets/figma-export/neking/icon-chevron-down.svg" alt="">
+                            </button>
+                            <div class="dw-accordion-body">
+                                <p class="dw-empty">No e-wallet options available.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dw-step" data-dw-step="2" hidden>
+                        <form class="dw-form" data-dw-form>
+                            <label class="dw-field">
+                                <span class="dw-label">Deposit Bank</span>
+                                <span class="dw-select-wrap">
+                                    <img class="dw-field-ico" src="/assets/figma-export/neking/dw-bank-select-icon.svg" alt="">
+                                    <select data-dw-bank-select>
+                                        <option value="ABA BANK" selected>ABA BANK</option>
+                                        <option value="WING BANK">WING BANK</option>
+                                        <option value="ACLEDA BANK">ACLEDA BANK</option>
+                                    </select>
+                                    <img class="dw-select-chevron" src="/assets/figma-export/neking/icon-dropdown-arrow.svg" alt="">
+                                </span>
+                            </label>
+                            <label class="dw-field">
+                                <span class="dw-label">Account Name</span>
+                                <input type="text" value="LIM KOK WENG" autocomplete="off">
+                            </label>
+                            <label class="dw-field">
+                                <span class="dw-label">Account Number</span>
+                                <input type="text" value="013374386" autocomplete="off">
+                            </label>
+                            <label class="dw-field">
+                                <span class="dw-label">Amount</span>
+                                <input type="number" data-dw-amount value="10" min="3" max="100000" step="0.01">
+                            </label>
+                            <div class="dw-quick-row">
+                                <button type="button" data-dw-quick="min">Min</button>
+                                <button type="button" data-dw-quick="50">50%</button>
+                                <button type="button" data-dw-quick="75">75%</button>
+                                <button type="button" data-dw-quick="max">Max</button>
+                            </div>
+                            <p class="dw-balance-line">Balance <strong>RM</strong></p>
+                            <div class="dw-summary">
+                                <div><span>Apply Amount</span><strong>RM 10.00</strong></div>
+                                <div><span>Fee</span><strong>RM 2.00</strong></div>
+                                <div class="dw-total"><span>Total</span><strong>RM 8.00</strong></div>
+                            </div>
+                            <label class="dw-field">
+                                <span class="dw-label">Reference / Transaction ID <em>(Optional)</em></span>
+                                <input type="text" placeholder="Enter reference" autocomplete="off">
+                            </label>
+                            <label class="dw-upload">
+                                <input type="file" accept="image/*,.pdf" hidden>
+                                <img src="/assets/figma-export/neking/dw-upload.svg" alt="">
+                                <strong>Upload a screenshot or PDF of your transfer receipt</strong>
+                                <span>Tap to upload file</span>
+                            </label>
+                            <button class="dw-submit" type="submit">Deposit</button>
+                            <div class="dw-warning">
+                                <img src="/assets/figma-export/neking/dw-info.svg" alt="">
+                                <p>For security reasons, large or suspicious withdrawals may take 1-6 hours to process. Please wait patiently.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="dw-modal" data-dw-modal hidden>
+            <div class="dw-modal-backdrop" data-dw-modal-close></div>
+            <div class="dw-modal-card" role="dialog" aria-modal="true" aria-labelledby="dw-modal-title">
+                <img class="dw-modal-check" src="/assets/figma-export/neking/dw-check.png" alt="">
+                <p id="dw-modal-title">We are verifying your payment. Once we received the money, your account balance will be updated</p>
+                <button class="dw-modal-ok" type="button" data-dw-modal-close>OK</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ MOBILE ============ -->
+    <main class="dw-page dw-mobile auth-logged-in" aria-label="NEKINGX deposit mobile" data-dw-mode="deposit">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+
+        <header class="profile-m-header">
+            <a class="pm-back" href="/profile.html" aria-label="Back"><img src="/assets/figma-export/neking/icon-back-arrow.svg" alt=""></a>
+            <h1>Deposit</h1>
+            <a class="pm-help" href="#" aria-label="Support"><img src="/assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+        </header>
+
+        <div class="dw-m-body">
+            <div class="dw-m-tabs" role="tablist" aria-label="Deposit method">
+                <button class="dw-m-tab" type="button" data-dw-tab="crypto" aria-selected="false">Crypto</button>
+                <button class="dw-m-tab is-active" type="button" data-dw-tab="legal" aria-selected="true">Legal</button>
+            </div>
+
+            <div class="dw-panel dw-panel-m">
+                <div class="dw-step is-active" data-dw-step="1">
+                    <p class="dw-prompt">Select a reload option from the available options.</p>
+
+                    <div class="dw-accordion is-open" data-dw-accordion>
+                        <button class="dw-accordion-head" type="button" data-dw-accordion-toggle>
+                            <img class="dw-acc-ico" src="/assets/figma-export/neking/dw-icon-bank.svg" alt="">
+                            <span class="dw-acc-copy"><strong>Bank</strong><em>Normal Bank Transfer</em></span>
+                            <img class="dw-acc-chevron" src="/assets/figma-export/neking/icon-chevron-up.svg" alt="">
+                        </button>
+                        <div class="dw-accordion-body">
+                            <div class="dw-bank-grid">
+                                <button class="dw-bank-card is-selected" type="button" data-dw-bank="ABA BANK">
+                                    <img src="/assets/figma-export/neking/dw-bank-aba.png" alt="">
+                                    <strong>ABA BANK</strong>
+                                    <span>3 – 100000</span>
+                                </button>
+                                <button class="dw-bank-card" type="button" data-dw-bank="WING BANK">
+                                    <img src="/assets/figma-export/neking/dw-bank-wing.png" alt="">
+                                    <strong>WING BANK</strong>
+                                    <span>3 – 100000</span>
+                                </button>
+                                <button class="dw-bank-card" type="button" data-dw-bank="ACLEDA BANK">
+                                    <img src="/assets/figma-export/neking/dw-bank-acleda.png" alt="">
+                                    <strong>ACLEDA BANK</strong>
+                                    <span>3 – 100000</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dw-accordion" data-dw-accordion>
+                        <button class="dw-accordion-head" type="button" data-dw-accordion-toggle>
+                            <img class="dw-acc-ico" src="/assets/figma-export/neking/dw-icon-ewallet.svg" alt="">
+                            <span class="dw-acc-copy"><strong>E-Wallet</strong><em>E-Wallet (Manual)</em></span>
+                            <img class="dw-acc-chevron" src="/assets/figma-export/neking/icon-chevron-down.svg" alt="">
+                        </button>
+                        <div class="dw-accordion-body">
+                            <p class="dw-empty">No e-wallet options available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dw-step" data-dw-step="2" hidden>
+                    <form class="dw-form" data-dw-form>
+                        <label class="dw-field">
+                            <span class="dw-label">Deposit Bank</span>
+                            <span class="dw-select-wrap">
+                                <img class="dw-field-ico" src="/assets/figma-export/neking/dw-bank-select-icon.svg" alt="">
+                                <select data-dw-bank-select>
+                                    <option value="ABA BANK" selected>ABA BANK</option>
+                                    <option value="WING BANK">WING BANK</option>
+                                    <option value="ACLEDA BANK">ACLEDA BANK</option>
+                                </select>
+                                <img class="dw-select-chevron" src="/assets/figma-export/neking/icon-dropdown-arrow.svg" alt="">
+                            </span>
+                        </label>
+                        <label class="dw-field">
+                            <span class="dw-label">Account Name</span>
+                            <input type="text" value="LIM KOK WENG" autocomplete="off">
+                        </label>
+                        <label class="dw-field">
+                            <span class="dw-label">Account Number</span>
+                            <input type="text" value="013374386" autocomplete="off">
+                        </label>
+                        <label class="dw-field">
+                            <span class="dw-label">Amount</span>
+                            <input type="number" data-dw-amount value="10" min="3" max="100000" step="0.01">
+                        </label>
+                        <div class="dw-quick-row">
+                            <button type="button" data-dw-quick="min">Min</button>
+                            <button type="button" data-dw-quick="50">50%</button>
+                            <button type="button" data-dw-quick="75">75%</button>
+                            <button type="button" data-dw-quick="max">Max</button>
+                        </div>
+                        <p class="dw-balance-line">Balance <strong>RM</strong></p>
+                        <div class="dw-summary">
+                            <div><span>Apply Amount</span><strong>RM 10.00</strong></div>
+                            <div><span>Fee</span><strong>RM 2.00</strong></div>
+                            <div class="dw-total"><span>Total</span><strong>RM 8.00</strong></div>
+                        </div>
+                        <label class="dw-field">
+                            <span class="dw-label">Reference / Transaction ID <em>(Optional)</em></span>
+                            <input type="text" placeholder="Enter reference" autocomplete="off">
+                        </label>
+                        <label class="dw-upload">
+                            <input type="file" accept="image/*,.pdf" hidden>
+                            <img src="/assets/figma-export/neking/dw-upload.svg" alt="">
+                            <strong>Upload a screenshot or PDF of your transfer receipt</strong>
+                            <span>Tap to upload file</span>
+                        </label>
+                        <button class="dw-submit" type="submit">Deposit</button>
+                        <div class="dw-warning">
+                            <img src="/assets/figma-export/neking/dw-info.svg" alt="">
+                            <p>For security reasons, large or suspicious withdrawals may take 1-6 hours to process. Please wait patiently.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="dw-modal" data-dw-modal hidden>
+            <div class="dw-modal-backdrop" data-dw-modal-close></div>
+            <div class="dw-modal-card" role="dialog" aria-modal="true">
+                <img class="dw-modal-check" src="/assets/figma-export/neking/dw-check.png" alt="">
+                <p>We are verifying your payment. Once we received the money, your account balance will be updated</p>
+                <button class="dw-modal-ok" type="button" data-dw-modal-close>OK</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/include.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

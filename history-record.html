@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>History Record - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+
+    <!-- ============ DESKTOP ============ -->
+    <main class="profile-page history-page history-desktop auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX history record" data-history-tab="transaction" data-history-range="24h">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+        <div data-include="/components/header.html"></div>
+
+        <section class="profile-shell history-shell">
+            <nav class="profile-tabs flex items-center justify-center" aria-label="Account sections">
+                <a href="/profile.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Profile
+                </a>
+                <a href="/notice.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 19a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Notice
+                </a>
+                <a class="active" href="/history-record.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    History Record
+                </a>
+                <a href="/available-bonus.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 4h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Available Bonus
+                </a>
+                <a href="#">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 19c0-2.5 2.2-4 5-4s5 1.5 5 4M13 15.2c.8-.4 1.8-.7 3-.7 2.8 0 5 1.5 5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Referral
+                </a>
+            </nav>
+
+            <div class="history-tabs" role="tablist" aria-label="History categories">
+                <button class="history-tab is-active" type="button" data-history-tab="transaction" role="tab" aria-selected="true">Transaction Record</button>
+                <button class="history-tab" type="button" data-history-tab="bet" role="tab" aria-selected="false">Bet Record</button>
+                <button class="history-tab" type="button" data-history-tab="commission" role="tab" aria-selected="false">Commission Record</button>
+                <button class="history-tab" type="button" data-history-tab="rebate" role="tab" aria-selected="false">Rebate Record</button>
+                <button class="history-tab" type="button" data-history-tab="checkin" role="tab" aria-selected="false">Daily Check-In</button>
+                <button class="history-tab" type="button" data-history-tab="promotion" role="tab" aria-selected="false">Promotion Record</button>
+            </div>
+
+            <div class="history-filters">
+                <div class="history-range" role="group" aria-label="Time range">
+                    <button class="history-range-btn is-active" type="button" data-history-range="24h">24 hours</button>
+                    <button class="history-range-btn" type="button" data-history-range="3d">3 days</button>
+                    <button class="history-range-btn" type="button" data-history-range="7d">7 days</button>
+                    <button class="history-cal-btn" type="button" aria-label="Pick date"><img src="/assets/figma-export/neking/history-calendar.svg" alt=""></button>
+                </div>
+                <button class="history-select" type="button">All Games <img src="/assets/figma-export/neking/history-select.svg" alt=""></button>
+                <button class="history-select" type="button">All States <img src="/assets/figma-export/neking/history-select.svg" alt=""></button>
+            </div>
+
+            <section class="history-table-card" aria-label="Transaction records">
+                <p class="history-date-label">DATE 2025-10-26~2025-10-27</p>
+                <div class="history-table history-table-desktop">
+                    <div class="history-thead">
+                        <span>No.</span>
+                        <span>Game</span>
+                        <span>Amount</span>
+                        <span>State</span>
+                        <span>Time</span>
+                    </div>
+                    <div class="history-tbody">
+                        <div class="history-row">
+                            <span>123456789</span>
+                            <span>PG</span>
+                            <span>100.00</span>
+                            <span class="history-state"><em class="is-win">Win</em>&nbsp;100.00</span>
+                            <span class="history-time">2025-10-25<br>09:00:00</span>
+                        </div>
+                        <div class="history-row">
+                            <span>123456789</span>
+                            <span>PG</span>
+                            <span>100.00</span>
+                            <span class="history-state"><em class="is-lose">Lose</em>&nbsp;100.00</span>
+                            <span class="history-time">2025-10-25<br>09:00:00</span>
+                        </div>
+                        <div class="history-row">
+                            <span>123456789</span>
+                            <span>PG</span>
+                            <span>100.00</span>
+                            <span class="history-state"><em class="is-win">Win</em>&nbsp;100.00</span>
+                            <span class="history-time">2025-10-25<br>09:00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- ============ MOBILE ============ -->
+    <main class="profile-page history-page history-mobile auth-logged-in" aria-label="NEKINGX history record mobile" data-history-tab="transaction" data-history-range="24h">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+
+        <header class="profile-m-header">
+            <a class="pm-back" href="/profile.html" aria-label="Back">&lsaquo;</a>
+            <h1>History Record</h1>
+            <a class="pm-help" href="#" aria-label="Support"><img src="/assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+        </header>
+
+        <div class="history-m-body">
+            <div class="history-tabs history-m-tabs" role="tablist" aria-label="History categories">
+                <button class="history-tab is-active" type="button" data-history-tab="transaction" role="tab" aria-selected="true">Transaction Record</button>
+                <button class="history-tab" type="button" data-history-tab="bet" role="tab" aria-selected="false">Bet Record</button>
+                <button class="history-tab" type="button" data-history-tab="commission" role="tab" aria-selected="false">Commission Record</button>
+                <button class="history-tab" type="button" data-history-tab="rebate" role="tab" aria-selected="false">Rebate Record</button>
+                <button class="history-tab" type="button" data-history-tab="checkin" role="tab" aria-selected="false">Daily Check-In</button>
+                <button class="history-tab" type="button" data-history-tab="promotion" role="tab" aria-selected="false">Promotion Record</button>
+            </div>
+
+            <div class="history-m-filters">
+                <div class="history-range history-m-range" role="group" aria-label="Time range">
+                    <button class="history-range-btn is-active" type="button" data-history-range="24h">24 Hours</button>
+                    <button class="history-range-btn" type="button" data-history-range="3d">3 Days</button>
+                    <button class="history-range-btn" type="button" data-history-range="7d">7 Days</button>
+                    <button class="history-cal-btn" type="button" aria-label="Pick date"><img src="/assets/figma-export/neking/history-calendar.svg" alt=""></button>
+                </div>
+                <div class="history-m-selects">
+                    <button class="history-select" type="button">All Types <img src="/assets/figma-export/neking/history-chevron-sm.svg" alt=""></button>
+                    <button class="history-select" type="button">All Statuses <img src="/assets/figma-export/neking/history-chevron-sm.svg" alt=""></button>
+                </div>
+            </div>
+
+            <p class="history-date-label history-m-date">Date: 2025-10-26 to 2025-10-27</p>
+
+            <div class="history-table history-table-mobile">
+                <div class="history-thead">
+                    <span>NO.</span>
+                    <span>Amount</span>
+                    <span>Balance</span>
+                    <span>Status</span>
+                    <span>Time</span>
+                </div>
+                <div class="history-tbody">
+                    <div class="history-row">
+                        <span>123456789</span>
+                        <span>100.00</span>
+                        <span>1200.00</span>
+                        <span class="history-status is-failed">Failed</span>
+                        <span class="history-time">2025-10-25<br>09:00:00</span>
+                    </div>
+                    <div class="history-row">
+                        <span>123456789</span>
+                        <span>100.00</span>
+                        <span>1100.00</span>
+                        <span class="history-status is-success">Success</span>
+                        <span class="history-time">2025-10-25<br>09:00:00</span>
+                    </div>
+                    <div class="history-row">
+                        <span>123456789</span>
+                        <span>100.00</span>
+                        <span>100.00</span>
+                        <span class="history-status is-failed">Failed</span>
+                        <span class="history-time">2025-10-25<br>09:00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/include.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

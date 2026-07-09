@@ -13,7 +13,7 @@
     <title>Personal Center - NEKINGX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         window.tailwind = window.tailwind || {};
         window.tailwind.config = {
@@ -32,8 +32,6 @@
     <main class="profile-page profile-desktop auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX personal center">
         <div class="profile-bg-pattern" aria-hidden="true"></div>
         <input class="nav-drawer-toggle" type="checkbox" id="static1DesktopNavDrawer" aria-hidden="true">
-<input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
-
 <header class="desktop-header flex items-center">
     <label class="desktop-menu inline-grid shrink-0 place-items-center" for="static1DesktopNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
     <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
@@ -99,71 +97,78 @@
         <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
     </div>
     <div class="desktop-actions desktop-after-login flex items-center">
-        <div class="wallet flex items-center"><span>N</span><strong>50,145.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
-        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
-        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/header-chat-bubble.svg" alt=""><em>1</em></a>
+        <button class="profile-trigger" aria-label="Account menu">
+            <img class="profile-avatar" src="../assets/figma-export/neking/header-profile-lion.png" alt="">
+            <img class="profile-chevron" src="../assets/figma-export/neking/header-chevron-down.svg" alt="">
+        </button>
     </div>
 </header>
-
-<label class="drawer-backdrop" for="static1DesktopNavDrawer" aria-hidden="true"></label>
-<aside class="side-drawer grid content-start" aria-label="Main menu">
-    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
-    <label class="drawer-close" for="static1DesktopNavDrawer" aria-label="Close menu">&times;</label>
+<label class="drawer-backdrop drawer-backdrop-desktop" for="static1DesktopNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer desktop-side-drawer grid content-start" aria-label="Main menu">
+    <a class="drawer-top-cta drawer-home" href="index.html">Home</a>
+    <div class="drawer-cash-row grid grid-cols-2">
+        <a class="drawer-deposit" href="deposit.html">Deposit</a>
+        <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+    </div>
     <nav class="drawer-nav grid">
-        <a class="drawer-home" href="index.html"><span></span>Home</a>
-        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
-        <a href="#"><span>*</span>Inbox</a>
-        <a href="promotion.html"><span>~</span>Promotions</a>
-        <a href="profile.html"><span>#</span>Personal Center</a>
-        <a href="#"><span>+</span>Affiliate</a>
-        <a href="#"><span>V</span>VIP Club</a>
-        <a href="#"><span>B</span>Blog</a>
-        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+        <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+        <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+        <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+        <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+        <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
     </nav>
     <section class="drawer-invite logged-in-only grid">
         <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
         <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
         <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
-        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
     </section>
 </aside>
 
+<input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
 <header class="mobile-header flex items-center">
-    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
     <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
     <div class="mobile-before-login flex items-center">
         <a class="login-btn" href="login.html">Login</a>
-        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
     </div>
     <div class="mobile-after-login flex items-center">
-        <div class="wallet flex items-center"><span>N</span><strong>46,305.49</strong></div>
-        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
-        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
     </div>
+    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
 </header>
-
-<label class="drawer-backdrop" for="static1MobileNavDrawer" aria-hidden="true"></label>
+<label class="drawer-backdrop drawer-backdrop-mobile" for="static1MobileNavDrawer" aria-hidden="true"></label>
 <aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
-    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
     <label class="drawer-close" for="static1MobileNavDrawer" aria-label="Close menu">&times;</label>
-    <nav class="drawer-nav grid">
-        <a class="drawer-home" href="index.html"><span></span>Home</a>
-        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
-        <a href="#"><span>*</span>Inbox</a>
-        <a href="promotion.html"><span>~</span>Promotions</a>
-        <a href="profile.html"><span>#</span>Personal Center</a>
-        <a href="#"><span>+</span>Affiliate</a>
-        <a href="#"><span>V</span>VIP Club</a>
-        <a href="#"><span>B</span>Blog</a>
-        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
-    </nav>
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <a class="drawer-top-cta drawer-login logged-out-only" href="login.html">Login</a>
+    <div class="drawer-actions">
+        <div class="drawer-cash-row grid grid-cols-2">
+            <a class="drawer-deposit" href="deposit.html">Deposit</a>
+            <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+        </div>
+        <nav class="drawer-nav grid">
+            <a class="drawer-home" href="index.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-home.png" alt=""><span class="drawer-nav-label">Home</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+            <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+            <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+            <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+            <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+            <a class="drawer-providers" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-providers.png" alt=""><span class="drawer-nav-label">Providers</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+            <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
+        </nav>
+    </div>
     <section class="drawer-invite logged-in-only grid">
         <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
         <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
         <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
-        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
     </section>
 </aside>
 
@@ -174,15 +179,15 @@
                     <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
                     Profile
                 </a>
-                <a href="#">
+                <a href="notice.html">
                     <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 19a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
                     Notice
                 </a>
-                <a href="#">
+                <a href="history-record.html">
                     <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                     History Record
                 </a>
-                <a href="#">
+                <a href="available-bonus.html">
                     <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 4h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
                     Available Bonus
                 </a>
@@ -196,7 +201,7 @@
             <div class="balance-card">
                 <div class="balance-user">
                     <div class="balance-avatar"><img src="../assets/figma-export/neking/profile-user-avatar.png" alt="User avatar"></div>
-                    <div class="balance-vip"><img class="vip-badge" src="../assets/figma-export/neking/profile-vip-badge.png" alt="" width="32" height="32">VIP 3</div>
+                    <div class="balance-vip"><img class="vip-badge" src="../assets/figma-export/neking/profile-vip-badge.svg" alt="" width="32" height="32"><span>VIP 3</span></div>
                     <p class="balance-name"><span>Name</span> TestAx88</p>
                 </div>
                 <div class="balance-main">
@@ -216,12 +221,12 @@
                         <button class="btn-withdraw">WITHDRAW</button>
                     </div>
                 </div>
-                <img class="balance-coins" src="../assets/figma-export/neking/profile-coins.png" alt="">
+                <img class="balance-coins" src="../assets/figma-export/neking/profile-coins.png" alt="" width="160" height="160">
             </div>
 
             <!-- Tier strip -->
             <div class="tier-strip">
-                <img class="tier-badge" src="../assets/figma-export/neking/profile-tier-badge.png" alt="" width="40" height="40">
+                <img class="tier-badge" src="../assets/figma-export/neking/profile-tier-badge.svg" alt="" width="40" height="40">
                 <div class="tier-user">
                     <p><strong>TestAx88</strong> <span>|</span> +60 12** ***789</p>
                     <p class="tier-level">Normal</p>
@@ -320,58 +325,118 @@
     </main>
 
     <!-- ============ MOBILE ============ -->
-    <main class="profile-page profile-mobile auth-logged-in overflow-hidden" aria-label="NEKINGX personal center mobile">
+    <main class="profile-page profile-mobile auth-logged-in" aria-label="NEKINGX personal center mobile" data-m-view="home">
         <div class="profile-bg-pattern" aria-hidden="true"></div>
-        <header class="profile-m-header">
-            <a class="pm-back" href="index.html" aria-label="Back">&lsaquo;</a>
-            <h1>Profile</h1>
-            <a class="pm-help" href="#" aria-label="Support"><svg viewBox="0 0 24 24" fill="none"><path d="M4 13v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="13" width="4" height="6" rx="2" fill="currentColor"/><rect x="17" y="13" width="4" height="6" rx="2" fill="currentColor"/></svg></a>
-        </header>
 
-        <section class="profile-m-body" data-profile-root>
-            <div class="m-avatar-card">
-                <div class="avatar-view">
-                    <button class="m-avatar" data-avatar-edit aria-label="Change avatar"><img src="../assets/figma-export/neking/profile-avatar-1.png" alt="Selected avatar" data-avatar-target></button>
-                    <button class="btn-customize" data-avatar-edit>Customize</button>
-                </div>
-                <div class="avatar-picker">
-                    <div class="m-avatar-preview"><img src="../assets/figma-export/neking/profile-avatar-1.png" alt="" data-avatar-preview></div>
-                    <p class="avatar-hint">Tap an avatar to switch</p>
-                    <div class="avatar-grid" data-avatar-grid>
-                        <button class="avatar-option is-selected" data-avatar-src="../assets/figma-export/neking/profile-avatar-1.png"><img src="../assets/figma-export/neking/profile-avatar-1.png" alt="Avatar 1"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-2.png"><img src="../assets/figma-export/neking/profile-avatar-2.png" alt="Avatar 2"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-3.png"><img src="../assets/figma-export/neking/profile-avatar-3.png" alt="Avatar 3"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-4.png"><img src="../assets/figma-export/neking/profile-avatar-4.png" alt="Avatar 4"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-5.png"><img src="../assets/figma-export/neking/profile-avatar-5.png" alt="Avatar 5"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-6.png"><img src="../assets/figma-export/neking/profile-avatar-6.png" alt="Avatar 6"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-7.png"><img src="../assets/figma-export/neking/profile-avatar-7.png" alt="Avatar 7"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-8.png"><img src="../assets/figma-export/neking/profile-avatar-8.png" alt="Avatar 8"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-9.png"><img src="../assets/figma-export/neking/profile-avatar-9.png" alt="Avatar 9"></button>
-                        <button class="avatar-option" data-avatar-src="../assets/figma-export/neking/profile-avatar-10.png"><img src="../assets/figma-export/neking/profile-avatar-10.png" alt="Avatar 10"></button>
-                    </div>
-                    <div class="avatar-picker-actions">
-                        <button class="btn-cancel" data-avatar-cancel>Cancel</button>
-                        <button class="btn-save" data-avatar-save>Save</button>
-                    </div>
-                </div>
-            </div>
+        <!-- Mobile 1: dashboard -->
+        <section class="profile-m-view profile-m-home is-active" data-m-panel="home">
+            <header class="profile-m-header">
+                <a class="pm-back" href="index.html" aria-label="Back">&lsaquo;</a>
+                <h1>Profile</h1>
+                <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+            </header>
 
-            <div class="m-info-list">
-                <div class="m-info-row"><span class="info-label">Account</span><span class="info-value">123456789</span></div>
-                <div class="m-info-row"><span class="info-label">Phone</span><span class="info-value">+60 12*****789</span></div>
-                <button class="m-info-row m-info-btn" data-profile-open="password"><span class="info-label">Change Password</span><span class="info-chevron" aria-hidden="true">&rsaquo;</span></button>
-                <button class="m-info-row m-info-btn" data-profile-open="name"><span class="info-label">Name <i class="info-edit" aria-hidden="true">&rsaquo;</i></span></button>
-                <button class="m-info-row m-info-btn" data-profile-open="birthday"><span class="info-label">Birthday <i class="info-edit" aria-hidden="true">&rsaquo;</i></span><span class="info-value info-muted">Not Set</span></button>
-                <button class="m-info-row m-info-btn" data-profile-open="email"><span class="info-label">Email <i class="info-edit" aria-hidden="true">&rsaquo;</i></span></button>
+            <div class="profile-m-body">
+                <div class="m-user-block">
+                    <div class="m-user-top">
+                        <div class="m-user-avatar">
+                            <img src="../assets/figma-export/neking/profile-m-avatar.png" alt="User avatar">
+                        </div>
+                        <div class="m-user-meta">
+                            <div class="m-vip-row">
+                                <img class="m-vip-badge" src="../assets/figma-export/neking/profile-m-vip.png" alt="" width="32" height="32">
+                                <span>VIP 2</span>
+                            </div>
+                            <p class="m-user-name">User Name: 9127924150</p>
+                        </div>
+                    </div>
+
+                    <div class="m-wallet-card">
+                        <img class="m-wallet-deco" src="../assets/figma-export/neking/profile-m-decoration.png" alt="" aria-hidden="true">
+                        <div class="m-wallet-figures">
+                            <div class="m-wallet-col">
+                                <p class="m-wallet-label">Balance</p>
+                                <p class="m-wallet-value"><em>NGN</em> 49789.00 <button class="m-icon-btn" type="button" aria-label="Refresh balance">&#8635;</button></p>
+                            </div>
+                            <div class="m-wallet-col m-wallet-bonus">
+                                <p class="m-wallet-label">Bonus</p>
+                                <p class="m-wallet-value"><em>NGN</em> 1,509.37 <button class="m-icon-btn" type="button" aria-label="Refresh bonus">&#8635;</button><button class="m-icon-btn m-wallet-ico" type="button" aria-label="Bonus wallet"><img src="../assets/figma-export/neking/profile-m-wallet.png" alt="" width="14" height="14"></button></p>
+                            </div>
+                        </div>
+                        <div class="m-wallet-actions">
+                            <button class="m-btn-deposit" type="button">DEPOSIT</button>
+                            <button class="m-btn-withdraw" type="button">WITHDRAWAL</button>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="m-menu-card" aria-label="Profile menu">
+                    <a class="m-menu-item" href="notice.html"><img src="../assets/figma-export/neking/profile-m-icon-notice.png" alt=""><span>Notice</span><i aria-hidden="true">&rsaquo;</i></a>
+                    <button class="m-menu-item" type="button" data-m-open="detail"><img src="../assets/figma-export/neking/profile-m-icon-profile.png" alt=""><span>Profile</span><i aria-hidden="true">&rsaquo;</i></button>
+                    <a class="m-menu-item" href="#"><img src="../assets/figma-export/neking/profile-m-icon-game.png" alt=""><span>Game records</span><i aria-hidden="true">&rsaquo;</i></a>
+                    <a class="m-menu-item" href="history-record.html"><img src="../assets/figma-export/neking/profile-m-icon-transaction.png" alt=""><span>Transaction records</span><i aria-hidden="true">&rsaquo;</i></a>
+                    <a class="m-menu-item" href="available-bonus.html"><img src="../assets/figma-export/neking/profile-m-icon-bonus.png" alt=""><span>Available Bonus</span><i aria-hidden="true">&rsaquo;</i></a>
+                </nav>
+
+                <div class="m-logout-card">
+                    <button class="m-menu-item m-logout" type="button" data-m-logout><img src="../assets/figma-export/neking/profile-m-icon-logout.png" alt=""><span>Log Out</span><i aria-hidden="true">&rsaquo;</i></button>
+                </div>
             </div>
         </section>
 
-        <!-- Mobile edit sheets -->
-        <section class="profile-sheet" id="sheet-password" data-profile-dialog>
+        <!-- Mobile 2 / 3: personal info + avatar picker -->
+        <section class="profile-m-view profile-m-detail" data-m-panel="detail" data-profile-root>
             <header class="profile-m-header">
-                <button class="pm-back" data-profile-close aria-label="Back">&lsaquo;</button>
+                <button class="pm-back" type="button" data-m-open="home" aria-label="Back">&lsaquo;</button>
+                <h1>Profile</h1>
+                <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+            </header>
+
+            <div class="profile-m-body">
+                <div class="m-avatar-card">
+                    <div class="avatar-view">
+                        <button class="m-avatar" data-avatar-edit aria-label="Change avatar"><img src="../assets/figma-export/neking/profile-m-avatar.png" alt="Selected avatar" data-avatar-target></button>
+                        <button class="btn-customize" data-avatar-edit type="button">Customize</button>
+                    </div>
+                    <div class="avatar-picker">
+                        <div class="m-avatar-preview"><img src="../assets/figma-export/neking/profile-m-avatar.png" alt="" data-avatar-preview></div>
+                        <p class="avatar-hint">Tap an avatar to switch</p>
+                        <div class="avatar-grid" data-avatar-grid>
+                            <button class="avatar-option is-selected" type="button" data-avatar-src="../assets/figma-export/neking/profile-m-avatar.png"><img src="../assets/figma-export/neking/profile-m-avatar.png" alt="Avatar 1"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-2.png"><img src="../assets/figma-export/neking/profile-avatar-2.png" alt="Avatar 2"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-3.png"><img src="../assets/figma-export/neking/profile-avatar-3.png" alt="Avatar 3"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-4.png"><img src="../assets/figma-export/neking/profile-avatar-4.png" alt="Avatar 4"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-5.png"><img src="../assets/figma-export/neking/profile-avatar-5.png" alt="Avatar 5"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-6.png"><img src="../assets/figma-export/neking/profile-avatar-6.png" alt="Avatar 6"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-7.png"><img src="../assets/figma-export/neking/profile-avatar-7.png" alt="Avatar 7"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-8.png"><img src="../assets/figma-export/neking/profile-avatar-8.png" alt="Avatar 8"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-9.png"><img src="../assets/figma-export/neking/profile-avatar-9.png" alt="Avatar 9"></button>
+                            <button class="avatar-option" type="button" data-avatar-src="../assets/figma-export/neking/profile-avatar-10.png"><img src="../assets/figma-export/neking/profile-avatar-10.png" alt="Avatar 10"></button>
+                        </div>
+                        <div class="avatar-picker-actions">
+                            <button class="btn-cancel" type="button" data-avatar-cancel>Cancel</button>
+                            <button class="btn-save" type="button" data-avatar-save>Save</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="m-info-list">
+                    <div class="m-info-row"><span class="info-label">Account</span><span class="info-value">123456789</span></div>
+                    <div class="m-info-row"><span class="info-label">Phone</span><span class="info-value">+60 12*****789</span></div>
+                    <button class="m-info-row m-info-btn" type="button" data-m-open="password"><span class="info-label">Change Password</span><span class="info-chevron" aria-hidden="true">&rsaquo;</span></button>
+                    <button class="m-info-row m-info-btn" type="button" data-m-open="name"><span class="info-label">Name</span><span class="info-chevron" aria-hidden="true">&rsaquo;</span></button>
+                    <button class="m-info-row m-info-btn" type="button" data-m-open="birthday"><span class="info-label">Birthday <i class="info-edit" aria-hidden="true">&rsaquo;</i></span><span class="info-value">Not Set</span></button>
+                    <button class="m-info-row m-info-btn" type="button" data-m-open="email"><span class="info-label">Email</span><span class="info-chevron" aria-hidden="true">&rsaquo;</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile edit screens (one visible at a time via .is-active) -->
+        <section class="profile-sheet" id="sheet-password" data-m-panel="password" data-profile-dialog>
+            <header class="profile-m-header">
+                <button class="pm-back" type="button" data-m-open="detail" aria-label="Back">&lsaquo;</button>
                 <h1>Change Password</h1>
-                <a class="pm-help" href="#" aria-label="Support"><svg viewBox="0 0 24 24" fill="none"><path d="M4 13v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="13" width="4" height="6" rx="2" fill="currentColor"/><rect x="17" y="13" width="4" height="6" rx="2" fill="currentColor"/></svg></a>
+                <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
             </header>
             <div class="profile-sheet-body">
                 <div class="profile-sheet-panel">
@@ -379,60 +444,84 @@
                     <label class="pf-field"><span class="pf-label">New Password</span><input class="pf-input" type="password"></label>
                     <label class="pf-field"><span class="pf-label">Phone</span><span class="pf-input-wrap"><input class="pf-input" type="tel"><button class="pf-send" type="button">Send</button></span></label>
                     <label class="pf-field"><span class="pf-label">Verification Code</span><input class="pf-input" type="text" inputmode="numeric"></label>
-                    <button class="pf-confirm" data-profile-close>Confirm</button>
+                    <button class="pf-confirm" type="button" data-m-open="detail">Confirm</button>
                 </div>
             </div>
         </section>
 
-        <section class="profile-sheet" id="sheet-name" data-profile-dialog>
+        <section class="profile-sheet" id="sheet-name" data-m-panel="name" data-profile-dialog>
             <header class="profile-m-header">
-                <button class="pm-back" data-profile-close aria-label="Back">&lsaquo;</button>
+                <button class="pm-back" type="button" data-m-open="detail" aria-label="Back">&lsaquo;</button>
                 <h1>Change Name</h1>
-                <a class="pm-help" href="#" aria-label="Support"><svg viewBox="0 0 24 24" fill="none"><path d="M4 13v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="13" width="4" height="6" rx="2" fill="currentColor"/><rect x="17" y="13" width="4" height="6" rx="2" fill="currentColor"/></svg></a>
+                <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
             </header>
             <div class="profile-sheet-body">
                 <div class="profile-sheet-panel">
-                    <label class="pf-field"><span class="pf-label">Name</span><input class="pf-input" type="text" placeholder="Mr.88"></label>
-                    <button class="pf-confirm" data-profile-close>Confirm</button>
+                    <label class="pf-field"><span class="pf-label">Name</span><input class="pf-input" type="text"></label>
+                    <button class="pf-confirm" type="button" data-m-open="detail">Confirm</button>
                 </div>
             </div>
         </section>
 
-        <section class="profile-sheet" id="sheet-birthday" data-profile-dialog>
+        <section class="profile-sheet" id="sheet-birthday" data-m-panel="birthday" data-profile-dialog>
             <header class="profile-m-header">
-                <button class="pm-back" data-profile-close aria-label="Back">&lsaquo;</button>
+                <button class="pm-back" type="button" data-m-open="detail" aria-label="Back">&lsaquo;</button>
                 <h1>Birthday Setting</h1>
-                <a class="pm-help" href="#" aria-label="Support"><svg viewBox="0 0 24 24" fill="none"><path d="M4 13v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="13" width="4" height="6" rx="2" fill="currentColor"/><rect x="17" y="13" width="4" height="6" rx="2" fill="currentColor"/></svg></a>
+                <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
             </header>
             <div class="profile-sheet-body">
                 <div class="profile-sheet-panel">
-                    <label class="pf-field"><span class="pf-label">Birthday Date</span><input class="pf-input pf-input-date" type="text" inputmode="numeric" placeholder="1991.11.11"></label>
-                    <button class="pf-confirm" data-profile-close>Confirm</button>
+                    <label class="pf-field"><span class="pf-label">Birthday Date</span><input class="pf-input pf-input-date" type="text" inputmode="numeric" placeholder="1991.11.11" value="1991.11.11"></label>
+                    <button class="pf-confirm" type="button" data-m-open="detail">Confirm</button>
                 </div>
             </div>
         </section>
 
-        <section class="profile-sheet" id="sheet-email" data-profile-dialog>
+        <section class="profile-sheet" id="sheet-email" data-m-panel="email" data-profile-dialog>
             <header class="profile-m-header">
-                <button class="pm-back" data-profile-close aria-label="Back">&lsaquo;</button>
+                <button class="pm-back" type="button" data-m-open="detail" aria-label="Back">&lsaquo;</button>
                 <h1>Bind Email</h1>
-                <a class="pm-help" href="#" aria-label="Support"><svg viewBox="0 0 24 24" fill="none"><path d="M4 13v-1a8 8 0 0 1 16 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="13" width="4" height="6" rx="2" fill="currentColor"/><rect x="17" y="13" width="4" height="6" rx="2" fill="currentColor"/></svg></a>
+                <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
             </header>
             <div class="profile-sheet-body">
                 <div class="profile-sheet-panel">
                     <label class="pf-field"><span class="pf-label">Email</span><span class="pf-input-wrap"><input class="pf-input" type="email"><button class="pf-send" type="button">Send</button></span></label>
                     <label class="pf-field"><span class="pf-label">Verification Code</span><input class="pf-input" type="text" inputmode="numeric"></label>
-                    <button class="pf-confirm" data-profile-close>Confirm</button>
+                    <button class="pf-confirm" type="button" data-m-open="detail">Confirm</button>
                 </div>
             </div>
         </section>
 
         <nav class="bottom-nav flex items-center" aria-label="Bottom navigation">
-    <a class="promotion-link" href="promotion.html"><img src="../assets/figma-export/neking/bottom-receipt.png" alt="">Promotion</a>
-    <a class="affiliate-link" href="#"><img src="../assets/figma-export/neking/bottom-crown.png" alt="">Affiliate</a>
+    <a class="promotion-link" href="promotion.html">
+        <span class="bottom-nav-icon" aria-hidden="true">
+            <img class="bottom-nav-icon-default" src="../assets/figma-export/neking/promotion.png" alt="">
+            <img class="bottom-nav-icon-active" src="../assets/figma-export/neking/promotion-color.png" alt="">
+        </span>
+        Promotion
+    </a>
+    <a class="affiliate-link" href="affiliate.html">
+        <span class="bottom-nav-icon" aria-hidden="true">
+            <img class="bottom-nav-icon-default" src="../assets/figma-export/neking/affiliate.png" alt="">
+            <img class="bottom-nav-icon-active" src="../assets/figma-export/neking/affiliate-color.png" alt="">
+        </span>
+        Affiliate
+    </a>
     <a class="home-link" href="index.html"><img src="../assets/figma-export/neking/bottom-x-icon.png" alt="">Home</a>
-    <a href="#"><img src="../assets/figma-export/neking/bottom-deposit.webp" alt="">Deposit</a>
-    <a href="#"><img src="../assets/figma-export/neking/bottom-chat.webp" alt="">Chat</a>
+    <a class="deposit-link" href="#">
+        <span class="bottom-nav-icon" aria-hidden="true">
+            <img class="bottom-nav-icon-default" src="../assets/figma-export/neking/deposit.png" alt="">
+            <img class="bottom-nav-icon-active" src="../assets/figma-export/neking/deposit-color.png" alt="">
+        </span>
+        Deposit
+    </a>
+    <a class="chat-link" href="#">
+        <span class="bottom-nav-icon" aria-hidden="true">
+            <img class="bottom-nav-icon-default" src="../assets/figma-export/neking/chat.png" alt="">
+            <img class="bottom-nav-icon-active" src="../assets/figma-export/neking/chat-color.png" alt="">
+        </span>
+        Chat
+    </a>
 </nav>
 
     </main>

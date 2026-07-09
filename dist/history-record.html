@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>History Record - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+
+    <!-- ============ DESKTOP ============ -->
+    <main class="profile-page history-page history-desktop auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX history record" data-history-tab="transaction" data-history-range="24h">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+        <input class="nav-drawer-toggle" type="checkbox" id="static1DesktopNavDrawer" aria-hidden="true">
+<header class="desktop-header flex items-center">
+    <label class="desktop-menu inline-grid shrink-0 place-items-center" for="static1DesktopNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
+    <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
+        <a class="nav-aviator-badge" data-nav="home" href="index.html">Aviator</a>
+        <div class="nav-dropdown-wrap nav-crash-wrap">
+            <a class="nav-crash-link detail-crash-nav" data-nav="crash" data-text="Crash" href="crash.html">Crash</a>
+            <div class="nav-dropdown nav-crash-dropdown">
+                <div class="nav-provider-panel">
+    <div class="nav-featured-providers" aria-label="Crash providers">
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games">
+                <span>Turbo Games</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-spribe.webp" alt="Spribe">
+                <span>Spribe</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix">
+                <span>Aviatrix</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="nav-dropdown-wrap nav-casino-wrap">
+            <a class="nav-casino-link detail-casino-nav" data-nav="casino" data-text="Casino" href="casino.html">Casino</a>
+            <div class="nav-dropdown nav-casino-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="Casino providers">
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-virtual-link" data-nav="virtual" data-text="Virtual" href="virtual.html">Virtual</a>
+        <div class="nav-dropdown-wrap nav-esports-wrap">
+            <a class="nav-esports-link" data-nav="esports" data-text="E-Sports" href="e-sports.html">E-Sports</a>
+            <div class="nav-dropdown nav-esports-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="E-Sports providers">
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/turbo2.webp" alt="Turbo Sports"><span>Turbo Sports</span></div></a>
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/oddin2.webp" alt="Oddin"><span>Oddin</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-bet-game-link" data-nav="betgame" data-text="Bet Game" href="bet-game.html">Bet Game</a>
+    </nav>
+    <div class="desktop-actions desktop-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+    <div class="desktop-actions desktop-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/header-chat-bubble.svg" alt=""><em>1</em></a>
+        <button class="profile-trigger" aria-label="Account menu">
+            <img class="profile-avatar" src="../assets/figma-export/neking/header-profile-lion.png" alt="">
+            <img class="profile-chevron" src="../assets/figma-export/neking/header-chevron-down.svg" alt="">
+        </button>
+    </div>
+</header>
+<label class="drawer-backdrop drawer-backdrop-desktop" for="static1DesktopNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer desktop-side-drawer grid content-start" aria-label="Main menu">
+    <a class="drawer-top-cta drawer-home" href="index.html">Home</a>
+    <div class="drawer-cash-row grid grid-cols-2">
+        <a class="drawer-deposit" href="deposit.html">Deposit</a>
+        <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+    </div>
+    <nav class="drawer-nav grid">
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+        <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+        <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+        <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+        <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+        <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
+    </nav>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+    </section>
+</aside>
+
+<input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
+<header class="mobile-header flex items-center">
+    <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+    <div class="mobile-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+    </div>
+    <div class="mobile-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+    </div>
+    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+</header>
+<label class="drawer-backdrop drawer-backdrop-mobile" for="static1MobileNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
+    <label class="drawer-close" for="static1MobileNavDrawer" aria-label="Close menu">&times;</label>
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <a class="drawer-top-cta drawer-login logged-out-only" href="login.html">Login</a>
+    <div class="drawer-actions">
+        <div class="drawer-cash-row grid grid-cols-2">
+            <a class="drawer-deposit" href="deposit.html">Deposit</a>
+            <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+        </div>
+        <nav class="drawer-nav grid">
+            <a class="drawer-home" href="index.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-home.png" alt=""><span class="drawer-nav-label">Home</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+            <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+            <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+            <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+            <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+            <a class="drawer-providers" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-providers.png" alt=""><span class="drawer-nav-label">Providers</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+            <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
+        </nav>
+    </div>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+    </section>
+</aside>
+
+
+        <section class="profile-shell history-shell">
+            <nav class="profile-tabs flex items-center justify-center" aria-label="Account sections">
+                <a href="profile.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Profile
+                </a>
+                <a href="notice.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 19a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Notice
+                </a>
+                <a class="active" href="history-record.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    History Record
+                </a>
+                <a href="available-bonus.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 4h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Available Bonus
+                </a>
+                <a href="#">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 19c0-2.5 2.2-4 5-4s5 1.5 5 4M13 15.2c.8-.4 1.8-.7 3-.7 2.8 0 5 1.5 5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Referral
+                </a>
+            </nav>
+
+            <div class="history-tabs" role="tablist" aria-label="History categories">
+                <button class="history-tab is-active" type="button" data-history-tab="transaction" role="tab" aria-selected="true">Transaction Record</button>
+                <button class="history-tab" type="button" data-history-tab="bet" role="tab" aria-selected="false">Bet Record</button>
+                <button class="history-tab" type="button" data-history-tab="commission" role="tab" aria-selected="false">Commission Record</button>
+                <button class="history-tab" type="button" data-history-tab="rebate" role="tab" aria-selected="false">Rebate Record</button>
+                <button class="history-tab" type="button" data-history-tab="checkin" role="tab" aria-selected="false">Daily Check-In</button>
+                <button class="history-tab" type="button" data-history-tab="promotion" role="tab" aria-selected="false">Promotion Record</button>
+            </div>
+
+            <div class="history-filters">
+                <div class="history-range" role="group" aria-label="Time range">
+                    <button class="history-range-btn is-active" type="button" data-history-range="24h">24 hours</button>
+                    <button class="history-range-btn" type="button" data-history-range="3d">3 days</button>
+                    <button class="history-range-btn" type="button" data-history-range="7d">7 days</button>
+                    <button class="history-cal-btn" type="button" aria-label="Pick date"><img src="../assets/figma-export/neking/history-calendar.svg" alt=""></button>
+                </div>
+                <button class="history-select" type="button">All Games <img src="../assets/figma-export/neking/history-select.svg" alt=""></button>
+                <button class="history-select" type="button">All States <img src="../assets/figma-export/neking/history-select.svg" alt=""></button>
+            </div>
+
+            <section class="history-table-card" aria-label="Transaction records">
+                <p class="history-date-label">DATE 2025-10-26~2025-10-27</p>
+                <div class="history-table history-table-desktop">
+                    <div class="history-thead">
+                        <span>No.</span>
+                        <span>Game</span>
+                        <span>Amount</span>
+                        <span>State</span>
+                        <span>Time</span>
+                    </div>
+                    <div class="history-tbody">
+                        <div class="history-row">
+                            <span>123456789</span>
+                            <span>PG</span>
+                            <span>100.00</span>
+                            <span class="history-state"><em class="is-win">Win</em>&nbsp;100.00</span>
+                            <span class="history-time">2025-10-25<br>09:00:00</span>
+                        </div>
+                        <div class="history-row">
+                            <span>123456789</span>
+                            <span>PG</span>
+                            <span>100.00</span>
+                            <span class="history-state"><em class="is-lose">Lose</em>&nbsp;100.00</span>
+                            <span class="history-time">2025-10-25<br>09:00:00</span>
+                        </div>
+                        <div class="history-row">
+                            <span>123456789</span>
+                            <span>PG</span>
+                            <span>100.00</span>
+                            <span class="history-state"><em class="is-win">Win</em>&nbsp;100.00</span>
+                            <span class="history-time">2025-10-25<br>09:00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- ============ MOBILE ============ -->
+    <main class="profile-page history-page history-mobile auth-logged-in" aria-label="NEKINGX history record mobile" data-history-tab="transaction" data-history-range="24h">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+
+        <header class="profile-m-header">
+            <a class="pm-back" href="profile.html" aria-label="Back">&lsaquo;</a>
+            <h1>History Record</h1>
+            <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+        </header>
+
+        <div class="history-m-body">
+            <div class="history-tabs history-m-tabs" role="tablist" aria-label="History categories">
+                <button class="history-tab is-active" type="button" data-history-tab="transaction" role="tab" aria-selected="true">Transaction Record</button>
+                <button class="history-tab" type="button" data-history-tab="bet" role="tab" aria-selected="false">Bet Record</button>
+                <button class="history-tab" type="button" data-history-tab="commission" role="tab" aria-selected="false">Commission Record</button>
+                <button class="history-tab" type="button" data-history-tab="rebate" role="tab" aria-selected="false">Rebate Record</button>
+                <button class="history-tab" type="button" data-history-tab="checkin" role="tab" aria-selected="false">Daily Check-In</button>
+                <button class="history-tab" type="button" data-history-tab="promotion" role="tab" aria-selected="false">Promotion Record</button>
+            </div>
+
+            <div class="history-m-filters">
+                <div class="history-range history-m-range" role="group" aria-label="Time range">
+                    <button class="history-range-btn is-active" type="button" data-history-range="24h">24 Hours</button>
+                    <button class="history-range-btn" type="button" data-history-range="3d">3 Days</button>
+                    <button class="history-range-btn" type="button" data-history-range="7d">7 Days</button>
+                    <button class="history-cal-btn" type="button" aria-label="Pick date"><img src="../assets/figma-export/neking/history-calendar.svg" alt=""></button>
+                </div>
+                <div class="history-m-selects">
+                    <button class="history-select" type="button">All Types <img src="../assets/figma-export/neking/history-chevron-sm.svg" alt=""></button>
+                    <button class="history-select" type="button">All Statuses <img src="../assets/figma-export/neking/history-chevron-sm.svg" alt=""></button>
+                </div>
+            </div>
+
+            <p class="history-date-label history-m-date">Date: 2025-10-26 to 2025-10-27</p>
+
+            <div class="history-table history-table-mobile">
+                <div class="history-thead">
+                    <span>NO.</span>
+                    <span>Amount</span>
+                    <span>Balance</span>
+                    <span>Status</span>
+                    <span>Time</span>
+                </div>
+                <div class="history-tbody">
+                    <div class="history-row">
+                        <span>123456789</span>
+                        <span>100.00</span>
+                        <span>1200.00</span>
+                        <span class="history-status is-failed">Failed</span>
+                        <span class="history-time">2025-10-25<br>09:00:00</span>
+                    </div>
+                    <div class="history-row">
+                        <span>123456789</span>
+                        <span>100.00</span>
+                        <span>1100.00</span>
+                        <span class="history-status is-success">Success</span>
+                        <span class="history-time">2025-10-25<br>09:00:00</span>
+                    </div>
+                    <div class="history-row">
+                        <span>123456789</span>
+                        <span>100.00</span>
+                        <span>100.00</span>
+                        <span class="history-status is-failed">Failed</span>
+                        <span class="history-time">2025-10-25<br>09:00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

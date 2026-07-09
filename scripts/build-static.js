@@ -84,9 +84,26 @@ const rewriteUrlForDist = (url) => {
 };
 
 const rewritePathsForDist = (html) => {
-    return html.replace(/\b(src|href)=["']([^"']+)["']/gi, (match, attr, url) => {
-        return `${attr}="${rewriteUrlForDist(url)}"`;
-    });
+    return html
+        .replace(/\b(src|href)=["']([^"']+)["']/gi, (match, attr, url) => {
+            return `${attr}="${rewriteUrlForDist(url)}"`;
+        })
+        .replace(/\bsrcset=["']([^"']+)["']/gi, (match, value) => {
+            const rewritten = value
+                .split(",")
+                .map((part) => {
+                    const trimmed = part.trim();
+                    const space = trimmed.search(/\s/);
+                    if (space === -1) {
+                        return rewriteUrlForDist(trimmed);
+                    }
+                    const url = trimmed.slice(0, space);
+                    const descriptor = trimmed.slice(space);
+                    return `${rewriteUrlForDist(url)}${descriptor}`;
+                })
+                .join(", ");
+            return `srcset="${rewritten}"`;
+        });
 };
 
 const writeBuiltPage = (fileName, output) => {

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>Notice - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = {
+            corePlugins: {
+                preflight: false
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+
+    <!-- ============ DESKTOP ============ -->
+    <main class="profile-page notice-page notice-desktop auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX notice center" data-notice-tab="platform">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+        <div data-include="/components/header.html"></div>
+
+        <section class="profile-shell notice-shell">
+            <nav class="profile-tabs flex items-center justify-center" aria-label="Account sections">
+                <a href="/profile.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Profile
+                </a>
+                <a class="active" href="/notice.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0 1 12 0c0 5 2 6 2 6H4s2-1 2-6Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 19a2 2 0 0 0 4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Notice
+                </a>
+                <a href="/history-record.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    History Record
+                </a>
+                <a href="/available-bonus.html">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 4h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Available Bonus
+                </a>
+                <a href="#">
+                    <span class="pf-tab-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M3 19c0-2.5 2.2-4 5-4s5 1.5 5 4M13 15.2c.8-.4 1.8-.7 3-.7 2.8 0 5 1.5 5 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+                    Referral
+                </a>
+            </nav>
+
+            <div class="notice-tabs" role="tablist" aria-label="Notice categories">
+                <button class="notice-tab is-active" type="button" data-notice-tab="platform" role="tab" aria-selected="true">Platform</button>
+                <button class="notice-tab" type="button" data-notice-tab="events" role="tab" aria-selected="false">Events<span class="notice-badge">12</span></button>
+                <button class="notice-tab" type="button" data-notice-tab="personal" role="tab" aria-selected="false">Personal</button>
+            </div>
+
+            <div class="notice-panels">
+                <div class="notice-panel is-active" data-notice-panel="platform" role="tabpanel">
+                    <article class="notice-card">
+                        <img class="notice-card-icon" src="/assets/figma-export/neking/notice-icon-platform.svg" alt="">
+                        <div class="notice-card-body">
+                            <time class="notice-card-date">2025-05-01 05:12:12</time>
+                            <h2 class="notice-card-title">Login password changed successfully</h2>
+                            <p class="notice-card-desc">Your login password has been changed successfully.</p>
+                        </div>
+                        <button class="notice-action" type="button">Mark as Read <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                </div>
+
+                <div class="notice-panel" data-notice-panel="events" role="tabpanel" hidden>
+                    <article class="notice-card">
+                        <img class="notice-card-icon notice-card-icon-events" src="/assets/figma-export/neking/notice-icon-events.png" alt="">
+                        <div class="notice-card-body">
+                            <time class="notice-card-date">2025-05-01 05:12:12</time>
+                            <h2 class="notice-card-title">welcome bonus</h2>
+                            <p class="notice-card-desc">Aonut : USDT <strong>58</strong></p>
+                        </div>
+                        <button class="notice-action" type="button">Collect <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                </div>
+
+                <div class="notice-panel" data-notice-panel="personal" role="tabpanel" hidden>
+                    <article class="notice-card">
+                        <img class="notice-card-icon" src="/assets/figma-export/neking/notice-icon-platform.svg" alt="">
+                        <div class="notice-card-body">
+                            <time class="notice-card-date">2025-05-01 05:12:12</time>
+                            <h2 class="notice-card-title">Login password changed successfully</h2>
+                            <p class="notice-card-desc">Your login password has been changed successfully.</p>
+                        </div>
+                        <button class="notice-action" type="button">Mark as Read <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                    <article class="notice-card">
+                        <img class="notice-card-icon" src="/assets/figma-export/neking/notice-icon-platform.svg" alt="">
+                        <div class="notice-card-body">
+                            <time class="notice-card-date">2025-05-01 05:12:12</time>
+                            <h2 class="notice-card-title">Login password changed successfully</h2>
+                            <p class="notice-card-desc">Your login password has been changed successfully.</p>
+                        </div>
+                        <button class="notice-action is-read" type="button">READ <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ MOBILE ============ -->
+    <main class="profile-page notice-page notice-mobile auth-logged-in" aria-label="NEKINGX notice center mobile" data-notice-tab="platform">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+
+        <header class="profile-m-header">
+            <a class="pm-back" href="/profile.html" aria-label="Back">&lsaquo;</a>
+            <h1>Notice</h1>
+            <a class="pm-help" href="#" aria-label="Support"><img src="/assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+        </header>
+
+        <div class="notice-m-body">
+            <div class="notice-tabs notice-m-tabs" role="tablist" aria-label="Notice categories">
+                <button class="notice-tab is-active" type="button" data-notice-tab="platform" role="tab" aria-selected="true">Platform<span class="notice-badge">12</span></button>
+                <button class="notice-tab" type="button" data-notice-tab="events" role="tab" aria-selected="false">Events<span class="notice-badge">12</span></button>
+                <button class="notice-tab" type="button" data-notice-tab="personal" role="tab" aria-selected="false">Personal<span class="notice-badge">12</span></button>
+            </div>
+
+            <div class="notice-panels notice-m-panels">
+                <div class="notice-panel is-active" data-notice-panel="platform" role="tabpanel">
+                    <article class="notice-card notice-m-card">
+                        <time class="notice-card-date">2025-05-01 05:12:12</time>
+                        <div class="notice-m-row">
+                            <img class="notice-card-icon" src="/assets/figma-export/neking/notice-icon-platform.svg" alt="">
+                            <div class="notice-card-body">
+                                <h2 class="notice-card-title">Login password changed successfully</h2>
+                                <p class="notice-card-desc">Your login password has been changed successfully.</p>
+                            </div>
+                        </div>
+                        <button class="notice-action" type="button">Mark as Read <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                </div>
+
+                <div class="notice-panel" data-notice-panel="events" role="tabpanel" hidden>
+                    <article class="notice-card notice-m-card">
+                        <time class="notice-card-date">2025-05-01 05:12:12</time>
+                        <div class="notice-m-row">
+                            <img class="notice-card-icon notice-card-icon-events" src="/assets/figma-export/neking/notice-icon-events.png" alt="">
+                            <div class="notice-card-body">
+                                <h2 class="notice-card-title">welcome bonus</h2>
+                                <p class="notice-card-desc">Aonut : USDT <strong>58</strong></p>
+                            </div>
+                        </div>
+                        <button class="notice-action" type="button">Collect <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                </div>
+
+                <div class="notice-panel" data-notice-panel="personal" role="tabpanel" hidden>
+                    <article class="notice-card notice-m-card">
+                        <time class="notice-card-date">2025-05-01 05:12:12</time>
+                        <div class="notice-m-row">
+                            <img class="notice-card-icon" src="/assets/figma-export/neking/notice-icon-platform.svg" alt="">
+                            <div class="notice-card-body">
+                                <h2 class="notice-card-title">Login password changed successfully</h2>
+                                <p class="notice-card-desc">Your login password has been changed successfully.</p>
+                            </div>
+                        </div>
+                        <button class="notice-action" type="button">Mark as Read <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                    <article class="notice-card notice-m-card">
+                        <time class="notice-card-date">2025-05-01 05:12:12</time>
+                        <div class="notice-m-row">
+                            <img class="notice-card-icon" src="/assets/figma-export/neking/notice-icon-platform.svg" alt="">
+                            <div class="notice-card-body">
+                                <h2 class="notice-card-title">Login password changed successfully</h2>
+                                <p class="notice-card-desc">Your login password has been changed successfully.</p>
+                            </div>
+                        </div>
+                        <button class="notice-action is-read" type="button">READ <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <button class="notice-mark-all" type="button" data-notice-mark-all>Mark all as read <img src="/assets/figma-export/neking/notice-shield-tick.svg" alt=""></button>
+    </main>
+
+    <script src="/js/include.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

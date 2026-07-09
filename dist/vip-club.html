@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>VIP Club - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+
+    <!-- ============ DESKTOP ============ -->
+    <main class="vip-page vip-desktop auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX VIP Club">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+        <input class="nav-drawer-toggle" type="checkbox" id="static1DesktopNavDrawer" aria-hidden="true">
+<header class="desktop-header flex items-center">
+    <label class="desktop-menu inline-grid shrink-0 place-items-center" for="static1DesktopNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
+    <nav class="desktop-nav flex items-center" aria-label="Desktop navigation">
+        <a class="nav-aviator-badge" data-nav="home" href="index.html">Aviator</a>
+        <div class="nav-dropdown-wrap nav-crash-wrap">
+            <a class="nav-crash-link detail-crash-nav" data-nav="crash" data-text="Crash" href="crash.html">Crash</a>
+            <div class="nav-dropdown nav-crash-dropdown">
+                <div class="nav-provider-panel">
+    <div class="nav-featured-providers" aria-label="Crash providers">
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-turbo-games.webp" alt="Turbo Games">
+                <span>Turbo Games</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-spribe.webp" alt="Spribe">
+                <span>Spribe</span>
+            </div>
+        </a>
+        <a href="crash.html" class="nav-dropdown-item">
+            <div class="nav-dropdown-card">
+                <img src="../assets/figma-export/neking/provider-aviatrix.png" alt="Aviatrix">
+                <span>Aviatrix</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="nav-dropdown-wrap nav-casino-wrap">
+            <a class="nav-casino-link detail-casino-nav" data-nav="casino" data-text="Casino" href="casino.html">Casino</a>
+            <div class="nav-dropdown nav-casino-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="Casino providers">
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-aviatrix.png" alt="Aviatrix"><span>Aviatrix</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-betgames.png" alt="BetGames"><span>BetGames</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-ezugi.png" alt="Ezugi"><span>Ezugi</span></div></a>
+                        <a href="casino.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/casino/provider-golden-race.png" alt="GoldenRace"><span>GoldenRace</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-virtual-link" data-nav="virtual" data-text="Virtual" href="virtual.html">Virtual</a>
+        <div class="nav-dropdown-wrap nav-esports-wrap">
+            <a class="nav-esports-link" data-nav="esports" data-text="E-Sports" href="e-sports.html">E-Sports</a>
+            <div class="nav-dropdown nav-esports-dropdown">
+                <div class="nav-provider-panel">
+                    <div class="nav-featured-providers" aria-label="E-Sports providers">
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/turbo2.webp" alt="Turbo Sports"><span>Turbo Sports</span></div></a>
+                        <a href="e-sports.html" class="nav-dropdown-item"><div class="nav-dropdown-card"><img src="../assets/figma-export/neking/e-sports/oddin2.webp" alt="Oddin"><span>Oddin</span></div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="nav-bet-game-link" data-nav="betgame" data-text="Bet Game" href="bet-game.html">Bet Game</a>
+    </nav>
+    <div class="desktop-actions desktop-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+    </div>
+    <div class="desktop-actions desktop-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/header-chat-bubble.svg" alt=""><em>1</em></a>
+        <button class="profile-trigger" aria-label="Account menu">
+            <img class="profile-avatar" src="../assets/figma-export/neking/header-profile-lion.png" alt="">
+            <img class="profile-chevron" src="../assets/figma-export/neking/header-chevron-down.svg" alt="">
+        </button>
+    </div>
+</header>
+<label class="drawer-backdrop drawer-backdrop-desktop" for="static1DesktopNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer desktop-side-drawer grid content-start" aria-label="Main menu">
+    <a class="drawer-top-cta drawer-home" href="index.html">Home</a>
+    <div class="drawer-cash-row grid grid-cols-2">
+        <a class="drawer-deposit" href="deposit.html">Deposit</a>
+        <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+    </div>
+    <nav class="drawer-nav grid">
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+        <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+        <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+        <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+        <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+        <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
+    </nav>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+    </section>
+</aside>
+
+<input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
+<header class="mobile-header flex items-center">
+    <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+    <div class="mobile-before-login flex items-center">
+        <a class="login-btn" href="login.html">Login</a>
+    </div>
+    <div class="mobile-after-login flex items-center">
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+    </div>
+    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+</header>
+<label class="drawer-backdrop drawer-backdrop-mobile" for="static1MobileNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
+    <label class="drawer-close" for="static1MobileNavDrawer" aria-label="Close menu">&times;</label>
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <a class="drawer-top-cta drawer-login logged-out-only" href="login.html">Login</a>
+    <div class="drawer-actions">
+        <div class="drawer-cash-row grid grid-cols-2">
+            <a class="drawer-deposit" href="deposit.html">Deposit</a>
+            <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+        </div>
+        <nav class="drawer-nav grid">
+            <a class="drawer-home" href="index.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-home.png" alt=""><span class="drawer-nav-label">Home</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+            <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+            <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+            <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+            <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+            <a class="drawer-providers" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-providers.png" alt=""><span class="drawer-nav-label">Providers</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+            <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
+        </nav>
+    </div>
+    <section class="drawer-invite logged-in-only grid">
+        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
+        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
+        <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+    </section>
+</aside>
+
+
+        <section class="vip-shell">
+            <article class="vip-progress-banner" aria-label="Current VIP progress">
+                <span class="vip-level-tag">Current level</span>
+                <div class="vip-progress-body">
+                    <div class="vip-progress-copy">
+                        <h1 class="vip-progress-title">VIP <strong>1</strong></h1>
+                        <p class="vip-progress-wager">Current Wagering <strong>680$</strong></p>
+                        <div class="vip-progress-track" aria-hidden="true">
+                            <i style="width:15%"></i>
+                        </div>
+                        <p class="vip-progress-goal"><strong>5000$</strong> To Go Next Level</p>
+                    </div>
+                    <img class="vip-progress-crown" src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                </div>
+            </article>
+
+            <div class="vip-levels-head">
+                <h2 class="vip-section-title">VIP Levels</h2>
+                <div class="vip-carousel-controls" role="group" aria-label="VIP levels carousel">
+                    <button class="vip-arrow-prev" type="button" data-vip-scroll="-1" aria-label="Previous VIP levels" disabled>
+                        <img src="../assets/figma-export/neking/vip-arrow-left.svg" alt="">
+                    </button>
+                    <button class="vip-arrow-next" type="button" data-vip-scroll="1" aria-label="Next VIP levels">
+                        <img src="../assets/figma-export/neking/vip-arrow-right.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="vip-levels-track vip-carousel" data-vip-carousel>
+                <article class="vip-level-card vip-level-1">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>1</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade Bonus</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday Gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal Limit</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Retention Requirement</span><strong>18</strong></li>
+                    </ul>
+                </article>
+                <article class="vip-level-card vip-level-2">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>2</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade Bonus</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday Gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal Limit</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Retention Requirement</span><strong>18</strong></li>
+                    </ul>
+                </article>
+                <article class="vip-level-card vip-level-3">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>3</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade Bonus</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday Gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal Limit</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Retention Requirement</span><strong>18</strong></li>
+                    </ul>
+                </article>
+                <article class="vip-level-card vip-level-4">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>4</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade Bonus</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday Gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal Limit</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Retention Requirement</span><strong>18</strong></li>
+                    </ul>
+                </article>
+                <article class="vip-level-card vip-level-5">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>5</em></h3>
+                            <p>Wagering <strong>10000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.20%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade Bonus</span><strong>28</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday Gift</span><strong>28</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal Limit</span><strong>28</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Retention Requirement</span><strong>28</strong></li>
+                    </ul>
+                </article>
+            </div>
+
+            <section class="vip-qa" aria-label="VIP Q&A">
+                <h2 class="vip-section-title">Q&A</h2>
+                <div class="vip-qa-list">
+                    <article class="vip-qa-item">
+                        <button class="vip-qa-q" type="button">How can I improve my VIP level?<img src="../assets/figma-export/neking/vip-qa-chevron.svg" alt="" class="vip-qa-chevron"></button>
+                        <div class="vip-qa-a"><p>Increase your valid wagering to meet the next VIP level requirement. Progress updates as eligible bets settle.</p></div>
+                    </article>
+                    <article class="vip-qa-item">
+                        <button class="vip-qa-q" type="button">What are the rules for VIP level promotion?<img src="../assets/figma-export/neking/vip-qa-chevron.svg" alt="" class="vip-qa-chevron"></button>
+                        <div class="vip-qa-a"><p>VIP levels upgrade automatically when your cumulative wagering reaches the threshold for the next stage.</p></div>
+                    </article>
+                    <article class="vip-qa-item">
+                        <button class="vip-qa-q" type="button">Explanation of VIP Wagering rebate bonuses.<img src="../assets/figma-export/neking/vip-qa-chevron.svg" alt="" class="vip-qa-chevron"></button>
+                        <div class="vip-qa-a"><p>Rebate bonuses are calculated from eligible wagering at your current VIP rebate rate and credited according to program rules.</p></div>
+                    </article>
+                    <article class="vip-qa-item">
+                        <button class="vip-qa-q" type="button">Why did my VIP level go down?<img src="../assets/figma-export/neking/vip-qa-chevron.svg" alt="" class="vip-qa-chevron"></button>
+                        <div class="vip-qa-a"><p>If retention requirements are not met within the review period, your VIP level may be adjusted according to the VIP rules.</p></div>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- ============ MOBILE ============ -->
+    <main class="vip-page vip-mobile auth-logged-in" aria-label="NEKINGX VIP Club mobile">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+
+        <header class="profile-m-header">
+            <a class="pm-back" href="index.html" aria-label="Back">&lsaquo;</a>
+            <h1>VIP Club</h1>
+            <a class="pm-help" href="#" aria-label="Support"><img src="../assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+        </header>
+
+        <div class="vip-m-body">
+            <article class="vip-progress-banner vip-progress-banner-m" aria-label="Current VIP progress">
+                <span class="vip-level-tag">Current level</span>
+                <div class="vip-progress-body">
+                    <div class="vip-progress-copy">
+                        <h1 class="vip-progress-title">VIP <strong>1</strong></h1>
+                        <p class="vip-progress-wager">Current Wagering <strong>680$</strong></p>
+                        <div class="vip-progress-track" aria-hidden="true">
+                            <i style="width:15%"></i>
+                        </div>
+                        <p class="vip-progress-goal"><strong>5000$</strong> To Go Next Level</p>
+                    </div>
+                    <img class="vip-progress-crown" src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                </div>
+            </article>
+
+            <h2 class="vip-section-title vip-section-title-m">VIP System Level</h2>
+
+            <div class="vip-levels-track vip-carousel vip-carousel-m" data-vip-carousel>
+                <article class="vip-level-card vip-level-1">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>1</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal count</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Relegation battle</span><strong>18</strong></li>
+                    </ul>
+                </article>
+                <article class="vip-level-card vip-level-2">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>2</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal count</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Relegation battle</span><strong>18</strong></li>
+                    </ul>
+                </article>
+                <article class="vip-level-card vip-level-3">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>3</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal count</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Relegation battle</span><strong>18</strong></li>
+                    </ul>
+                </article>
+                <article class="vip-level-card vip-level-4">
+                    <header class="vip-level-card-head">
+                        <img src="../assets/figma-export/neking/vip-banner-crown.png" alt="">
+                        <div>
+                            <h3>VIP <em>4</em></h3>
+                            <p>Wagering <strong>5000</strong></p>
+                        </div>
+                    </header>
+                    <ul class="vip-benefit-list">
+                        <li><img src="../assets/figma-export/neking/vip-icon-rebate.png" alt=""><span>Rebate Rate</span><strong>0.15%</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-upgrade.png" alt=""><span>Upgrade gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-birthday.png" alt=""><span>Birthday gift</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-withdraw.png" alt=""><span>Withdrawal count</span><strong>18</strong></li>
+                        <li><img src="../assets/figma-export/neking/vip-icon-retention.png" alt=""><span>Relegation battle</span><strong>18</strong></li>
+                    </ul>
+                </article>
+            </div>
+
+            <section class="vip-qa vip-qa-m" aria-label="VIP FAQs">
+                <h2 class="vip-section-title vip-section-title-m">FAQs</h2>
+                <div class="vip-qa-list">
+                    <article class="vip-qa-item">
+                        <button class="vip-qa-q" type="button">How can I improve my VIP level?<img src="../assets/figma-export/neking/vip-qa-chevron.svg" alt="" class="vip-qa-chevron"></button>
+                        <div class="vip-qa-a"><p>Increase your valid wagering to meet the next VIP level requirement. Progress updates as eligible bets settle.</p></div>
+                    </article>
+                    <article class="vip-qa-item">
+                        <button class="vip-qa-q" type="button">What are the rules for VIP level..<img src="../assets/figma-export/neking/vip-qa-chevron.svg" alt="" class="vip-qa-chevron"></button>
+                        <div class="vip-qa-a"><p>VIP levels upgrade automatically when your cumulative wagering reaches the threshold for the next stage.</p></div>
+                    </article>
+                    <article class="vip-qa-item">
+                        <button class="vip-qa-q" type="button">Explanation of VIP turnover rebate..<img src="../assets/figma-export/neking/vip-qa-chevron.svg" alt="" class="vip-qa-chevron"></button>
+                        <div class="vip-qa-a"><p>Rebate bonuses are calculated from eligible wagering at your current VIP rebate rate and credited according to program rules.</p></div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/include.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

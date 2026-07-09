@@ -88,6 +88,7 @@
                 document.querySelectorAll(".nav-drawer-toggle").forEach((toggle) => {
                     toggle.checked = false;
                 });
+                document.body.classList.remove("drawer-open");
                 setAuthState();
             });
         });
@@ -153,8 +154,9 @@
         document.querySelectorAll(".bottom-nav a").forEach((link) => link.classList.remove("active"));
         document.querySelectorAll(".bottom-nav").forEach((nav) => {
             const activeSelector = page === "promotion.html" ? ".promotion-link" :
-                page === "index.html" || page === "" ? ".affiliate-link" :
-                    ".home-link";
+                page === "affiliate.html" ? ".affiliate-link" :
+                page === "index.html" || page === "" ? ".home-link" :
+                ".home-link";
             nav.querySelector(activeSelector)?.classList.add("active");
         });
     };

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
+            const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
+        }
+    </script>
+    <title>Affiliate - NEKINGX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="min-h-screen overflow-x-hidden">
+
+    <!-- ============ DESKTOP ============ -->
+    <main class="affiliate-page affiliate-desktop auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX affiliate program" data-aff-tab="overview">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+        <div data-include="/components/header.html"></div>
+
+        <section class="affiliate-shell">
+            <nav class="aff-tabs" aria-label="Affiliate sections">
+                <button class="aff-tab is-active" type="button" data-aff-tab="overview" aria-selected="true">
+                    <img class="aff-tab-ico aff-tab-ico-inactive" src="/assets/figma-export/neking/aff-tab-overview.svg" alt="">
+                    <img class="aff-tab-ico aff-tab-ico-active" src="/assets/figma-export/neking/aff-tab-overview-active.svg" alt="">
+                    <span>Overview</span>
+                </button>
+                <button class="aff-tab aff-tab-team" type="button" data-aff-tab="team" aria-selected="false">
+                    <img class="aff-tab-ico aff-tab-ico-inactive" src="/assets/figma-export/neking/aff-tab-team.svg" alt="">
+                    <img class="aff-tab-ico aff-tab-ico-active" src="/assets/figma-export/neking/aff-tab-team-active.svg" alt="">
+                    <span>My Team</span>
+                </button>
+                <button class="aff-tab aff-tab-rewards" type="button" data-aff-tab="rewards" aria-selected="false">
+                    <img class="aff-tab-ico aff-tab-ico-inactive" src="/assets/figma-export/neking/aff-tab-rewards.svg" alt="">
+                    <img class="aff-tab-ico aff-tab-ico-active" src="/assets/figma-export/neking/aff-tab-rewards-active.svg" alt="">
+                    <span>My Rewards</span>
+                </button>
+            </nav>
+
+            <section class="aff-stage-card" aria-label="Team stage progress">
+                <div class="aff-stage-left">
+                    <div class="aff-stage-head">
+                        <p class="aff-stage-title"><span class="aff-stage-label">TEAM STAGE</span> <strong>2</strong></p>
+                        <img class="aff-stage-crown" src="/assets/figma-export/neking/aff-stage-crown.png" alt="">
+                    </div>
+                    <div class="aff-stage-bars">
+                        <div class="aff-stage-bar-row">
+                            <span class="aff-stage-bar-label"><img src="/assets/figma-export/neking/aff-icon-members.svg" alt=""> MEMBERS</span>
+                            <div class="aff-stage-bar-track">
+                                <div class="aff-stage-bar"><i style="width:33%"></i></div>
+                                <span class="aff-stage-bar-val">[1/3]</span>
+                            </div>
+                        </div>
+                        <div class="aff-stage-bar-row">
+                            <span class="aff-stage-bar-label"><img src="/assets/figma-export/neking/aff-icon-coin.svg" alt=""> TEAM BET</span>
+                            <div class="aff-stage-bar-track">
+                                <div class="aff-stage-bar"><i style="width:10%"></i></div>
+                                <span class="aff-stage-bar-val">[500/5000]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aff-stage-right">
+                    <p class="aff-commission-title">MY COMMISSION</p>
+                    <div class="aff-commission-items">
+                        <div class="aff-commission-item">
+                            <img src="/assets/figma-export/neking/aff-comm-1.png" alt="">
+                            <span>LEVEL 1 AGENT</span>
+                            <strong>UP TO <em>0.1%</em></strong>
+                        </div>
+                        <div class="aff-commission-item">
+                            <img src="/assets/figma-export/neking/aff-comm-2.png" alt="">
+                            <span>LEVEL 2 AGENT</span>
+                            <strong>UP TO <em>0.05%</em></strong>
+                        </div>
+                        <div class="aff-commission-item">
+                            <img src="/assets/figma-export/neking/aff-comm-3.png" alt="">
+                            <span>LEVEL 3 AGENT</span>
+                            <strong>UP TO <em>0.05%</em></strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overview panel -->
+            <div class="aff-panel is-active" data-aff-panel="overview">
+                <div class="aff-overview-grid">
+                    <section class="aff-join-card" aria-label="Join for Wealth">
+                        <div class="aff-join-head">
+                            <h2 class="aff-join-title">Join for Wealth <span class="aff-join-accent">We Made Way !</span></h2>
+                            <p class="aff-join-sub">Share your QR code and invite friends to build your team and earn more together.</p>
+                        </div>
+                        <div class="aff-join-body">
+                            <button class="aff-qr-trigger" type="button" aria-label="View QR code">
+                                <img class="aff-qr-img" src="/assets/figma-export/neking/aff-invite-qr.png" alt="Invitation QR code">
+                            </button>
+                            <div class="aff-join-rows">
+                                <div class="aff-join-row">
+                                    <img class="aff-join-row-ico" src="/assets/figma-export/neking/aff-tab-overview.svg" alt="">
+                                    <div class="aff-join-row-body">
+                                        <span class="aff-join-row-label">INVITATION CODE</span>
+                                        <strong>191175</strong>
+                                    </div>
+                                    <button class="aff-copy-btn" type="button" data-copy="191175" aria-label="Copy invitation code">COPY</button>
+                                </div>
+                                <div class="aff-join-row">
+                                    <img class="aff-join-row-ico" src="/assets/figma-export/neking/aff-icon-link.svg" alt="">
+                                    <div class="aff-join-row-body">
+                                        <span class="aff-join-row-label">INVITE LINK</span>
+                                        <strong class="aff-join-link">https://clientview11.allgame..</strong>
+                                    </div>
+                                    <button class="aff-copy-btn" type="button" data-copy="https://www.nekingx.com/account/register?ref=191175" aria-label="Copy invite link">COPY</button>
+                                </div>
+                                <div class="aff-join-row aff-join-row-id">
+                                    <img class="aff-join-row-ico" src="/assets/figma-export/neking/aff-shield-tick.svg" alt="">
+                                    <div class="aff-join-row-body">
+                                        <span class="aff-join-row-label">MEMBER ID</span>
+                                        <strong>01****8677</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aff-share-block">
+                            <p class="aff-share-label">SHARE &amp; INVITE</p>
+                            <div class="aff-social-row" aria-label="Share on social media">
+                                <a href="#" aria-label="Telegram"><img src="/assets/figma-export/neking/aff-social-telegram.svg" alt=""></a>
+                                <a href="#" aria-label="X"><img src="/assets/figma-export/neking/aff-social-x.svg" alt=""></a>
+                                <a href="#" aria-label="Facebook"><img src="/assets/figma-export/neking/aff-social-fb.svg" alt=""></a>
+                                <a href="#" aria-label="Instagram"><img src="/assets/figma-export/neking/aff-social-ig.svg" alt=""></a>
+                                <button class="aff-social-qr aff-qr-trigger" type="button" aria-label="View QR code"><img src="/assets/figma-export/neking/aff-qr-social.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="aff-comm-table-card" aria-label="Commission rates by level and stage">
+                        <h2 class="aff-comm-table-title">Level-1~Level-3 Agent Commission( Direct / Downline Members )</h2>
+                        <div class="aff-comm-table-wrap">
+                            <table class="aff-comm-table">
+                                <thead>
+                                    <tr>
+                                        <th>Stage</th>
+                                        <th>Active Members</th>
+                                        <th>Wagering</th>
+                                        <th>Level 1</th>
+                                        <th>Level 2</th>
+                                        <th>Level 3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>1</td><td>1</td><td>1000</td><td>0.10%</td><td>0.05%</td><td>0.05%</td></tr>
+                                    <tr><td>2</td><td>8</td><td>150,000</td><td>0.15%</td><td>0.08%</td><td>0.08%</td></tr>
+                                    <tr><td>3</td><td>18</td><td>300,000</td><td>0.20%</td><td>0.10%</td><td>0.10%</td></tr>
+                                    <tr><td>4</td><td>88</td><td>1,600,000</td><td>0.25%</td><td>0.13%</td><td>0.13%</td></tr>
+                                    <tr><td>5</td><td>168</td><td>3,000,000</td><td>0.30%</td><td>0.15%</td><td>0.15%</td></tr>
+                                    <tr class="aff-comm-extra"><td>6</td><td>288</td><td>5,000,000</td><td>0.40%</td><td>0.20%</td><td>0.20%</td></tr>
+                                    <tr class="aff-comm-extra"><td>7</td><td>888</td><td>16,000,000</td><td>0.50%</td><td>0.25%</td><td>0.25%</td></tr>
+                                    <tr class="aff-comm-extra"><td>8</td><td>&gt; 1200</td><td>50,000,000</td><td>0.60%</td><td>0.30%</td><td>0.30%</td></tr>
+                                    <tr class="aff-comm-extra"><td>9</td><td>&gt; 2000</td><td>100,000,000</td><td>0.70%</td><td>0.35%</td><td>0.35%</td></tr>
+                                    <tr class="aff-comm-extra"><td>10</td><td>&gt; 5000</td><td>&gt; 2500000000</td><td>0.80%</td><td>0.40%</td><td>0.40%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="aff-comm-expand" type="button" aria-expanded="false">
+                            <img class="aff-comm-expand-ico" src="/assets/figma-export/neking/aff-expand-chevron.svg" alt="">
+                            <span class="aff-comm-expand-text">
+                                <span class="aff-comm-expand-title">Show Stage 6-10</span>
+                                <span class="aff-comm-expand-sub">Click to expand and view more levels</span>
+                            </span>
+                        </button>
+                    </section>
+                </div>
+
+                <section class="aff-qa-card" aria-label="Frequently asked questions">
+                    <h2 class="aff-section-title">Q&amp;A</h2>
+                    <div class="aff-qa-list">
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">What is a valid member?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>A valid member is a referred player who has completed registration, made a qualifying deposit, and placed valid wagers within the evaluation period.</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">How do team stages upgrade?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Your team stage increases when your team meets the required thresholds for total members, active members, and cumulative team wagering volume.</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">How is commission calculated?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Commission is calculated as a percentage of your downline's valid wagering volume, based on your current team stage and the referral level (Level 1, 2, or 3).</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">How does Level 1 differ from other team levels?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Level 1 members are your direct referrals. Level 2 and Level 3 members are downline referrals from your team, each earning a lower commission tier based on your stage.</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">Are commission rates the same across games?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Commission rates may vary by game category. Valid wagering from eligible games counts toward your team stage and commission earnings as defined in the program terms.</p></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Team panel -->
+            <div class="aff-panel" data-aff-panel="team" hidden>
+                <div class="aff-team-board">
+                    <div class="aff-team-date-filters" role="group" aria-label="Date range">
+                        <button class="aff-date-btn" type="button" data-aff-date="yesterday">
+                            <img class="aff-date-ico aff-date-cal" src="/assets/figma-export/neking/history-calendar.svg" alt="">
+                            <span>Yesterday</span>
+                            <img class="aff-date-ico aff-date-chevron" src="/assets/figma-export/neking/aff-date-chevron.svg" alt="">
+                            <img class="aff-date-ico aff-date-check" src="/assets/figma-export/neking/aff-date-check.svg" alt="">
+                        </button>
+                        <button class="aff-date-btn is-active" type="button" data-aff-date="7d">
+                            <img class="aff-date-ico aff-date-cal" src="/assets/figma-export/neking/history-calendar.svg" alt="">
+                            <span>Past 7 Days</span>
+                            <img class="aff-date-ico aff-date-chevron" src="/assets/figma-export/neking/aff-date-chevron.svg" alt="">
+                            <img class="aff-date-ico aff-date-check" src="/assets/figma-export/neking/aff-date-check.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="aff-team-stats">
+                        <div class="aff-team-stat-row is-total">
+                            <div class="aff-team-stat-cells">
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">MEMBERS</span>
+                                        <strong class="aff-team-stat-value">120</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">ACTIVE MEMBERS (ALL)</span>
+                                        <strong class="aff-team-stat-value">85</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-coin.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">TOTAL WAGERING (ALL)</span>
+                                        <strong class="aff-team-stat-value">$35,670.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aff-team-stat-row is-s1">
+                            <p class="aff-team-stage-badge">STAGE 1</p>
+                            <div class="aff-team-stat-cells">
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">MEMBERS</span>
+                                        <strong class="aff-team-stat-value">70</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">ACTIVE MEMBERS</span>
+                                        <strong class="aff-team-stat-value">50</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-coin.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">TOTAL WAGERING</span>
+                                        <strong class="aff-team-stat-value">$25,450.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aff-team-stat-row is-s2">
+                            <p class="aff-team-stage-badge">STAGE 2</p>
+                            <div class="aff-team-stat-cells">
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">MEMBERS</span>
+                                        <strong class="aff-team-stat-value">30</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">ACTIVE MEMBERS</span>
+                                        <strong class="aff-team-stat-value">20</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-coin.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">TOTAL WAGERING</span>
+                                        <strong class="aff-team-stat-value">$7,850.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aff-team-stat-row is-s3">
+                            <p class="aff-team-stage-badge">STAGE 3</p>
+                            <div class="aff-team-stat-cells">
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">MEMBERS</span>
+                                        <strong class="aff-team-stat-value">20</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-people.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">ACTIVE MEMBERS</span>
+                                        <strong class="aff-team-stat-value">15</strong>
+                                    </div>
+                                </div>
+                                <div class="aff-team-stat-cell">
+                                    <img class="aff-team-stat-ico" src="/assets/figma-export/neking/aff-team-coin.svg" alt="">
+                                    <div class="aff-team-stat-text">
+                                        <span class="aff-team-stat-label">TOTAL WAGERING</span>
+                                        <strong class="aff-team-stat-value">$2,370.00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-filters aff-team-filters">
+                    <div class="history-range" role="group" aria-label="Time range">
+                        <button class="history-range-btn is-active" type="button" data-history-range="24h">24 hours</button>
+                        <button class="history-range-btn" type="button" data-history-range="3d">3 days</button>
+                        <button class="history-range-btn" type="button" data-history-range="7d">7 days</button>
+                        <button class="history-cal-btn" type="button" aria-label="Pick date"><img src="/assets/figma-export/neking/history-calendar.svg" alt=""></button>
+                    </div>
+                    <button class="history-select" type="button">All Games <img src="/assets/figma-export/neking/history-select.svg" alt=""></button>
+                    <button class="history-select" type="button">All Statuses <img src="/assets/figma-export/neking/history-select.svg" alt=""></button>
+                </div>
+
+                <section class="history-table-card aff-team-table-card" aria-label="Team activity">
+                    <p class="history-date-label aff-team-date-range">DATE 2025-10-26~2025-10-27</p>
+                    <div class="history-table history-table-desktop aff-team-table">
+                        <div class="history-thead">
+                            <span>Account</span>
+                            <span>Stage</span>
+                            <span>Type</span>
+                            <span>Amount</span>
+                            <span>Time</span>
+                        </div>
+                        <div class="history-tbody">
+                            <div class="history-row">
+                                <span>123456789</span>
+                                <span>2</span>
+                                <span>Betting</span>
+                                <span>1200.00</span>
+                                <span class="history-time">2025-10-25 09:00:00</span>
+                            </div>
+                            <div class="history-row">
+                                <span>123456789</span>
+                                <span>5</span>
+                                <span>Betting</span>
+                                <span>100.00</span>
+                                <span class="history-time">2025-10-25 09:00:00</span>
+                            </div>
+                            <div class="history-row">
+                                <span>123456789</span>
+                                <span>1</span>
+                                <span>Betting</span>
+                                <span>--</span>
+                                <span class="history-time">2025-10-25 09:00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Rewards panel -->
+            <div class="aff-panel" data-aff-panel="rewards" hidden>
+                <div class="aff-bonus-cards">
+                    <article class="aff-bonus-card">
+                        <h3 class="aff-bonus-title">
+                            Referral Commission Bonus
+                            <img class="aff-bonus-info" src="/assets/figma-export/neking/aff-bonus-info.svg" alt="" aria-hidden="true">
+                        </h3>
+                        <div class="aff-bonus-stats">
+                            <div class="aff-bonus-stat"><span>Today:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat"><span>This Month:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat is-claimed"><span>Total Claimed:</span><strong>$0.000</strong></div>
+                        </div>
+                        <div class="aff-bonus-claim-row">
+                            <div class="aff-bonus-unclaimed">
+                                <span>Unclaimed Amount:</span>
+                                <strong>$0.000</strong>
+                            </div>
+                            <button class="aff-claim-btn" type="button">Claim</button>
+                        </div>
+                        <div class="aff-bonus-warn">
+                            <img src="/assets/figma-export/neking/aff-bonus-warn-red.svg" alt="" aria-hidden="true">
+                            <span>Bonus will be credited to Main Wallet.</span>
+                        </div>
+                    </article>
+                    <article class="aff-bonus-card">
+                        <h3 class="aff-bonus-title">
+                            Referral Deposit Bonus
+                            <img class="aff-bonus-info" src="/assets/figma-export/neking/aff-bonus-info.svg" alt="" aria-hidden="true">
+                        </h3>
+                        <div class="aff-bonus-stats">
+                            <div class="aff-bonus-stat"><span>Today:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat"><span>This Month:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat is-claimed"><span>Total Claimed:</span><strong>$0.000</strong></div>
+                        </div>
+                        <div class="aff-bonus-claim-row">
+                            <div class="aff-bonus-unclaimed">
+                                <span>Unclaimed Amount:</span>
+                                <strong>$0.000</strong>
+                            </div>
+                            <button class="aff-claim-btn" type="button">Claim</button>
+                        </div>
+                        <div class="aff-bonus-warn">
+                            <img src="/assets/figma-export/neking/aff-bonus-warn-red.svg" alt="" aria-hidden="true">
+                            <span>Bonus will be credited to Bonus Wallet (Coin).</span>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="aff-rewards-record-card" aria-label="Reward records">
+                    <div class="aff-reward-subtabs" role="tablist" aria-label="Reward types">
+                        <button class="aff-reward-subtab is-active" type="button" data-aff-reward-tab="referral">Referral Commission Bonus</button>
+                        <button class="aff-reward-subtab" type="button" data-aff-reward-tab="deposit">Referral Deposit Bonus</button>
+                    </div>
+
+                    <div class="aff-reward-panel is-active" data-aff-reward-panel="referral">
+                        <div class="history-table history-table-desktop aff-rewards-table">
+                            <div class="history-thead">
+                                <span>Date</span>
+                                <span>Commission</span>
+                                <span>Status</span>
+                                <span>Claimed Time</span>
+                            </div>
+                            <div class="history-tbody">
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$5.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$2.00</span>
+                                    <span class="aff-status-pending">Pending</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-24</span>
+                                    <span>$1.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-24<br>09:00:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aff-reward-panel" data-aff-reward-panel="deposit" hidden>
+                        <div class="history-table history-table-desktop aff-rewards-table">
+                            <div class="history-thead">
+                                <span>Date</span>
+                                <span>Commission</span>
+                                <span>Status</span>
+                                <span>Claimed Time</span>
+                            </div>
+                            <div class="history-tbody">
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$5.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$2.00</span>
+                                    <span class="aff-status-pending">Pending</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-24</span>
+                                    <span>$1.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-24<br>09:00:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <div class="aff-qr-modal" id="affQrModal" hidden>
+            <div class="aff-qr-overlay" data-aff-qr-close></div>
+            <div class="aff-qr-dialog" role="dialog" aria-labelledby="affQrTitle" aria-modal="true">
+                <button class="aff-qr-close" type="button" data-aff-qr-close aria-label="Close">&times;</button>
+                <h2 class="aff-qr-title" id="affQrTitle">NekingX QR</h2>
+                <img class="aff-qr-dialog-img" src="/assets/figma-export/neking/aff-invite-qr.png" alt="Invitation QR code">
+                <p class="aff-qr-caption">Invite your friends to register</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============ MOBILE ============ -->
+    <main class="affiliate-page affiliate-mobile auth-logged-in" aria-label="NEKINGX affiliate program mobile" data-aff-tab="overview">
+        <div class="profile-bg-pattern" aria-hidden="true"></div>
+
+        <header class="profile-m-header">
+            <a class="pm-back" href="/index.html" aria-label="Back">&lsaquo;</a>
+            <h1>Affiliate</h1>
+            <a class="pm-help" href="#" aria-label="Support"><img src="/assets/figma-export/neking/profile-m-livechat.png" alt=""></a>
+        </header>
+
+        <div class="aff-m-body">
+            <nav class="aff-m-tabs" aria-label="Affiliate sections">
+                <button class="aff-m-tab is-active" type="button" data-aff-tab="overview">Overview</button>
+                <button class="aff-m-tab" type="button" data-aff-tab="team">My Team</button>
+                <button class="aff-m-tab" type="button" data-aff-tab="rewards">My Rewards</button>
+            </nav>
+
+            <section class="aff-stage-card aff-stage-card-m" aria-label="Team stage progress">
+                <div class="aff-stage-head aff-stage-head-m">
+                    <p class="aff-stage-title"><span class="aff-stage-label">TEAM STAGE</span> <strong>2</strong></p>
+                    <img class="aff-stage-crown" src="/assets/figma-export/neking/aff-stage-crown.png" alt="">
+                </div>
+                <div class="aff-stage-bars">
+                    <div class="aff-stage-bar-row">
+                        <span class="aff-stage-bar-label"><img src="/assets/figma-export/neking/aff-icon-members.svg" alt=""> MEMBERS</span>
+                        <div class="aff-stage-bar-track">
+                            <div class="aff-stage-bar"><i style="width:33%"></i></div>
+                            <span class="aff-stage-bar-val">[1/3]</span>
+                        </div>
+                    </div>
+                    <div class="aff-stage-bar-row">
+                        <span class="aff-stage-bar-label"><img src="/assets/figma-export/neking/aff-icon-coin.svg" alt=""> TEAM BET</span>
+                        <div class="aff-stage-bar-track">
+                            <div class="aff-stage-bar"><i style="width:10%"></i></div>
+                            <span class="aff-stage-bar-val">[500/5000]</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="aff-commission-row">
+                    <p class="aff-commission-title">MY COMMISSION</p>
+                    <div class="aff-commission-items">
+                        <div class="aff-commission-item">
+                            <img src="/assets/figma-export/neking/aff-comm-1.png" alt="">
+                            <span>LEVEL 1 AGENT</span>
+                            <strong>UP TO <em>0.1%</em></strong>
+                        </div>
+                        <div class="aff-commission-item">
+                            <img src="/assets/figma-export/neking/aff-comm-2.png" alt="">
+                            <span>LEVEL 2 AGENT</span>
+                            <strong>UP TO <em>0.05%</em></strong>
+                        </div>
+                        <div class="aff-commission-item">
+                            <img src="/assets/figma-export/neking/aff-comm-3.png" alt="">
+                            <span>LEVEL 3 AGENT</span>
+                            <strong>UP TO <em>0.05%</em></strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="aff-panel is-active" data-aff-panel="overview">
+                <section class="aff-join-card aff-join-card-m" aria-label="Join for Wealth">
+                    <div class="aff-join-head">
+                        <h2 class="aff-join-title">Join for Wealth <span class="aff-join-accent">We Made Way !</span></h2>
+                        <p class="aff-join-sub">Share your QR code and invite friends to build your team and earn more together.</p>
+                    </div>
+                    <div class="aff-join-body">
+                        <button class="aff-qr-trigger aff-qr-trigger-m" type="button" aria-label="View QR code">
+                            <img class="aff-qr-img" src="/assets/figma-export/neking/aff-invite-qr.png" alt="Invitation QR code">
+                        </button>
+                        <div class="aff-join-rows">
+                            <div class="aff-join-row">
+                                <img class="aff-join-row-ico" src="/assets/figma-export/neking/aff-tab-overview.svg" alt="">
+                                <div class="aff-join-row-body">
+                                    <span class="aff-join-row-label">INVITATION CODE</span>
+                                    <strong>191175</strong>
+                                </div>
+                                <button class="aff-copy-btn" type="button" data-copy="191175" aria-label="Copy invitation code">COPY</button>
+                            </div>
+                            <div class="aff-join-row">
+                                <img class="aff-join-row-ico" src="/assets/figma-export/neking/aff-icon-link.svg" alt="">
+                                <div class="aff-join-row-body">
+                                    <span class="aff-join-row-label">INVITE LINK</span>
+                                    <strong class="aff-join-link">https://clientview11.allgame..</strong>
+                                </div>
+                                <button class="aff-copy-btn" type="button" data-copy="https://www.nekingx.com/account/register?ref=191175" aria-label="Copy invite link">COPY</button>
+                            </div>
+                            <div class="aff-join-row aff-join-row-id">
+                                <img class="aff-join-row-ico" src="/assets/figma-export/neking/aff-shield-tick.svg" alt="">
+                                <div class="aff-join-row-body">
+                                    <span class="aff-join-row-label">MEMBER ID</span>
+                                    <strong>01****8677</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aff-share-block">
+                        <p class="aff-share-label">SHARE &amp; INVITE</p>
+                        <div class="aff-social-row" aria-label="Share on social media">
+                            <a href="#" aria-label="Telegram"><img src="/assets/figma-export/neking/aff-social-telegram.svg" alt=""></a>
+                            <a href="#" aria-label="X"><img src="/assets/figma-export/neking/aff-social-x.svg" alt=""></a>
+                            <a href="#" aria-label="Facebook"><img src="/assets/figma-export/neking/aff-social-fb.svg" alt=""></a>
+                            <a href="#" aria-label="Instagram"><img src="/assets/figma-export/neking/aff-social-ig.svg" alt=""></a>
+                            <button class="aff-social-qr aff-qr-trigger" type="button" aria-label="View QR code"><img src="/assets/figma-export/neking/aff-qr-social.svg" alt=""></button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="aff-comm-table-card aff-comm-table-card-m" aria-label="Commission rates">
+                    <h2 class="aff-comm-table-title">Level-1~Level-3 Agent Commission( Direct / Downline Members )</h2>
+                    <div class="aff-comm-table-wrap">
+                        <table class="aff-comm-table">
+                            <thead>
+                                <tr>
+                                    <th>Stage</th>
+                                    <th>Active</th>
+                                    <th>Wager</th>
+                                    <th>L1</th>
+                                    <th>L2</th>
+                                    <th>L3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>1</td><td>1000</td><td>0.10%</td><td>0.05%</td><td>0.05%</td></tr>
+                                <tr><td>2</td><td>8</td><td>150K</td><td>0.15%</td><td>0.08%</td><td>0.08%</td></tr>
+                                <tr><td>3</td><td>18</td><td>300K</td><td>0.20%</td><td>0.10%</td><td>0.10%</td></tr>
+                                <tr><td>4</td><td>88</td><td>1.6M</td><td>0.25%</td><td>0.13%</td><td>0.13%</td></tr>
+                                <tr><td>5</td><td>168</td><td>3M</td><td>0.30%</td><td>0.15%</td><td>0.15%</td></tr>
+                                <tr class="aff-comm-extra"><td>6</td><td>288</td><td>5M</td><td>0.40%</td><td>0.20%</td><td>0.20%</td></tr>
+                                <tr class="aff-comm-extra"><td>7</td><td>888</td><td>16M</td><td>0.50%</td><td>0.25%</td><td>0.25%</td></tr>
+                                <tr class="aff-comm-extra"><td>8</td><td>&gt;1200</td><td>50M</td><td>0.60%</td><td>0.30%</td><td>0.30%</td></tr>
+                                <tr class="aff-comm-extra"><td>9</td><td>&gt;2000</td><td>100M</td><td>0.70%</td><td>0.35%</td><td>0.35%</td></tr>
+                                <tr class="aff-comm-extra"><td>10</td><td>&gt;5000</td><td>&gt;250M</td><td>0.80%</td><td>0.40%</td><td>0.40%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="aff-qa-card aff-qa-card-m" aria-label="Frequently asked questions">
+                    <h2 class="aff-section-title">Q&amp;A</h2>
+                    <div class="aff-qa-list">
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">What is a valid member?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>A valid member is a referred player who has completed registration, made a qualifying deposit, and placed valid wagers within the evaluation period.</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">How do team stages upgrade?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Your team stage increases when your team meets the required thresholds for total members, active members, and cumulative team wagering volume.</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">How is commission calculated?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Commission is calculated as a percentage of your downline's valid wagering volume, based on your current team stage and the referral level (Level 1, 2, or 3).</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">How does Level 1 differ from other team levels?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Level 1 members are your direct referrals. Level 2 and Level 3 members are downline referrals from your team, each earning a lower commission tier based on your stage.</p></div>
+                        </article>
+                        <article class="aff-qa-item">
+                            <button class="aff-qa-q" type="button">Are commission rates the same across games?<img src="/assets/figma-export/neking/aff-chevron.svg" alt="" class="aff-qa-chevron"></button>
+                            <div class="aff-qa-a"><p>Commission rates may vary by game category. Valid wagering from eligible games counts toward your team stage and commission earnings as defined in the program terms.</p></div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <div class="aff-panel" data-aff-panel="team" hidden>
+                <div class="aff-team-board aff-team-board-m">
+                    <div class="aff-team-date-filters" role="group" aria-label="Date range">
+                        <button class="aff-date-btn" type="button" data-aff-date="today">
+                            <img class="aff-date-ico aff-date-cal" src="/assets/figma-export/neking/history-calendar.svg" alt="">
+                            <span>Today</span>
+                            <img class="aff-date-ico aff-date-chevron" src="/assets/figma-export/neking/aff-date-chevron.svg" alt="">
+                        </button>
+                        <button class="aff-date-btn is-active" type="button" data-aff-date="7d">
+                            <img class="aff-date-ico aff-date-cal" src="/assets/figma-export/neking/history-calendar.svg" alt="">
+                            <span>Past 7 Days</span>
+                            <img class="aff-date-ico aff-date-chevron" src="/assets/figma-export/neking/aff-date-chevron.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="aff-team-stats aff-team-stats-m">
+                        <div class="aff-team-stat-block is-total">
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> MEMBERS</span>
+                                <strong class="aff-team-list-value">120</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> ACTIVE MEMBERS (ALL)</span>
+                                <strong class="aff-team-list-value">85</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-coin.svg" alt=""> TOTAL WAGERING</span>
+                                <strong class="aff-team-list-value">$35,670.00</strong>
+                            </div>
+                        </div>
+                        <div class="aff-team-stat-block is-s1">
+                            <p class="aff-team-stage-badge">STAGE 1</p>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> MEMBERS</span>
+                                <strong class="aff-team-list-value">70</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> ACTIVE MEMBERS</span>
+                                <strong class="aff-team-list-value">50</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-coin.svg" alt=""> TOTAL WAGERING</span>
+                                <strong class="aff-team-list-value">$25,450.00</strong>
+                            </div>
+                        </div>
+                        <div class="aff-team-stat-block is-s2">
+                            <p class="aff-team-stage-badge">STAGE 2</p>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> MEMBERS</span>
+                                <strong class="aff-team-list-value">30</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> ACTIVE MEMBERS</span>
+                                <strong class="aff-team-list-value">20</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-coin.svg" alt=""> TOTAL WAGERING</span>
+                                <strong class="aff-team-list-value">$7,850.00</strong>
+                            </div>
+                        </div>
+                        <div class="aff-team-stat-block is-s3">
+                            <p class="aff-team-stage-badge">STAGE 3</p>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> MEMBERS</span>
+                                <strong class="aff-team-list-value">20</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-people.svg" alt=""> ACTIVE MEMBERS</span>
+                                <strong class="aff-team-list-value">15</strong>
+                            </div>
+                            <div class="aff-team-list-row">
+                                <span class="aff-team-list-label"><img src="/assets/figma-export/neking/aff-team-coin.svg" alt=""> TOTAL WAGERING</span>
+                                <strong class="aff-team-list-value">$2,370.00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-m-filters aff-team-filters-m">
+                    <div class="history-range history-m-range" role="group" aria-label="Time range">
+                        <button class="history-range-btn is-active" type="button" data-history-range="24h">24 Hours</button>
+                        <button class="history-range-btn" type="button" data-history-range="3d">3 Days</button>
+                        <button class="history-range-btn" type="button" data-history-range="7d">7 Days</button>
+                        <button class="history-cal-btn" type="button" aria-label="Pick date"><img src="/assets/figma-export/neking/history-calendar.svg" alt=""></button>
+                    </div>
+                    <div class="history-m-selects">
+                        <button class="history-select" type="button">All Games <img src="/assets/figma-export/neking/history-select.svg" alt=""></button>
+                        <button class="history-select" type="button">All Statuses <img src="/assets/figma-export/neking/history-select.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <section class="aff-team-table-card aff-team-table-card-m" aria-label="Team activity">
+                    <div class="history-table history-table-mobile aff-team-table-m">
+                        <div class="history-thead">
+                            <span>Account</span>
+                            <span>Stage</span>
+                            <span>Type</span>
+                            <span>Amount</span>
+                            <span>Time</span>
+                        </div>
+                        <div class="history-tbody">
+                            <div class="history-row">
+                                <span>123456789</span>
+                                <span>1</span>
+                                <span>Betting</span>
+                                <span>1200.00</span>
+                                <span class="history-time">2025-10-25<br>09:00:00</span>
+                            </div>
+                            <div class="history-row">
+                                <span>123456789</span>
+                                <span>2</span>
+                                <span>Register</span>
+                                <span>-</span>
+                                <span class="history-time">2025-10-25<br>09:00:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="aff-panel" data-aff-panel="rewards" hidden>
+                <div class="aff-bonus-cards aff-bonus-cards-m">
+                    <article class="aff-bonus-card">
+                        <h3 class="aff-bonus-title">
+                            Referral Commission Bonus
+                            <img class="aff-bonus-info" src="/assets/figma-export/neking/aff-bonus-info.svg" alt="" aria-hidden="true">
+                        </h3>
+                        <div class="aff-bonus-stats">
+                            <div class="aff-bonus-stat"><span>Today:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat"><span>This Month:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat is-claimed"><span>Total Claimed:</span><strong>$0.000</strong></div>
+                        </div>
+                        <div class="aff-bonus-claim-row">
+                            <div class="aff-bonus-unclaimed">
+                                <span>Unclaimed Amount:</span>
+                                <strong>$0.000</strong>
+                            </div>
+                            <button class="aff-claim-btn" type="button">Claim</button>
+                        </div>
+                        <div class="aff-bonus-warn">
+                            <img src="/assets/figma-export/neking/aff-bonus-warn-red.svg" alt="" aria-hidden="true">
+                            <span>Bonus will be credited to Main Wallet.</span>
+                        </div>
+                    </article>
+                    <article class="aff-bonus-card">
+                        <h3 class="aff-bonus-title">
+                            Referral Deposit Bonus
+                            <img class="aff-bonus-info" src="/assets/figma-export/neking/aff-bonus-info.svg" alt="" aria-hidden="true">
+                        </h3>
+                        <div class="aff-bonus-stats">
+                            <div class="aff-bonus-stat"><span>Today:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat"><span>This Month:</span><strong>$0.000</strong></div>
+                            <div class="aff-bonus-stat is-claimed"><span>Total Claimed:</span><strong>$0.000</strong></div>
+                        </div>
+                        <div class="aff-bonus-claim-row">
+                            <div class="aff-bonus-unclaimed">
+                                <span>Unclaimed Amount:</span>
+                                <strong>$0.000</strong>
+                            </div>
+                            <button class="aff-claim-btn" type="button">Claim</button>
+                        </div>
+                        <div class="aff-bonus-warn">
+                            <img src="/assets/figma-export/neking/aff-bonus-warn-red.svg" alt="" aria-hidden="true">
+                            <span>Bonus will be credited to Bonus Wallet (Coin).</span>
+                        </div>
+                    </article>
+                </div>
+
+                <section class="aff-rewards-record-card aff-rewards-record-card-m" aria-label="Reward records">
+                    <div class="aff-reward-subtabs aff-reward-subtabs-m" role="tablist" aria-label="Reward types">
+                        <button class="aff-reward-subtab is-active" type="button" data-aff-reward-tab="referral">Referral Commission Bonus</button>
+                        <button class="aff-reward-subtab" type="button" data-aff-reward-tab="deposit">Referral Deposit Bonus</button>
+                    </div>
+
+                    <div class="aff-reward-panel is-active" data-aff-reward-panel="referral">
+                        <div class="history-table history-table-mobile aff-rewards-table-m">
+                            <div class="history-thead">
+                                <span>Date</span>
+                                <span>Commission</span>
+                                <span>Status</span>
+                                <span>Claimed Time</span>
+                            </div>
+                            <div class="history-tbody">
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$5.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$2.00</span>
+                                    <span class="aff-status-pending">Pending</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-24</span>
+                                    <span>$1.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-24<br>09:00:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="aff-reward-panel" data-aff-reward-panel="deposit" hidden>
+                        <div class="history-table history-table-mobile aff-rewards-table-m">
+                            <div class="history-thead">
+                                <span>Date</span>
+                                <span>Commission</span>
+                                <span>Status</span>
+                                <span>Claimed Time</span>
+                            </div>
+                            <div class="history-tbody">
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$5.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-25</span>
+                                    <span>$2.00</span>
+                                    <span class="aff-status-pending">Pending</span>
+                                    <span class="history-time">2025-10-25<br>09:00:00</span>
+                                </div>
+                                <div class="history-row">
+                                    <span>2025-10-24</span>
+                                    <span>$1.00</span>
+                                    <span class="aff-status-received">Received</span>
+                                    <span class="history-time">2025-10-24<br>09:00:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div data-include="/components/mobile-bottom-nav.html"></div>
+
+        <div class="aff-qr-modal" id="affQrModalMobile" hidden>
+            <div class="aff-qr-overlay" data-aff-qr-close></div>
+            <div class="aff-qr-dialog" role="dialog" aria-labelledby="affQrTitleM" aria-modal="true">
+                <button class="aff-qr-close" type="button" data-aff-qr-close aria-label="Close">&times;</button>
+                <h2 class="aff-qr-title" id="affQrTitleM">NekingX QR</h2>
+                <img class="aff-qr-dialog-img" src="/assets/figma-export/neking/aff-invite-qr.png" alt="Invitation QR code">
+                <p class="aff-qr-caption">Invite your friends to register</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/include.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

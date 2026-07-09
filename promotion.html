@@ -13,7 +13,7 @@
     <title>Promotion - NEKINGX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         window.tailwind = window.tailwind || {};
         window.tailwind.config = {
@@ -27,7 +27,7 @@
 </head>
 
 <body class="min-h-screen overflow-x-hidden">
-    <main class="promotion-page auth-logged-out mx-auto overflow-hidden" aria-label="NEKINGX promotion page">
+    <main class="promotion-page auth-logged-in mx-auto overflow-hidden" aria-label="NEKINGX promotion page">
         <div data-include="/components/header.html"></div>
         <section class="promotion-content">
             <nav class="promotion-tabs flex items-center justify-center" aria-label="Promotion categories">
@@ -39,26 +39,35 @@
 
             <div class="promotion-grid">
                 <article class="promotion-card">
-                    <img src="assets/figma-export/neking/promotion-welcome-package.webp" alt="Exclusive NEKINGX Welcome Package">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="/assets/figma-export/neking/promotion-m-welcome.png">
+                        <img src="/assets/figma-export/neking/promotion-welcome-package.webp" alt="Exclusive NEKINGX Welcome Package">
+                    </picture>
                     <div class="promotion-card-info">
-                        <h2>[Register &amp; Claim, Free To Climb]&nbsp;&nbsp;10,000 NGN Free Credits</h2>
-                        <a href="#promotion-detail">View Details</a>
+                        <h2>【Register &amp; Claim, Free To Climb】 10,000 NGN Free Credits</h2>
+                        <a href="#promotion-detail">View Details <img src="/assets/figma-export/neking/promotion-view-chevron.svg" alt=""></a>
                     </div>
                 </article>
 
                 <article class="promotion-card">
-                    <img src="assets/figma-export/neking/promotion-vip-rebate.png" alt="VIP Daily Rebate">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="/assets/figma-export/neking/promotion-m-vip.png">
+                        <img src="/assets/figma-export/neking/promotion-vip-rebate.png" alt="VIP Daily Rebate">
+                    </picture>
                     <div class="promotion-card-info">
-                        <h2>VIP [Daily Rebate, Unlimited Rewards] Daily Cash Rebate</h2>
-                        <a href="#promotion-detail">View Details</a>
+                        <h2>VIP【Daily Rebate, Unlimited Rewards】 Daily Cash Rebate</h2>
+                        <a href="#promotion-detail">View Details <img src="/assets/figma-export/neking/promotion-view-chevron.svg" alt=""></a>
                     </div>
                 </article>
 
                 <article class="promotion-card">
-                    <img src="assets/figma-export/neking/promotion-affiliate-rebate.png" alt="Unlimited Daily Rebate Affiliate Program">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="/assets/figma-export/neking/promotion-m-affiliate.png">
+                        <img src="/assets/figma-export/neking/promotion-affiliate-rebate.png" alt="Unlimited Daily Rebate Affiliate Program">
+                    </picture>
                     <div class="promotion-card-info">
-                        <h2>[Build Your Team, Earn Together] 3-Level Affiliate Program</h2>
-                        <a href="#promotion-detail">View Details</a>
+                        <h2>【Build Your Team, Earn Together】 3-Level Affiliate Program</h2>
+                        <a href="#promotion-detail">View Details <img src="/assets/figma-export/neking/promotion-view-chevron.svg" alt=""></a>
                     </div>
                 </article>
             </div>

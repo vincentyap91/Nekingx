@@ -13,7 +13,7 @@
     <title>Game Detail - NEKINGX</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@600;700;800&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script>
         window.tailwind = window.tailwind || {};
         window.tailwind.config = { corePlugins: { preflight: false } };
@@ -25,8 +25,6 @@
 <body class="min-h-screen overflow-x-hidden">
     <main class="game-detail-page auth-logged-out">
         <input class="nav-drawer-toggle" type="checkbox" id="static1DesktopNavDrawer" aria-hidden="true">
-<input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
-
 <header class="desktop-header flex items-center">
     <label class="desktop-menu inline-grid shrink-0 place-items-center" for="static1DesktopNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
     <a class="desktop-logo inline-flex shrink-0 items-center" href="index.html"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></a>
@@ -92,71 +90,78 @@
         <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
     </div>
     <div class="desktop-actions desktop-after-login flex items-center">
-        <div class="wallet flex items-center"><span>N</span><strong>50,145.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
-        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
-        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/header-chat-bubble.svg" alt=""><em>1</em></a>
+        <button class="profile-trigger" aria-label="Account menu">
+            <img class="profile-avatar" src="../assets/figma-export/neking/header-profile-lion.png" alt="">
+            <img class="profile-chevron" src="../assets/figma-export/neking/header-chevron-down.svg" alt="">
+        </button>
     </div>
 </header>
-
-<label class="drawer-backdrop" for="static1DesktopNavDrawer" aria-hidden="true"></label>
-<aside class="side-drawer grid content-start" aria-label="Main menu">
-    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
-    <label class="drawer-close" for="static1DesktopNavDrawer" aria-label="Close menu">&times;</label>
+<label class="drawer-backdrop drawer-backdrop-desktop" for="static1DesktopNavDrawer" aria-hidden="true"></label>
+<aside class="side-drawer desktop-side-drawer grid content-start" aria-label="Main menu">
+    <a class="drawer-top-cta drawer-home" href="index.html">Home</a>
+    <div class="drawer-cash-row grid grid-cols-2">
+        <a class="drawer-deposit" href="deposit.html">Deposit</a>
+        <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+    </div>
     <nav class="drawer-nav grid">
-        <a class="drawer-home" href="index.html"><span></span>Home</a>
-        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
-        <a href="#"><span>*</span>Inbox</a>
-        <a href="promotion.html"><span>~</span>Promotions</a>
-        <a href="profile.html"><span>#</span>Personal Center</a>
-        <a href="#"><span>+</span>Affiliate</a>
-        <a href="#"><span>V</span>VIP Club</a>
-        <a href="#"><span>B</span>Blog</a>
-        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+        <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+        <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+        <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+        <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+        <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
     </nav>
     <section class="drawer-invite logged-in-only grid">
         <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
         <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
         <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
-        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
     </section>
 </aside>
 
+<input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
 <header class="mobile-header flex items-center">
-    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
     <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
     <div class="mobile-before-login flex items-center">
         <a class="login-btn" href="login.html">Login</a>
-        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
     </div>
     <div class="mobile-after-login flex items-center">
-        <div class="wallet flex items-center"><span>N</span><strong>46,305.49</strong></div>
-        <a class="messages" href="#" aria-label="Messages"><img src="../assets/figma-export/neking/chat-bubble.svg" alt=""></a>
-        <button class="profile-trigger" aria-label="Account menu"><i></i><span></span></button>
+        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
     </div>
+    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
 </header>
-
-<label class="drawer-backdrop" for="static1MobileNavDrawer" aria-hidden="true"></label>
+<label class="drawer-backdrop drawer-backdrop-mobile" for="static1MobileNavDrawer" aria-hidden="true"></label>
 <aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
-    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
     <label class="drawer-close" for="static1MobileNavDrawer" aria-label="Close menu">&times;</label>
-    <nav class="drawer-nav grid">
-        <a class="drawer-home" href="index.html"><span></span>Home</a>
-        <div class="drawer-cash-row grid grid-cols-2"><a class="drawer-deposit" href="#">Deposit</a><a class="drawer-withdraw" href="#">Withdrawal</a></div>
-        <a href="#"><span>*</span>Inbox</a>
-        <a href="promotion.html"><span>~</span>Promotions</a>
-        <a href="profile.html"><span>#</span>Personal Center</a>
-        <a href="#"><span>+</span>Affiliate</a>
-        <a href="#"><span>V</span>VIP Club</a>
-        <a href="#"><span>B</span>Blog</a>
-        <a class="drawer-logout logged-in-only" href="#"><span>&gt;</span>LOG OUT</a>
-    </nav>
+    <div class="drawer-logo inline-flex items-center"><img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
+    <a class="drawer-top-cta drawer-login logged-out-only" href="login.html">Login</a>
+    <div class="drawer-actions">
+        <div class="drawer-cash-row grid grid-cols-2">
+            <a class="drawer-deposit" href="deposit.html">Deposit</a>
+            <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
+        </div>
+        <nav class="drawer-nav grid">
+            <a class="drawer-home" href="index.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-home.png" alt=""><span class="drawer-nav-label">Home</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+            <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
+            <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
+            <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
+            <a href="vip-club.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
+            <a class="drawer-providers" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-providers.png" alt=""><span class="drawer-nav-label">Providers</span></a>
+            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
+            <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
+        </nav>
+    </div>
     <section class="drawer-invite logged-in-only grid">
         <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
         <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
         <div class="drawer-qr"><img src="../assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><span>COPY</span></div>
-        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><span>COPY</span></div>
+        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
+        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="../assets/figma-export/neking/copy.png" alt=""></button></div>
     </section>
 </aside>
 
