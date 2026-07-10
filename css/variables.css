@@ -1,5 +1,6 @@
 /* NEKINGX typography tokens — values taken from existing style.css usage.
-   Do not invent new sizes; extend this file when a new repeated value appears. */
+   Do not invent new sizes; extend this file when a new repeated value appears.
+   Base: 16px = 1rem (visual size unchanged from previous px tokens). */
 
 :root {
     /* Family (same stack already used site-wide) */
@@ -7,22 +8,22 @@
     --font-primary: var(--font-family-primary);
 
     /* Semantic sizes (mapped from most-used hardcoded values) */
-    --font-size-meta: 10px;          /* badges, captions, tiny UI */
-    --font-size-label: 12px;         /* tabs, bottom nav, small labels */
-    --font-size-button: 14px;        /* primary buttons, CTAs */
-    --font-size-nav: 14px;           /* desktop header nav links */
-    --font-size-body: 14px;          /* default body / table / UI copy */
-    --font-size-card-title: 20px;    /* card & panel titles */
+    --font-size-meta: 0.625rem;          /* 10px — badges, captions, tiny UI */
+    --font-size-label: 0.75rem;          /* 12px — tabs, bottom nav, small labels */
+    --font-size-button: 0.875rem;        /* 14px — primary buttons, CTAs */
+    --font-size-nav: 0.875rem;           /* 14px — desktop header nav links */
+    --font-size-body: 0.875rem;          /* 14px — default body / table / UI copy */
+    --font-size-card-title: 1.25rem;     /* 20px — card & panel titles */
 
     /* Additional repeated sizes from the codebase */
-    --font-size-11: 11px;
-    --font-size-13: 13px;
-    --font-size-15: 15px;
-    --font-size-16: 16px;
-    --font-size-18: 18px;
-    --font-size-22: 22px;
-    --font-size-24: 24px;
-    --font-size-12-8: 12.8px;        /* profile mobile controls */
+    --font-size-11: 0.6875rem;           /* 11px */
+    --font-size-13: 0.8125rem;           /* 13px */
+    --font-size-15: 0.9375rem;           /* 15px */
+    --font-size-16: 1rem;                /* 16px */
+    --font-size-18: 1.125rem;            /* 18px */
+    --font-size-22: 1.375rem;            /* 22px */
+    --font-size-24: 1.5rem;              /* 24px */
+    --font-size-12-8: 0.8rem;            /* 12.8px — profile mobile controls */
 
     /* Weights (frequency order in style.css: 800, 900, 700, 600, 400, 500) */
     --font-weight-regular: 400;
@@ -33,25 +34,25 @@
     --font-weight-black: 900;
 
     /* Line heights paired with common sizes */
-    --line-height-meta: 12px;
-    --line-height-label: 16px;
-    --line-height-body: 18px;
-    --line-height-nav: 20px;
-    --line-height-button: 18px;
-    --line-height-card-title: 20px;
-    --line-height-11: 14px;
-    --line-height-13: 17px;
-    --line-height-15: 19px;
-    --line-height-16: 16px;
-    --line-height-18: 18px;
-    --line-height-20: 20px;
-    --line-height-22: 22px;
-    --line-height-24: 24px;
-    --line-height-14: 14px;
-    --line-height-28: 28px;
+    --line-height-meta: 0.75rem;         /* 12px */
+    --line-height-label: 1rem;           /* 16px */
+    --line-height-body: 1.125rem;        /* 18px */
+    --line-height-nav: 1.25rem;          /* 20px */
+    --line-height-button: 1.125rem;      /* 18px */
+    --line-height-card-title: 1.25rem;   /* 20px */
+    --line-height-11: 0.875rem;          /* 14px */
+    --line-height-13: 1.0625rem;         /* 17px */
+    --line-height-15: 1.1875rem;         /* 19px */
+    --line-height-16: 1rem;              /* 16px */
+    --line-height-18: 1.125rem;          /* 18px */
+    --line-height-20: 1.25rem;           /* 20px */
+    --line-height-22: 1.375rem;          /* 22px */
+    --line-height-24: 1.5rem;            /* 24px */
+    --line-height-14: 0.875rem;          /* 14px */
+    --line-height-28: 1.75rem;           /* 28px */
     --line-height-tight: 1;
 
-    /* Letter spacing */
+    /* Letter spacing (fine tracking — keep px) */
     --letter-spacing-none: 0;
     --letter-spacing-wallet: .32px;
 }

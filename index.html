@@ -7,8 +7,7 @@
     <script>
         if (window.location.protocol === "file:" && !window.location.pathname.replace(/\\/g, "/").includes("/dist/")) {
             const page = window.location.pathname.split(/[\\/]/).pop() || "index.html";
-            const distPage = page === "index.html" ? "index-new.html" : page;
-            window.location.replace(`dist/${distPage}${window.location.search}${window.location.hash}`);
+            window.location.replace(`dist/${page}${window.location.search}${window.location.hash}`);
         }
     </script>
     <title>NEKINGX</title>
@@ -27,7 +26,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class="min-h-screen overflow-x-hidden">
+<body class="min-h-screen overflow-x-hidden" data-header-type="home">
     <main class="desktop-home auth-logged-out mx-auto overflow-hidden" aria-label="NEKINGX desktop home">
         <div data-include="/components/header.html"></div>
         <section class="desktop-hero relative overflow-hidden">
@@ -56,16 +55,16 @@
         <section class="top-series desktop-series overflow-hidden">
             <div class="series-heading flex items-center justify-between"><h2>Top 10 Series in NEKINGX Today</h2><a href="#">ALL <img src="assets/figma-export/neking/arrow-right.svg" alt=""></a></div>
             <div class="series-track flex overflow-x-auto">
-                <article><b>1</b><img src="assets/figma-export/neking/live-game-aviator.webp" alt="Aviator"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>2</b><img src="assets/figma-export/neking/live-game-aviatrix.webp" alt="Aviatrix"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>3</b><img src="assets/figma-export/neking/live-game-crash.webp" alt="Crash"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>4</b><img src="assets/figma-export/neking/live-game-chicken-route.webp" alt="Chicken Route"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>5</b><img src="assets/figma-export/neking/live-game-aero.webp" alt="Aero"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>6</b><img src="assets/figma-export/neking/live-game-olympus.webp" alt="Gates of Olympus"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>7</b><img src="assets/figma-export/neking/live-game-zeus.webp" alt="Zeus vs Hades"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>8</b><img src="assets/figma-export/neking/live-game-oddin.webp" alt="Oddin"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>9</b><img src="assets/figma-export/neking/live-game-ezugi.webp" alt="Ezugi"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>10</b><img src="assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/1.webp" alt=""><img src="assets/figma-export/neking/live-game-aviator.webp" alt="Aviator"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/2.webp" alt=""><img src="assets/figma-export/neking/live-game-aviatrix.webp" alt="Aviatrix"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/3.webp" alt=""><img src="assets/figma-export/neking/live-game-crash.webp" alt="Crash"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/4.webp" alt=""><img src="assets/figma-export/neking/live-game-chicken-route.webp" alt="Chicken Route"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/5.webp" alt=""><img src="assets/figma-export/neking/live-game-aero.webp" alt="Aero"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/6.webp" alt=""><img src="assets/figma-export/neking/live-game-olympus.webp" alt="Gates of Olympus"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/7.webp" alt=""><img src="assets/figma-export/neking/live-game-zeus.webp" alt="Zeus vs Hades"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/8.webp" alt=""><img src="assets/figma-export/neking/live-game-oddin.webp" alt="Oddin"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/9.webp" alt=""><img src="assets/figma-export/neking/live-game-ezugi.webp" alt="Ezugi"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/10.webp" alt=""><img src="assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
             </div>
         </section>
         <div data-include="/components/footer.html" data-variant="desktop"></div>
@@ -74,9 +73,6 @@
 
     <main class="mobile-home auth-logged-out flex flex-col overflow-hidden" aria-label="NEKINGX mobile home">
         <div data-include="/components/header.html"></div>
-        <nav class="mobile-top-nav flex items-center overflow-x-auto" aria-label="Mobile game navigation">
-            <a class="active" href="#">Aviator</a><a href="crash.html">Crash</a><a href="casino.html">Casino</a><a href="virtual.html">Virtual</a><a href="e-sports.html">E-Sports</a><a href="bet-game.html">Bet Game</a>
-        </nav>
         <section class="mobile-hero relative overflow-hidden">
             <div class="hero-slider" data-slider>
                 <div class="hero-slides">
@@ -101,16 +97,16 @@
         <section class="mobile-games overflow-hidden">
             <div class="mobile-section-title flex items-center justify-between"><h2>Top 10 Series in NEKINGX Today</h2><a href="#">ALL <img src="assets/figma-export/neking/arrow-right.svg" alt=""></a></div>
             <div class="mobile-game-row flex overflow-x-auto">
-                <article><b>1</b><img src="assets/figma-export/neking/live-game-aviator.webp" alt="Aviator"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>2</b><img src="assets/figma-export/neking/live-game-aviatrix.webp" alt="Aviatrix"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>3</b><img src="assets/figma-export/neking/live-game-crash.webp" alt="Crash"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>4</b><img src="assets/figma-export/neking/live-game-chicken-route.webp" alt="Chicken Route"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>5</b><img src="assets/figma-export/neking/live-game-aero.webp" alt="Aero"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>6</b><img src="assets/figma-export/neking/live-game-olympus.webp" alt="Gates of Olympus"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>7</b><img src="assets/figma-export/neking/live-game-zeus.webp" alt="Zeus vs Hades"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>8</b><img src="assets/figma-export/neking/live-game-oddin.webp" alt="Oddin"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>9</b><img src="assets/figma-export/neking/live-game-ezugi.webp" alt="Ezugi"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
-                <article><b>10</b><img src="assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/1.webp" alt=""><img src="assets/figma-export/neking/live-game-aviator.webp" alt="Aviator"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/2.webp" alt=""><img src="assets/figma-export/neking/live-game-aviatrix.webp" alt="Aviatrix"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/3.webp" alt=""><img src="assets/figma-export/neking/live-game-crash.webp" alt="Crash"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/4.webp" alt=""><img src="assets/figma-export/neking/live-game-chicken-route.webp" alt="Chicken Route"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/5.webp" alt=""><img src="assets/figma-export/neking/live-game-aero.webp" alt="Aero"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/6.webp" alt=""><img src="assets/figma-export/neking/live-game-olympus.webp" alt="Gates of Olympus"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/7.webp" alt=""><img src="assets/figma-export/neking/live-game-zeus.webp" alt="Zeus vs Hades"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/8.webp" alt=""><img src="assets/figma-export/neking/live-game-oddin.webp" alt="Oddin"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/9.webp" alt=""><img src="assets/figma-export/neking/live-game-ezugi.webp" alt="Ezugi"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
+                <article><img class="rank-num" src="assets/figma-export/neking/10.webp" alt=""><img src="assets/figma-export/neking/live-game-turbo-sports.webp" alt="Turbo Sports"><img class="top-badge" src="assets/figma-export/neking/live-top10-badge.png" alt="Top 10"></article>
             </div>
         </section>
         <div data-include="/components/footer.html" data-variant="mobile"></div>

@@ -23,7 +23,9 @@ const selectVariant = (html, variant) => {
     return match ? match[1].trim() : html;
 };
 
-const expandIncludes = (html) => {
+const replaceIncludeIds = (html, uniquePrefix) => String(html).split("__INCLUDE_ID__").join(uniquePrefix);
+
+const expandIncludes = (html, sharedId) => {
     const includePattern = /<div\b([^>]*?)\sdata-include=["']([^"']+)["']([^>]*)>\s*<\/div>/gi;
     let output = html;
 
@@ -39,7 +41,10 @@ const expandIncludes = (html) => {
             }
 
             const variant = variantMatch ? variantMatch[1] : "";
-            return selectVariant(readText(includeFile), variant).replaceAll("__INCLUDE_ID__", `static${++includeId}`);
+            const uniquePrefix = sharedId || `static${++includeId}`;
+            // Expand nested includes with the same prefix so drawer toggle IDs stay matched.
+            const expanded = expandIncludes(selectVariant(readText(includeFile), variant), uniquePrefix);
+            return replaceIncludeIds(expanded, uniquePrefix);
         });
     }
 
@@ -159,14 +164,6 @@ const buildPage = (fileName) => {
     const sourcePath = path.join(rootDir, fileName);
     const expanded = expandIncludes(readText(sourcePath));
     const output = rewritePathsForDist(expanded);
-
-    if (fileName === "index.html") {
-        try {
-            fs.writeFileSync(path.join(distDir, "index-new.html"), output, "utf8");
-        } catch (error) {
-            console.warn(`Could not refresh index-new.html: ${error.message}`);
-        }
-    }
 
     writeBuiltPage(fileName, output);
 };

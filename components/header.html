@@ -50,69 +50,27 @@
         </button>
     </div>
 </header>
-<label class="drawer-backdrop drawer-backdrop-desktop" for="__INCLUDE_ID__DesktopNavDrawer" aria-hidden="true"></label>
-<aside class="side-drawer desktop-side-drawer grid content-start" aria-label="Main menu">
-    <a class="drawer-top-cta drawer-home" href="/index.html">Home</a>
-    <div class="drawer-cash-row grid grid-cols-2">
-        <a class="drawer-deposit" href="/deposit.html">Deposit</a>
-        <a class="drawer-withdraw" href="/withdrawal.html">Withdrawal</a>
-    </div>
-    <nav class="drawer-nav grid">
-        <a href="#"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
-        <a href="/promotion.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
-        <a href="/profile.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
-        <a href="/affiliate.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
-        <a href="/vip-club.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
-        <a href="#"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
-        <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="/assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
-    </nav>
-    <section class="drawer-invite logged-in-only grid">
-        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
-        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
-        <div class="drawer-qr"><img src="/assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="/assets/figma-export/neking/copy.png" alt=""></button></div>
-        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="/assets/figma-export/neking/copy.png" alt=""></button></div>
-    </section>
-</aside>
+<div data-include="/components/sidemenu.html" data-variant="desktop"></div>
 
 <input class="nav-drawer-toggle" type="checkbox" id="__INCLUDE_ID__MobileNavDrawer" aria-hidden="true">
-<header class="mobile-header flex items-center">
-    <img src="/assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
-    <div class="mobile-before-login flex items-center">
-        <a class="login-btn" href="/login.html">Login</a>
-    </div>
-    <div class="mobile-after-login flex items-center">
-        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="/assets/figma-export/neking/refresh.png" width="25" alt=""></div>
-    </div>
-    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="__INCLUDE_ID__MobileNavDrawer" aria-label="Menu"><img src="/assets/figma-export/neking/menu-icon.svg" alt=""></label>
-</header>
-<label class="drawer-backdrop drawer-backdrop-mobile" for="__INCLUDE_ID__MobileNavDrawer" aria-hidden="true"></label>
-<aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
-    <label class="drawer-close" for="__INCLUDE_ID__MobileNavDrawer" aria-label="Close menu">&times;</label>
-    <div class="drawer-logo inline-flex items-center"><img src="/assets/figma-export/neking/live-logo.webp" alt="NEKINGX"></div>
-    <a class="drawer-top-cta drawer-login logged-out-only" href="/login.html">Login</a>
-    <div class="drawer-actions">
-        <div class="drawer-cash-row grid grid-cols-2">
-            <a class="drawer-deposit" href="/deposit.html">Deposit</a>
-            <a class="drawer-withdraw" href="/withdrawal.html">Withdrawal</a>
+<div class="mobile-header-stack">
+    <header class="mobile-header flex items-center">
+        <img src="/assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+        <div class="mobile-before-login flex items-center">
+            <a class="login-btn" href="/login.html">Login</a>
         </div>
-        <nav class="drawer-nav grid">
-            <a class="drawer-home" href="/index.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-home.png" alt=""><span class="drawer-nav-label">Home</span></a>
-            <a href="#"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
-            <a href="/promotion.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
-            <a href="/profile.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
-            <a href="/affiliate.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
-            <a href="/vip-club.html"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-vip.png" alt=""><span class="drawer-nav-label">VIP Club</span></a>
-            <a class="drawer-providers" href="#"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-providers.png" alt=""><span class="drawer-nav-label">Providers</span></a>
-            <a href="#"><img class="drawer-nav-icon" src="/assets/figma-export/neking/drawer-icon-blog.png" alt=""><span class="drawer-nav-label">Blog</span></a>
-            <a class="drawer-logout logged-in-only" href="#"><img class="drawer-nav-icon" src="/assets/figma-export/neking/logout.png" alt=""><span class="drawer-nav-label">LOG OUT</span></a>
-        </nav>
-    </div>
-    <section class="drawer-invite logged-in-only grid">
-        <h3>JOIN FOR WEALTH <span>EARN TOGETHER</span></h3>
-        <p>SHARE YOUR QR CODE AND INVITE FRIENDS TO BUILD YOUR TEAM AND EARN MORE TOGETHER.</p>
-        <div class="drawer-qr"><img src="/assets/figma-export/neking/invite-qr.png" alt="Invitation QR code"></div>
-        <div class="drawer-field"><b>REFERRAL CODE</b><strong>UVM2JD</strong><button class="drawer-copy" type="button" aria-label="Copy referral code"><img src="/assets/figma-export/neking/copy.png" alt=""></button></div>
-        <div class="drawer-field"><b>INVITE LINK</b><strong>https://www.nekingx.com/accou...</strong><button class="drawer-copy" type="button" aria-label="Copy invite link"><img src="/assets/figma-export/neking/copy.png" alt=""></button></div>
-    </section>
-</aside>
+        <div class="mobile-after-login flex items-center">
+            <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="/assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        </div>
+        <label class="mobile-menu inline-grid shrink-0 place-items-center" for="__INCLUDE_ID__MobileNavDrawer" aria-label="Menu"><img src="/assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    </header>
+    <nav class="mobile-top-nav flex items-center overflow-x-auto" aria-label="Mobile game navigation">
+        <a data-nav="home" href="index.html">Aviator</a>
+        <a data-nav="crash" href="crash.html">Crash</a>
+        <a data-nav="casino" href="casino.html">Casino</a>
+        <a data-nav="virtual" href="virtual.html">Virtual</a>
+        <a data-nav="esports" href="e-sports.html">E-Sports</a>
+        <a data-nav="betgame" href="bet-game.html">Betgame</a>
+    </nav>
+</div>
+<div data-include="/components/sidemenu.html" data-variant="mobile"></div>

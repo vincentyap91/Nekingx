@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="min-h-screen overflow-x-hidden">
+<body class="min-h-screen overflow-x-hidden" data-header-type="inner">
     <main class="casino-page auth-logged-out">
         <input class="nav-drawer-toggle" type="checkbox" id="static1DesktopNavDrawer" aria-hidden="true">
 <header class="desktop-header flex items-center">
@@ -106,7 +106,7 @@
         <a class="drawer-withdraw" href="withdrawal.html">Withdrawal</a>
     </div>
     <nav class="drawer-nav grid">
-        <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+        <a class="drawer-inbox" href="notice.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
         <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
         <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
         <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>
@@ -124,16 +124,26 @@
 </aside>
 
 <input class="nav-drawer-toggle" type="checkbox" id="static1MobileNavDrawer" aria-hidden="true">
-<header class="mobile-header flex items-center">
-    <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
-    <div class="mobile-before-login flex items-center">
-        <a class="login-btn" href="login.html">Login</a>
-    </div>
-    <div class="mobile-after-login flex items-center">
-        <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
-    </div>
-    <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
-</header>
+<div class="mobile-header-stack">
+    <header class="mobile-header flex items-center">
+        <img src="../assets/figma-export/neking/live-logo.webp" alt="NEKINGX">
+        <div class="mobile-before-login flex items-center">
+            <a class="login-btn" href="login.html">Login</a>
+        </div>
+        <div class="mobile-after-login flex items-center">
+            <div class="wallet flex items-center"><span>N</span><strong>49,789.00</strong><img src="../assets/figma-export/neking/refresh.png" width="25" alt=""></div>
+        </div>
+        <label class="mobile-menu inline-grid shrink-0 place-items-center" for="static1MobileNavDrawer" aria-label="Menu"><img src="../assets/figma-export/neking/menu-icon.svg" alt=""></label>
+    </header>
+    <nav class="mobile-top-nav flex items-center overflow-x-auto" aria-label="Mobile game navigation">
+        <a data-nav="home" href="index.html">Aviator</a>
+        <a data-nav="crash" href="crash.html">Crash</a>
+        <a data-nav="casino" href="casino.html">Casino</a>
+        <a data-nav="virtual" href="virtual.html">Virtual</a>
+        <a data-nav="esports" href="e-sports.html">E-Sports</a>
+        <a data-nav="betgame" href="bet-game.html">Betgame</a>
+    </nav>
+</div>
 <label class="drawer-backdrop drawer-backdrop-mobile" for="static1MobileNavDrawer" aria-hidden="true"></label>
 <aside class="side-drawer mobile-side-drawer grid content-start" aria-label="Main menu">
     <label class="drawer-close" for="static1MobileNavDrawer" aria-label="Close menu">&times;</label>
@@ -146,7 +156,7 @@
         </div>
         <nav class="drawer-nav grid">
             <a class="drawer-home" href="index.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-home.png" alt=""><span class="drawer-nav-label">Home</span></a>
-            <a href="#"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
+            <a class="drawer-inbox" href="notice.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-inbox.png" alt=""><span class="drawer-nav-label">Inbox</span></a>
             <a href="promotion.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-promotions.png" alt=""><span class="drawer-nav-label">Promotions</span></a>
             <a href="profile.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-profile.png" alt=""><span class="drawer-nav-label">Personal Center</span></a>
             <a href="affiliate.html"><img class="drawer-nav-icon" src="../assets/figma-export/neking/drawer-icon-affiliate.png" alt=""><span class="drawer-nav-label">Affiliate</span></a>

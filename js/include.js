@@ -14,7 +14,7 @@
     ]);
 
     const pageName = () => {
-        const name = window.location.pathname.split("/").pop();
+        const name = window.location.pathname.replace(/\\/g, "/").split("/").pop();
         return name || "index.html";
     };
 
@@ -23,6 +23,35 @@
             return path;
         }
         return path;
+    };
+
+    const resolvePageHref = (page) => {
+        const name = String(page || "").replace(/^\/+/, "");
+        return name || "index.html";
+    };
+
+    const resolveHomeHref = () => resolvePageHref("index.html");
+
+    const fixHomeLinks = () => {
+        const homeHref = resolveHomeHref();
+        document.querySelectorAll("a.desktop-logo, a.drawer-home, a.home-link, a.nav-aviator-badge").forEach((link) => {
+            link.setAttribute("href", homeHref);
+        });
+    };
+
+    const fixSideMenuLinks = () => {
+        const noticeHref = resolvePageHref("notice.html");
+        document.querySelectorAll("a.drawer-inbox").forEach((link) => {
+            link.setAttribute("href", noticeHref);
+        });
+    };
+
+    const applyMobileHeaderVariant = () => {
+        const headerType = document.body.getAttribute("data-header-type") === "home" ? "home" : "inner";
+        document.querySelectorAll(".mobile-header-stack").forEach((stack) => {
+            stack.classList.toggle("header--home", headerType === "home");
+            stack.classList.toggle("header--inner", headerType === "inner");
+        });
     };
 
     const fetchInclude = async (path) => {
@@ -47,24 +76,36 @@
         return template ? template.innerHTML.trim() : html;
     };
 
-    const loadIncludes = async (root = document) => {
-        const placeholders = Array.from(root.querySelectorAll("[data-include]"));
-        if (!placeholders.length) {
+    const replaceIncludeIds = (html, uniquePrefix) => html.split("__INCLUDE_ID__").join(uniquePrefix);
+
+    const unwrapInclude = (placeholder, html) => {
+        const host = document.createElement("div");
+        host.innerHTML = html;
+        const nodes = Array.from(host.childNodes);
+        placeholder.replaceWith(...nodes);
+    };
+
+    // Nested includes (e.g. sidemenu inside header) must reuse the parent prefix
+    // so drawer toggle IDs still match backdrop/close `for` attributes.
+    const loadIncludes = async (root = document, sharedPrefix) => {
+        const topPlaceholders = Array.from(root.querySelectorAll("[data-include]")).filter((placeholder) => {
+            const ancestor = placeholder.parentElement && placeholder.parentElement.closest("[data-include]");
+            return !ancestor;
+        });
+
+        if (!topPlaceholders.length) {
             return;
         }
 
-        await Promise.all(placeholders.map(async (placeholder) => {
+        await Promise.all(topPlaceholders.map(async (placeholder) => {
             const source = placeholder.getAttribute("data-include");
             const variant = placeholder.getAttribute("data-variant");
-            const uniquePrefix = `include${++includeIndex}`;
-            let html = await fetchInclude(source);
-
-            html = selectVariant(html, variant).replaceAll("__INCLUDE_ID__", uniquePrefix);
-            placeholder.removeAttribute("data-include");
-            placeholder.innerHTML = html;
+            const uniquePrefix = sharedPrefix || `include${++includeIndex}`;
+            const host = document.createElement("div");
+            host.innerHTML = selectVariant(await fetchInclude(source), variant);
+            await loadIncludes(host, uniquePrefix);
+            unwrapInclude(placeholder, replaceIncludeIds(host.innerHTML, uniquePrefix));
         }));
-
-        await loadIncludes(root);
     };
 
     const setAuthState = () => {
@@ -142,12 +183,13 @@
 
         document.querySelectorAll(".mobile-top-nav a").forEach((link) => {
             const href = link.getAttribute("href") || "";
-            const isCurrent = (key === "home" && (href === "#" || href.includes("index.html"))) ||
-                (key === "crash" && href.includes("crash.html")) ||
-                (key === "casino" && href.includes("casino.html")) ||
-                (key === "esports" && href.includes("e-sports.html")) ||
-                (key === "virtual" && href.includes("virtual.html")) ||
-                (key === "betgame" && href.includes("bet-game.html"));
+            const nav = link.getAttribute("data-nav") || "";
+            const isCurrent = (key === "home" && (nav === "home" || href === "#" || href.includes("index.html"))) ||
+                (key === "crash" && (nav === "crash" || href.includes("crash.html"))) ||
+                (key === "casino" && (nav === "casino" || href.includes("casino.html"))) ||
+                (key === "esports" && (nav === "esports" || href.includes("e-sports.html"))) ||
+                (key === "virtual" && (nav === "virtual" || href.includes("virtual.html"))) ||
+                (key === "betgame" && (nav === "betgame" || href.includes("bet-game.html")));
             link.classList.toggle("active", isCurrent);
         });
 
@@ -165,7 +207,10 @@
         try {
             await loadIncludes();
             setAuthState();
+            applyMobileHeaderVariant();
             setActiveNavigation();
+            fixHomeLinks();
+            fixSideMenuLinks();
             window.dispatchEvent(new CustomEvent("nekingx:includes-loaded"));
         } catch (error) {
             console.error(error);
