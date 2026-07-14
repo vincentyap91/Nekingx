@@ -1540,7 +1540,7 @@ main.overflow-hidden {
     position: fixed;
     right: 24px;
     bottom: 22px;
-    z-index: 40;
+    z-index: 12020;
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -1551,13 +1551,19 @@ main.overflow-hidden {
     box-shadow: 0 8px 18px rgba(0, 0, 0, .26);
 }
 
+body:has(.promotion-detail-modal:target) {
+    overflow: hidden;
+}
+
 .promotion-detail-modal {
     position: fixed;
     inset: 0;
-    z-index: 120;
+    z-index: 12000;
     display: none;
     justify-content: center;
-    background: rgba(0, 18, 3, .98);
+    align-items: stretch;
+    overflow: hidden;
+    background: #000f01;
 }
 
 .promotion-detail-modal:target {
@@ -1566,18 +1572,21 @@ main.overflow-hidden {
 
 .promotion-detail-shell {
     width: min(760px, 100%);
-    height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    background: linear-gradient(180deg, #001d05 0%, #001303 100%);
+    height: 100%;
+    max-height: 100vh;
+    max-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #000f01;
 }
 
 .promotion-detail-top {
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 2;
-    padding: 18px 34px 16px;
-    background: #001d05;
+    flex: 0 0 auto;
+    padding: 16px 20px;
+    background: #000f01;
 }
 
 .promotion-back {
@@ -1590,6 +1599,7 @@ main.overflow-hidden {
     font-size: var(--font-size-label);
     line-height: var(--line-height-label);
     font-weight: 900;
+    text-decoration: none;
 }
 
 .promotion-back span {
@@ -1598,21 +1608,25 @@ main.overflow-hidden {
     display: inline-grid;
     place-items: center;
     border-radius: 4px;
-    background: linear-gradient(90deg, #05ef43 0%, #dfff00 100%);
-    color: #061106;
-    font-size: var(--font-size-22);
-    line-height: var(--line-height-22);
-    font-weight: 900;
+    background: #00f243;
+}
+
+.promotion-back span svg {
+    width: 12px;
+    height: 12px;
+    display: block;
 }
 
 .promotion-detail-banner {
     width: 100%;
     aspect-ratio: 2 / 1;
+    display: block;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .promotion-detail-scroll h1 {
-    margin: 26px 0 15px;
+    margin: 18px 0 12px;
     color: #fff;
     font-size: var(--font-size-22);
     line-height: 30px;
@@ -1628,9 +1642,12 @@ main.overflow-hidden {
 }
 
 .promotion-detail-scroll {
+    flex: 1 1 auto;
     min-height: 0;
+    overflow-x: hidden;
     overflow-y: auto;
-    padding: 24px 34px 82px;
+    -webkit-overflow-scrolling: touch;
+    padding: 8px 20px 82px;
     scrollbar-color: rgba(255,255,255,.28) rgba(255,255,255,.05);
     scrollbar-width: thin;
 }
@@ -2018,7 +2035,7 @@ main.overflow-hidden {
     }
 
     .promotion-detail-top {
-        padding: 24px 47px 17px;
+        padding: 14px 16px 12px;
     }
 
     .promotion-back {
@@ -2026,15 +2043,18 @@ main.overflow-hidden {
     }
 
     .promotion-back span {
-        width: 32px;
-        height: 32px;
+        width: 28px;
+        height: 28px;
         border-radius: 5px;
-        font-size: 27px;
-        line-height: 27px;
+    }
+
+    .promotion-back span svg {
+        width: 14px;
+        height: 14px;
     }
 
     .promotion-detail-scroll h1 {
-        margin: 18px 0 16px;
+        margin: 16px 0 10px;
         font-size: 17px;
         line-height: var(--line-height-24);
     }
@@ -2045,7 +2065,12 @@ main.overflow-hidden {
     }
 
     .promotion-detail-scroll {
-        padding: 15px 47px 78px;
+        padding: 4px 16px 78px;
+    }
+
+    .promotion-page:has(.promotion-detail-modal:target) .bottom-nav,
+    .promotion-page:has(.promotion-detail-modal:target) .mobile-bottom-nav {
+        display: none !important;
     }
 
     .promotion-rules-card {
@@ -2645,11 +2670,12 @@ main.overflow-hidden {
 
 .profile-trigger {
     width: auto;
-    height: 40px;
+    height: auto;
+    min-height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 8px;
     border: 0;
     border-radius: 8px;
     background: #0f163b;
@@ -2812,15 +2838,6 @@ main.overflow-hidden {
 .desktop-after-login .messages::before,
 .desktop-after-login .messages::after {
     content: none;
-}
-.desktop-after-login .profile-trigger {
-    width: auto;
-    height: auto;
-    min-height: 40px;
-    padding: 5px;
-    gap: 8px;
-    border-radius: 8px;
-    background: #0f163b;
 }
 .desktop-after-login .profile-trigger i,
 .desktop-after-login .profile-trigger span {
