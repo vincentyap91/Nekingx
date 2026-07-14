@@ -3143,9 +3143,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 .desktop-hero {
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
     width: 100%;
     height: 585px;
     overflow: hidden;
@@ -3261,17 +3259,15 @@ body.drawer-open { overflow: hidden; }
 .desktop-dots { position: absolute; z-index: 8; left: 900px; top: 548px; width: 120px; height: 10px; }
 
 .announcement-bar {
-    position: absolute;
-    left: 0;
-    top: 585px;
-    width: 100%;
+    position: relative;
     height: 42px;
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 20px;
     padding: 0 14px;
     border: 0;
-    border-radius: 0;
+    border-radius: 8px;
     background: linear-gradient(90deg, #00250f 0%, #003717 52%, #00220d 100%);
     box-shadow: 0 1px 0 rgba(31,242,87,.45) inset, 0 -1px 0 rgba(31,242,87,.28) inset;
 }
@@ -3319,7 +3315,10 @@ body.drawer-open { overflow: hidden; }
 }
 .live img { width: 8px; height: 8px; }
 
-.desktop-series { width: 100%; }
+.desktop-series {
+    width: auto;
+    margin: 0 20px 20px;
+}
 .desktop-series-secondary { display: none; }
 .series-heading {
     height: 60px;
